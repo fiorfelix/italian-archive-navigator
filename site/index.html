@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Italian Archive Navigator</title>
+    <meta
+      name="description"
+      content="A read-only connector for Claude that helps with Italian family-history research: places, records, archives and request letters."
+    />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="tricolore"></div>
+    <header>
+      <img src="icon.svg" alt="" />
+      <div>
+        <div class="name">Italian Archive Navigator</div>
+        <div class="by">by fiorfelix</div>
+      </div>
+    </header>
+    <nav>
+      <a href="#add">Add to Claude</a>
+      <a href="#ask">What to ask</a>
+      <a href="#limits">Coverage and limits</a>
+      <a href="#sources">Sources</a>
+      <a href="privacy">Privacy</a>
+      <a href="#support">Support</a>
+    </nav>
+    <main>
+      <h1>Find where an Italian ancestor's record is kept, and ask for it</h1>
+      <p class="lead">
+        A read-only connector for Claude. Ask about a place, a year and an event, and Claude finds
+        what the place was called and which comune it belonged to, which records exist and which
+        office holds each copy today, gives that office's address and PEC, drafts the request letter
+        in Italian, and formats a citation for what you find.
+      </p>
+
+      <h2 id="add">Add it to Claude</h2>
+      <div class="card">
+        <p><strong>Server address</strong></p>
+        <span class="url">https://archives-mcp.fiorfelix.com/mcp</span>
+        <ol>
+          <li>
+            In Claude, open
+            <a href="https://claude.ai/customize/connectors">Connectors</a>, select
+            <strong>Add</strong>, then <strong>Add custom connector</strong>.
+          </li>
+          <li>
+            Name it <code>Italian Archive Navigator</code> and paste the address above. Click
+            <strong>Continue</strong>.
+          </li>
+          <li>Choose <strong>No sign-in</strong>, then <strong>Add</strong>.</li>
+          <li>In a new chat, turn the connector on from the tools menu and ask a question.</li>
+        </ol>
+        <p>
+          On Team and Enterprise plans, an Owner adds it under Organization settings, Connectors. No
+          account is needed; nothing is ever sent on your behalf.
+        </p>
+      </div>
+
+      <h2 id="ask">What to ask</h2>
+      <ul>
+        <li>"My great-grandfather was born in Corneto in 1880. Where is his birth record?"</li>
+        <li>"Which archive has the 1895 marriage records of Orvieto?"</li>
+        <li>"Where would a baptism from Perugia in 1840 be recorded?"</li>
+        <li>"Which Army office holds the service record of a soldier born in Pescia in 1890?"</li>
+        <li>"Write the letter asking the Comune for a full copy of that birth act."</li>
+        <li>"How should I cite birth act no. 45 of 1880 that I found in the archive's index?"</li>
+      </ul>
+
+      <h2>What it does</h2>
+      <table>
+        <tr>
+          <th>Tool</th>
+          <th>What you get</th>
+        </tr>
+        <tr>
+          <td>Place history</td>
+          <td>
+            Today's comune for any place name since 1861 (former names, merged comuni, hamlets),
+            with its name and province in a given year.
+          </td>
+        </tr>
+        <tr>
+          <td>Which records exist</td>
+          <td>
+            The registration system in force (Napoleonic, pre-unification states, Italian civil
+            registration from 1866, parish registers, military records), what to expect, and who
+            holds each copy today.
+          </td>
+        </tr>
+        <tr>
+          <td>Archive contact</td>
+          <td>
+            Name, address and PEC of the Comune, State Archive or Army documentation office, from
+            official sources.
+          </td>
+        </tr>
+        <tr>
+          <td>Request letter</td>
+          <td>
+            A formal letter in Italian with an English summary and a checklist of attachments.
+            Returned as text: you review it and send it yourself.
+          </td>
+        </tr>
+        <tr>
+          <td>Register guide</td>
+          <td>
+            What to expect inside a register: how acts are numbered, where the index is, typical
+            wording, and steps for reading it.
+          </td>
+        </tr>
+        <tr>
+          <td>Surname matching</td>
+          <td>
+            Finds your surnames among names read from records, allowing for old spellings and
+            letters that look alike in handwriting.
+          </td>
+        </tr>
+        <tr>
+          <td>Citation</td>
+          <td>One consistent citation format, with a label for how reliable the evidence is.</td>
+        </tr>
+      </table>
+
+      <h2 id="limits">Coverage and limits</h2>
+      <ul>
+        <li>
+          Coverage is deepest for <strong>Lazio, Umbria, Toscana and Marche</strong>. Place history
+          and office contacts cover all of Italy.
+        </li>
+        <li>
+          Every rule cites its source. Rules not yet confirmed from an official source are marked
+          <strong>unverified</strong> in every answer, so you know to check with the office.
+        </li>
+        <li>
+          It does not search Portale Antenati, FamilySearch or other websites, and it can't tell
+          whether a record has been put online.
+        </li>
+        <li>
+          It does not look up living people. Records of events less than 100 years old, or of people
+          born after 1940, are left to the Comune, which decides what it can release.
+        </li>
+        <li>Fees and response times are never stated: the letters ask the office for them.</li>
+      </ul>
+
+      <h2 id="sources">Sources</h2>
+      <ul>
+        <li>
+          Comuni, their history since 1861 and inhabited localities:
+          <a href="https://www.istat.it/">ISTAT</a> (Istituto Nazionale di Statistica).
+        </li>
+        <li>
+          Office addresses and PEC: <a href="https://www.indicepa.gov.it/">IndicePA</a> (Agenzia per
+          l'Italia Digitale), and the Italian Army's pages for its documentation offices.
+        </li>
+        <li>
+          Record rules: the <em>Guida generale degli Archivi di Stato italiani</em>, archive
+          inventories, and the laws themselves on Normattiva, each cited in the answer.
+        </li>
+      </ul>
+      <p>
+        Contains data from ISTAT and IndicePA, licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The data were
+        selected, normalised for searching and combined into one database; names of office holders
+        are not kept. Neither ISTAT nor AgID endorses this project.
+      </p>
+
+      <h2 id="support">Support</h2>
+      <p>
+        Questions, wrong answers or a record rule that needs correcting: write to
+        <a href="mailto:info@fiorfelix.com">info@fiorfelix.com</a> or open an issue on
+        <a href="https://github.com/fiorfelix/italian-archive-navigator/issues">GitHub</a>. The
+        source code is open, under the MIT licence.
+      </p>
+      <p class="note">
+        Italian Archive Navigator is an independent project. It is not affiliated with Anthropic,
+        the Italian Ministry of Culture, the Archivi di Stato, ISTAT, AgID or the Italian Army.
+      </p>
+    </main>
+    <footer>
+      fiorfelix · <a href="privacy">Privacy policy</a> ·
+      <a href="https://github.com/fiorfelix/italian-archive-navigator">Source code</a>
+    </footer>
+  </body>
+</html>

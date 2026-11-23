@@ -1,0 +1,158 @@
+﻿[
+  {
+    "COLUMN_NAME": "Codice_IPA",
+    "COLUMN_COMMENT": "Codice identificativo dell'ente",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 100
+  },
+  {
+    "COLUMN_NAME": "Denominazione_ente",
+    "COLUMN_COMMENT": "Denominazione dell'ente",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 1000
+  },
+  {
+    "COLUMN_NAME": "Codice_fiscale_ente",
+    "COLUMN_COMMENT": "Codice fiscale dell'ente",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 16
+  },
+  {
+    "COLUMN_NAME": "Codice_uni_uo",
+    "COLUMN_COMMENT": "Codice univoco dell'UO in IPA",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 6
+  },
+  {
+    "COLUMN_NAME": "Codice_uni_aoo",
+    "COLUMN_COMMENT": "Codice univoco dell'AOO a cui appartiene l'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 7
+  },
+  {
+    "COLUMN_NAME": "Codice_uni_uo_padre",
+    "COLUMN_COMMENT": "Codice univoco dell'Ufficio di livello superiore",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 6
+  },
+  {
+    "COLUMN_NAME": "Descrizione_uo",
+    "COLUMN_COMMENT": "Descrizione dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 1000
+  },
+  {
+    "COLUMN_NAME": "Data_istituzione",
+    "COLUMN_COMMENT": "Data di istituzione dell'UO (stringa nel formato yyyy-mm-dd)",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 10
+  },
+  {
+    "COLUMN_NAME": "Nome_responsabile",
+    "COLUMN_COMMENT": "Nome del responsabile dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "Cognome_responsabile",
+    "COLUMN_COMMENT": "Cognome del responsabile dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "Mail_responsabile",
+    "COLUMN_COMMENT": "Mail del responsabile dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "Telefono_responsabile",
+    "COLUMN_COMMENT": "Telefono del responsabile dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "Codice_comune_ISTAT",
+    "COLUMN_COMMENT": "Codice ISTAT del comune in cui ha sede l'UO",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 6
+  },
+  {
+    "COLUMN_NAME": "Codice_catastale_comune",
+    "COLUMN_COMMENT": "Codice catastale del comune in cui ha sede l'UO",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 4
+  },
+  {
+    "COLUMN_NAME": "CAP",
+    "COLUMN_COMMENT": "CAP della sede dell'UO",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "Indirizzo",
+    "COLUMN_COMMENT": "Indirizzo della sede dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 246
+  },
+  {
+    "COLUMN_NAME": "Telefono",
+    "COLUMN_COMMENT": "Telefono dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "Fax",
+    "COLUMN_COMMENT": "Fax dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "Mail1",
+    "COLUMN_COMMENT": "Indirizzo mail dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "Tipo_Mail1",
+    "COLUMN_COMMENT": "Tipologia dell'indirizzo mail dell'UO (pec/altro)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "Mail2",
+    "COLUMN_COMMENT": "Indirizzo mail dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "Tipo_Mail2",
+    "COLUMN_COMMENT": "Tipologia dell'indirizzo mail dell'UO (pec/altro)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "Mail3",
+    "COLUMN_COMMENT": "Indirizzo mail dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "Tipo_Mail3",
+    "COLUMN_COMMENT": "Tipologia dell'indirizzo mail dell'UO (pec/altro)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "Data_aggiornamento",
+    "COLUMN_COMMENT": "Maggiore tra la data di aggiornamento dati dell'UO e data verifica (stringa nel formato yyyy-mm-dd)",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 10
+  },
+  {
+    "COLUMN_NAME": "Url",
+    "COLUMN_COMMENT": "URL dell'UO",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  }
+]

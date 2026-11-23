@@ -1,0 +1,193 @@
+# Per-archive overrides for the Archivio di Stato di Viterbo, from its own inventory and the Guida
+# generale degli Archivi di Stato (read 2026-11-19).
+version: 1
+state: Archivio di Stato di Viterbo
+state_en: State Archive of Viterbo (per-archive overrides)
+rules:
+  - id: as-viterbo-stato-civile-1875-1992
+    title:
+      'Provincia di Viterbo: secondo originale dello stato civile all’Archivio di Stato di Viterbo
+      (1875–1992)'
+    territory:
+      provinces:
+        - VT
+    period:
+      from: '1875-01-01'
+      to: '1992-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - &id001
+        it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+      - it: Allegati e pubblicazioni di matrimonio
+        en: Supporting papers and marriage banns
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale con allegati e pubblicazioni, versato dal Tribunale di Viterbo nel 1993
+          en:
+            Second original with supporting papers and banns, transferred by the Tribunale of Viterbo in
+            1993
+        office_type: archivio_di_stato
+        note: Archivio di Stato di Viterbo, fondo Stato civile (1873–1992); most comuni from 1875.
+    fallbacks:
+      - it: 'Anni mancanti all’Archivio di Stato: chiedere al Comune (primo originale)'
+        en: 'Years missing at the State Archive: ask the Comune (first original)'
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - 'Many comuni have missing years in the State Archive series (e.g. Arlena di Castro lacks 1877,
+        1887, 1890, 1893): check the inventory before ordering.'
+      - Tarquinia and Montalto di Castro are not in this series (Tribunale di Civitavecchia).
+    source_url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+    sources:
+      - url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+        quote: Il fondo dello stato civile e’ stato versato dal Tribunale di Viterbo nel 1993
+      - url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+        quote: Consta di registri e allegati ( nascita, matrimonio, morte, pubblicazione di matrimonio, cittadinanza)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote: Atti dello stato civile (1870-1992). Versati recentemente dal Tribunale di Viterbo
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: as-viterbo-stato-civile-1871-1874
+    title: 'Provincia di Viterbo 1871–1874: anni non coperti dalla serie dell’Archivio di Stato'
+    territory:
+      provinces:
+        - VT
+    period:
+      from: '1871-01-01'
+      to: '1874-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+    fallbacks:
+      - it: 'Archivio di Stato di Viterbo: pochi registri dal 1873 (es. Gallese)'
+        en: 'State Archive of Viterbo: a few registers from 1873 (e.g. Gallese)'
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - The State Archive series for the province starts in 1875 for most comuni (1873 for a few), so for
+        these years ask the Comune first.
+    source_url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+    sources:
+      - url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+        quote: Stato Civile ( 1873 – 1992)
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: tribunale-civitavecchia-tarquinia-montalto
+    title: 'Tarquinia e Montalto di Castro: Tribunale di Civitavecchia, non Viterbo'
+    territory:
+      comuni:
+        - '056050'
+        - '056035'
+    period:
+      from: '1871-01-01'
+      to: '9999-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: 'Secondo originale: Tribunale di Civitavecchia (provincia di Roma); sede attuale da verificare'
+          en: 'Second original: Tribunale of Civitavecchia (province of Rome); current location to be confirmed'
+        office_type: archivio_di_stato
+        note: Not in the Archivio di Stato di Viterbo series. The Archivio di Stato di Roma lists no Italian civil-registration fonds (Guida generale; fonds list of December 2025); ask the Tribunale di Civitavecchia or the Comune.
+    fallbacks:
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - 'Confirmed: these comuni fall under the Tribunale di Civitavecchia and are absent from the Viterbo
+        civil-registry inventory. Not confirmed: where the Civitavecchia second originals are today. The
+        Archivio di Stato di Roma holds only 25 folders of the Tribunale di Civitavecchia (1871–1911) and
+        lists Napoleonic civil registration only (1810–1814), so the Comune is the reliable source.'
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote:
+          Non rientrano nella giurisdizione territoriale del tribunale i comuni di Montalto di Castro
+          e Tarquinia
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Tribunale di Civitavecchia, bb. 25 (1871-1911). Elenco 1970.
+      - url: https://archiviodistatoroma.cultura.gov.it/wp-content/uploads/2025/12/79466997ASSEGNAZIONE-FONDI-finale.pdf
+        quote: Atti di Stato civile 1810-1814 con docc. dal 1565 fino al 1849
+    verified: false
+    reviewed_for:
+      - Lazio
+  - id: as-viterbo-militare-classi-1876-1920
+    title: 'Provincia di Viterbo: liste di leva e ruoli matricolari all’Archivio di Stato di Viterbo'
+    territory:
+      provinces:
+        - VT
+    period:
+      from: '1852-01-01'
+      to: '1920-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Liste di leva (Ufficio di leva di Viterbo, 1852–1917; lacunoso 1852–1885)
+        en: Conscription lists (Viterbo conscription office, 1852–1917; gaps 1852–1885)
+      - it: 'Ruoli matricolari: Distretto militare di Orvieto (classi 1876–1917) e di Viterbo (classi 1901–1920)'
+        en:
+          'Service registers: Orvieto military district (classes 1876–1917) and Viterbo district (classes
+          1901–1920)'
+    holders:
+      - what:
+          it: Archivio di Stato di Viterbo
+          en: State Archive of Viterbo
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: 'Classi successive al 1920: Ufficio documentale del luogo di nascita'
+        en: 'Classes after 1920: Army documentation office for the place of birth'
+    notes:
+      - "Before 1897 the Viterbo circondario depended on the military district of Rome: the Archivio di Stato
+        di Roma holds that district's service registers (1843 and 1845–1895). For Tarquinia and Montalto di
+        Castro (circondario of Civitavecchia until 1927) it also holds the conscription lists of the Ufficio di
+        leva del circondario di Civitavecchia, 1850–1899."
+      - In 2022 the Archivio di Stato di Viterbo started digitising its military-district service records
+        (about 315,000 sheets) for consultation on its website.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote:
+          'Distretto militare di Orvieto, regg. 400 e rubb. 45 (classi 1876-1917): < Ruoli matricolari
+          >'
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote:
+          'Distretto militare di Viterbo, regg. 454 e rubb. 26 (classi 1901-1920): < Ruoli matricolari
+          >'
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote: Ufficio di leva di Viterbo, bb. e regg. 627 (1852-1917). Rubriche alfabetiche per classi.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Ufficio di leva del circondario di Civitavecchia, regg. 255 (1850- 1899). Liste di leva, liste di estrazione, decisioni del consiglio di leva.
+      - url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Determine_2022/Determina_34_2022_-_Avvio_RdO_Consip_per_digitalizzazione_dei_ruoli_matricolari_con_CIG_Z603784785-signed.pdf
+        quote: digitalizzazione di un lotto da definirsi su un totale di circa 315.000 fogli matricolari, appartenenti ai fondi documentari dei Distretti Militari conservati in ASVT
+    verified: true
+    reviewed_for:
+      - Lazio

@@ -1,0 +1,128 @@
+﻿[
+  {
+    "COLUMN_NAME": "cod_amm",
+    "COLUMN_COMMENT": "Codice identificativo dell'Ente a cui l'AOO appartiene",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 100
+  },
+  {
+    "COLUMN_NAME": "cod_aoo",
+    "COLUMN_COMMENT": "Codice identificativo dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 100
+  },
+  {
+    "COLUMN_NAME": "des_aoo",
+    "COLUMN_COMMENT": "Denominazione dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 1000
+  },
+  {
+    "COLUMN_NAME": "dat_istituz",
+    "COLUMN_COMMENT": "Data di istituzione dell'Area Organizzativa",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 10
+  },
+  {
+    "COLUMN_NAME": "Comune",
+    "COLUMN_COMMENT": "Comune della sede dell'Area organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 100
+  },
+  {
+    "COLUMN_NAME": "Cap",
+    "COLUMN_COMMENT": "Codice avviamento postale del Comune della sede dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "Provincia",
+    "COLUMN_COMMENT": "Provincia della sede dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "char",
+    "CHARACTER_MAXIMUM_LENGTH": 2
+  },
+  {
+    "COLUMN_NAME": "Regione",
+    "COLUMN_COMMENT": "Regione della sede dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 45
+  },
+  {
+    "COLUMN_NAME": "Indirizzo",
+    "COLUMN_COMMENT": "Indirizzo dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 246
+  },
+  {
+    "COLUMN_NAME": "Tel",
+    "COLUMN_COMMENT": "Telefono dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "nome_resp",
+    "COLUMN_COMMENT": "Nome del Responsabile dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "cogn_resp",
+    "COLUMN_COMMENT": "Cognome del Responsabile dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "mail_resp",
+    "COLUMN_COMMENT": "E-mail del Responsabile dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "tel_resp",
+    "COLUMN_COMMENT": "Telefono del Responsabile dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "fax",
+    "COLUMN_COMMENT": "Fax del Responsabile dell'Area Organizzativa Omogenea",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 50
+  },
+  {
+    "COLUMN_NAME": "mail1",
+    "COLUMN_COMMENT": "Mail dell'Area Organizzativa Omogenea('null' se non valorizzata)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "tipo_mail1",
+    "COLUMN_COMMENT": "Indica il tipo di mail('null' se non valorizzato)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "mail2",
+    "COLUMN_COMMENT": "Mail dell'Area Organizzativa Omogenea('null' se non valorizzata)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "tipo_mail2",
+    "COLUMN_COMMENT": "Indica il tipo di mail('null' se non valorizzato)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  },
+  {
+    "COLUMN_NAME": "mail3",
+    "COLUMN_COMMENT": "Mail dell'Area Organizzativa Omogenea('null' se non valorizzata)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 256
+  },
+  {
+    "COLUMN_NAME": "tipo_mail3",
+    "COLUMN_COMMENT": "Indica il tipo di mail('null' se non valorizzato)",
+    "DATA_TYPE": "varchar",
+    "CHARACTER_MAXIMUM_LENGTH": 5
+  }
+]

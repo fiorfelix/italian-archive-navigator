@@ -1,0 +1,49 @@
+{
+  "name": "italian-archive-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only MCP server for Italian family-history research: place history, archive contacts, record rules, request letters.",
+  "type": "module",
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
+    "inspect": "npx -y @modelcontextprotocol/inspector@2.15.0 --server-url http://127.0.0.1:${PORT:-8788}/mcp --transport http",
+    "refresh-data": "tsx scripts/refresh-data.ts",
+    "usage-summary": "tsx scripts/usage-summary.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/express": "2.0.2",
+    "@modelcontextprotocol/node": "2.1.2",
+    "@modelcontextprotocol/server": "2.4.0",
+    "express": "5.3.0",
+    "fflate": "0.8.3",
+    "read-excel-file": "9.3.17",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.6",
+    "eslint": "10.15.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.14.0",
+    "prettier": "3.10.1",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.73.0",
+    "vitest": "5.1.0"
+  },
+  "license": "MIT"
+}

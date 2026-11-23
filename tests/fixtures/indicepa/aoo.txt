@@ -1,0 +1,12 @@
+﻿cod_amm	cod_aoo	des_aoo	dat_istituz	Comune	Cap	Provincia	Regione	Indirizzo	Tel	nome_resp	cogn_resp	mail_resp	tel_resp	fax	mail1	tipo_mail1	mail2	tipo_mail2	mail3	tipo_mail3
+m_bac	mbac-as-fr	Archivio di Stato di Frosinone	2009-08-01	Frosinone	03100	FR	Lazio	Piazzale De Matthaeis, 41	0775872522					0775270603	as-fr@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-bz	Archivio di Stato di Bolzano	2009-08-01	Bolzano	39100	BZ	Trentino-Alto Adige/Südtirol	Via Armando Diaz, 8	0471264295					0471407176	as-bz@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-le	Archivio di Stato di Lecce	2009-08-01	Lecce	73100	LE	Puglia	Via Alfonso Sozy Carafa, 15	0832246788					0832242166	as-le@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-sa-laz	Soprintendenza archivistica e bibliografica del Lazio	2016-01-26	Roma	00153	RM	Lazio	Via del Porto, 13	0667233716						sab-laz@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-mi	Archivio di Stato di Milano	2009-08-01	Milano	20121	MI	Lombardia	Via Senato, 10	027742161					02774216230	as-mi@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-rm	Archivio di Stato di Roma	2009-08-01	Roma	00186	RM	Lazio	Corso Rinascimento, 40	066819081						as-rm@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-vt	Archivio di Stato di Viterbo	2009-08-01	Viterbo	01100	VT	Lazio	Via Vincenzo Cardarelli, 18	0761253140						as-vt@pec.cultura.gov.it	Pec	null	null	null	null
+m_bac	mbac-as-bg	Archivio di Stato di Bergamo	2009-08-01	Bergamo	24124	BG	Lombardia	Via Fratelli Bronzetti, 24	035233131					035233981	as-bg@pec.cultura.gov.it	Pec	null	null	null	null
+m_d	E26597	AOO Matricola Esercito	2018-04-16	Roma	00185	RM	Lazio	Via Marsala, 104	06462070606						matricolaesercito@postacert.difesa.it	Pec	null	null	null	null
+m_d	GMIL	AOO SEGREDIFESA - Direzione Generale per il Personale Militare	2012-06-11	Roma	00143	RM	Lazio	Viale Dell'Esercito, 186	06469136569						persomil@postacert.difesa.it	Pec	null	null	null	null
+m_d	EUDOCEI	AOO Uffici Documentali dell'E.I. (UDOCEI)	2020-01-01	Roma	00197	RM	Lazio	Via Scipio Slataper, 2	0680991					06809954057	udocei@postacert.difesa.it	Pec	null	null	null	null

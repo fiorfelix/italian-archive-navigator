@@ -1,0 +1,59 @@
+# Military service records. Each rule says whether it is verified from an official source and cites
+# its sources.
+version: 1
+state: Documentazione militare
+state_en: Military records
+rules:
+  - id: militare-esercito-nazionale
+    title: 'Esercito: liste di leva, ruoli e fogli matricolari'
+    territory:
+      national: true
+    period:
+      from: '1842-01-01'
+      to: '9999-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Liste di leva (per comune e classe di nascita)
+        en: Conscription lists (by comune and birth class)
+      - it: Ruoli matricolari e fogli matricolari
+        en: Service registers and individual service records (fogli matricolari)
+    holders:
+      - what:
+          it: 'Classi più vecchie: liste di leva e ruoli matricolari all’Archivio di Stato della provincia'
+          en: 'Older classes: conscription lists and service registers at the provincial State Archive'
+        office_type: archivio_di_stato
+      - what:
+          it: 'Classi più recenti (truppa, sottufficiali, ufficiali di complemento): Ufficio documentale del luogo di nascita'
+          en: 'Later classes (enlisted men, NCOs, reserve officers): Army documentation office for the place of birth'
+        office_type: ufficio_documentale_militare
+      - what:
+          it: 'Ufficiali in servizio permanente, dal 10° anno dalla morte (20° per i generali): Ministero della Difesa (Persomil, 6ª Divisione); prima, Ufficio documentale di residenza'
+          en: 'Career officers, from the 10th year after death (20th for generals): Ministry of Defence (Persomil, 6th Division); before that, the documentation office of residence'
+        office_type: ministero_difesa
+    fallbacks:
+      - it: Liste di leva presso il Comune
+        en: Conscription lists kept by the Comune
+    notes:
+      - The birth class from which records are at the Army rather than the State Archive differs by archive;
+        per-archive cut-offs belong in data/rules/it/overrides/.
+      - The Army part (place of birth for enlisted men; Persomil for officers) follows the Ministry of Defence
+        guide. By law, conscription lists go to the State Archive seventy years after the birth year of the
+        class; which classes of service registers an archive holds is set per archive in the overrides.
+    source_url: https://www.difesa.it/sgd/staff/dg/persomil/documentazione-matricolare/fogli-matricolaristato-di-servizio/24820.html
+    sources:
+      - url: https://www.difesa.it/sgd/staff/dg/persomil/documentazione-matricolare/fogli-matricolaristato-di-servizio/24820.html
+        quote: indirizzata direttamente agli Enti competenti così come individuati dagli schemi "Guida Matricolare"
+      - url: https://www.difesa.it/assets/allegati/24820/tabella_sito_ei_2be_.2024.03.08.10.31.48.830.pdf
+        quote: 'UFFICIALI DI COMPLEMENTO RUOLO ESAURIMENTO SOTTUFFICIALI TRUPPA: UFFICIO DOCUMENTALE DEL LUOGO DI NASCITA'
+      - url: https://www.difesa.it/assets/allegati/24820/tabella_sito_ei_2be_.2024.03.08.10.31.48.830.pdf
+        quote: 'UFFICIALI ... Dopo il compimento del 10° anno dalla morte: DIREZIONE GENERALE PER IL PERSONALE MILITARE 6^ DIVISIONE- Servizio Esercito'
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41
+        quote: Le liste di leva e di estrazione sono versate settant'anni dopo l'anno di nascita della classe cui si riferiscono.
+    verified: true
+    reviewed_for:
+      - Lazio
+      - Umbria
+      - Toscana
+      - Marche

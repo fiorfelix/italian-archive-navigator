@@ -1,0 +1,111 @@
+# What to expect inside a register, by registration regime (regime codes as in data/rules).
+# Each note says whether it is confirmed from an official source; "typical" notes are not.
+version: 1
+regimes:
+  italian_civil:
+    title: Italian civil registration (stato civile), 1866 onwards
+    notes:
+      - text: 'Each comune keeps four registers per year: citizenship, births, marriages and deaths
+          (plus a register of marriage banns).'
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 14: In ciascun ufficio di stato civile si debbono tenere i seguenti registri: 1.° Di cittadinanza; 2.° Di nascita; 3.° Di matrimonio; 4.° Di morte.'
+        verified: true
+      - text: 'Each act has a running number in the margin, with the name of the person it concerns
+          written under the number: scan the margins to find a surname quickly.'
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: "Art. 17: ... portare un numero d'ordine progressivo, e sotto al numero il nome e cognome della persona cui l'atto si riferisce."
+        verified: true
+      - text:
+          "Each year's register ends with an alphabetical index by surname (indice annuale), made
+          when the register is closed on 1 January. Read it first: it gives the act number."
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 30: ... un indice in ordine alfabetico dei cognomi di coloro, cui gli atti si riferiscono'
+        verified: true
+      - text: 'Every ten years a ten-year index (indice decennale) is compiled, often bound as a
+          separate volume: useful when the year is not known.'
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: "Art. 31: ... sarà compilato, nel gennaio dell'anno successivo ad ogni decennio, un indice dei dieci anni precedenti"
+        verified: true
+      - text: "Supporting papers (allegati) and the banns register exist only in the copy deposited
+          with the Tribunale, today usually at the State Archive, not in the Comune's copy."
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 41: I volumi sono trasmessi coi registri corrispondenti al procuratore del Re per essere depositati presso la cancelleria del tribunale.'
+        verified: true
+      - text: 'Annotations in the margin record later events (marriage, death, recognition,
+          corrections): read the margins of the act as well as its body.'
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 54: In margine agli atti di nascita si farà annotazione ... degli atti di matrimonio e delle sentenze di rettificazione'
+        verified: true
+      - text: 'Typical opening of an act: "L''anno milleottocento…, addì … del mese di …, a ore …,
+          nella Casa comunale. Avanti di me … Ufficiale dello Stato Civile … è comparso …".
+          Dates and numbers are written out in words.'
+        source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 19: Qualunque quantità che si voglia esprimere con cifre numeriche sarà scritta in lettere per disteso come le date.'
+        verified: false
+      - text: 'From 1939 a new regulation changed the layout of the registers (parts and series);
+          details are not covered here.'
+        verified: false
+  napoleonic:
+    title: Napoleonic civil registration (stato civile napoleonico)
+    notes:
+      - text: 'Registers were kept in duplicate and closed at the end of each year: one copy for the
+          Comune, one for the court of first instance (often at the State Archive today).'
+        source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: "I registri in duplice copia dovevano essere chiusi e firmati alla fine di ogni anno dall'ufficiale di stato civile."
+        verified: true
+      - text: 'Supporting documents (procure and others) were deposited with the court of first
+          instance.'
+        source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: 'Le procure e gli altri documenti allegati agli atti di stato civile dovevano essere firmati'
+        verified: true
+      - text: 'Typical: acts written in Italian or French on printed forms; ten-year tables (tavole
+          decennali) may exist. Check the end of each volume for an index.'
+        verified: false
+  restoration_civil:
+    title: Civil registration in the Restoration states
+    notes:
+      - text: 'Typical: registers organised by year and comune, often on printed forms, with an
+          index at the end of the volume. Practice varied by state; check the volume.'
+        verified: false
+  tuscan_civil:
+    title: Tuscan civil registration (1814/1817–1865)
+    notes:
+      - text: 'The state registry in Florence holds summaries (1814–1817), registers by community
+          (1818–1838), monthly extracts by community (1839–1865) and general indexes; parish
+          registers remain the originals.'
+        source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: '< Repertori generali > 18 18- 1865, regg. 372.'
+        verified: true
+  parish_civil:
+    title: Parish registers serving as civil records
+    notes:
+      - text: 'Typical: parish registers of baptisms, marriages and burials, often in Latin; given
+          names may be latinised (Ioannes, Iosephus, Maria); godparents are listed at baptisms.
+          Indexes are uncommon: read in date order.'
+        verified: false
+  parish_only:
+    title: Parish registers only (no civil registration)
+    notes:
+      - text: 'Typical: parish registers of baptisms, marriages and burials, often in Latin; given
+          names may be latinised (Ioannes, Iosephus, Maria); godparents are listed at baptisms.
+          Indexes are uncommon: read in date order. Status animarum (parish censuses) list
+          households.'
+        verified: false
+  foreign_parish:
+    title: Records of a foreign state (before annexation)
+    notes:
+      - text: "Typical: parish registers kept under the former state's rules, sometimes in German or
+          Latin, with printed column headings. Check the volume for an index."
+        verified: false
+  military_records:
+    title: Military conscription and service records
+    notes:
+      - text: 'Conscription lists (liste di leva) are by comune and birth class; service registers
+          (ruoli matricolari) are by military district and class, with alphabetical name
+          indexes (rubriche) for each class.'
+        source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Viterbo_.pdf
+        quote: Ufficio di leva di Viterbo, bb. e regg. 627 (1852-1917). Rubriche alfabetiche per classi.
+        verified: true
+      - text: 'Typical: a service record (foglio matricolare) gives a physical description,
+          occupation, parents, residence and the full service history, with later annotations.'
+        verified: false

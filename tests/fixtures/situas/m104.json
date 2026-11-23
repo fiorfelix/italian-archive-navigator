@@ -1,0 +1,126 @@
+{
+  "REPORT NAME": "Comuni con cambio denominazione",
+  "REPORT DESCRIZIONE": "Il report restituisce l'elenco dei comuni che, nel periodo di tempo impostato per la ricerca, hanno cambiato la propria denominazione con l’anno e la data di decorrenza dell’evento.  Tutti i campi sono descritti con maggior dettaglio nella legenda del file.",
+  "COL_DETAILS": [
+    {
+      "COLNAME": "ANNO",
+      "LABEL": "Anno evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Anno di decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS",
+      "LABEL": "Sigla Provincia/Uts",
+      "NOTE": "Alle province del Regno d’Italia (1861-1947) è assegnata la sigla automobilistica della corrispondente provincia esistente al 1948 e di quella al 1947 nel caso di Pola, Fiume e Zara. Alla Provincia della Venezia Giulia (nel 1923 scorporata nelle Province di Udine, Trieste, Pola, Fiume e Zara) è assegnata convenzionalmente la denominazione estesa. Alla Venezia Tridentina è assegnata la sigla della corrispondente Provincia di Trento.",
+      "LINK": "",
+      "GUIDA": "Elaborazione a fini statistici della sigla automobilistica assegnata alla provincia/unità territoriale sovracomunale di appartenenza del comune prima dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS",
+      "LABEL": "Codice Provincia/Uts",
+      "NOTE": "Codice di tre caratteri alfanumerici con validità nell’intervallo 001-111 per le province e 081-089 per i liberi consorzi quando subentrati alle omonime ex province. Il codice delle città metropolitane è, invece, creato sommando '200' al codice della provincia corrispondente. Ai soli fini statistici, permangono i codici delle soppresse province del Friuli-Venezia Giulia, cessate secondo le modalità espresse con L. r. n. 20/2016. Le Province soppresse e cedute a stato estero sono così identificate: 701=Fiume, 702=Pola, 703=Zara. Le province soppresse del Regno d'Italia (1861-1923) sono così identificate: 801=Venezia Giulia; 802= Venezia Tridentina.",
+      "LINK": "",
+      "GUIDA": "Codice Istat della provincia o unità territoriale sovracomunale (uts) di appartenenza del comune prima dell'evento.\nLe Unità territoriali sovracomunali, definite a fini statistici, ricomprendono, a partire dal 2015, oltre le province anche le città metropolitane, i liberi consorzi e le unità non amministrative (ex Province del Friuli-Venezia Giulia).",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "PRO_COM_T",
+      "LABEL": "Codice Comune",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat di sei caratteri in formato alfanumerico del comune alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE",
+      "LABEL": "Denominazione precedente",
+      "NOTE": "La denominazione ufficiale dei Comuni della Provincia di Bolzano/Bozen e di alcuni Comuni del Friuli-Venezia Giulia è definita dall'associazione del nome italiano a quello straniero. Per le denominazioni bilingue è previsto l'uso del simbolo separatore: \"/\" per i Comuni della Provincia di Bolzano/Bozen, e \"-\" per tutti gli altri.",
+      "LINK": "",
+      "GUIDA": "Denominazione italiana e straniera del comune precedente alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_A",
+      "LABEL": "Denominazione precedente (straniera)",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominazione precedente del comune in lingua diversa dall'italiano",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DATA_INIZIO_AMMINISTRATIVA",
+      "LABEL": "Data evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Data decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "DATA"
+    },
+    {
+      "COLNAME": "COMUNE_REL",
+      "LABEL": "Nuova denominazione",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Nuova denominazione del comune (italiana e straniera) valida alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_A_REL",
+      "LABEL": "Nuova denominazione (straniera)",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Nuova denominazione del comune in lingua divrsa dall'italiano",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "PRO_COM_T_REL",
+      "LABEL": "Codice Comune associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat di sei caratteri in formato alfanumerico del comune associato alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS_REL",
+      "LABEL": "Codice Provincia/Uts associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat della provincia/uts associato alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS_REL",
+      "LABEL": "Sigla provincia/uts associata",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Sigla della provincia o unità territoriale sovracomunale (Uts) associata alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+# Test fixture only. The real file is data/curated/offices.yaml.
+version: 1
+archivi_di_stato:
+  - {
+      province: VT,
+      aoo: mbac-as-vt,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - province: LO
+    aoo: mbac-as-mi
+    verified: false
+    note: Test entry for a province without its own archive.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+pointers:
+  ufficio_documentale_militare:
+    title: Ufficio documentale dell'Esercito
+    rule: Test rule.
+    rule_source_url: https://example.org/rule
+    directory_url: https://example.org/directory
+    directory_note: Test directory.
+    offices: [EUDOCEI, GMIL]
+    by_province:
+      - provinces: [VT]
+        name: Ufficio Documentale di prova
+        address: Via di Prova 1, 06100 Perugia
+        pec: prova@postacert.example.org
+        source_url: https://example.org/ufficio
+        quote: competente per la provincia di prova
+        note: Test note.
+        verified: true
+    verified: false
+  diocesi:
+    title: Diocesi
+    rule: Test rule.
+    directory_url: https://example.org/diocesi
+    directory_note: Test directory.
+    offices: []
+    verified: false

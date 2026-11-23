@@ -1,0 +1,90 @@
+{
+  "resultset": [
+    {
+      "ANNO": "2015",
+      "TIPO_UTS": "3",
+      "DESC_TIPO_UTS": "Città metropolitana",
+      "COD_UTS": "258",
+      "DEN_UTS": "Roma",
+      "SIGLA_UTS": "RM",
+      "COD_VARIAZIONE": "CSCT",
+      "DATA_INIZIO_AMMINISTRATIVA": "2015-01-01T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    },
+    {
+      "ANNO": "1934",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "059",
+      "DEN_UTS": "Littoria",
+      "SIGLA_UTS": "LT",
+      "COD_VARIAZIONE": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1934-10-26T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    },
+    {
+      "ANNO": "1927",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "056",
+      "DEN_UTS": "Viterbo",
+      "SIGLA_UTS": "VT",
+      "COD_VARIAZIONE": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1927-01-12T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    },
+    {
+      "ANNO": "1927",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "057",
+      "DEN_UTS": "Rieti",
+      "SIGLA_UTS": "RI",
+      "COD_VARIAZIONE": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1927-01-12T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    },
+    {
+      "ANNO": "1927",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "060",
+      "DEN_UTS": "Frosinone",
+      "SIGLA_UTS": "FR",
+      "COD_VARIAZIONE": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1927-01-12T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    },
+    {
+      "ANNO": "1871",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "058",
+      "DEN_UTS": "Roma",
+      "SIGLA_UTS": "RM",
+      "COD_VARIAZIONE": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "DEN_UTS_REL": "Stato estero"
+    }
+  ]
+}

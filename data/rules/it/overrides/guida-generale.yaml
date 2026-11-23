@@ -1,0 +1,894 @@
+# Per-archive overrides from the Guida generale degli Archivi di Stato italiani (official PDFs on
+# archivi.cultura.gov.it, read 2026-11-19). Quotes are as extracted from the scanned PDFs, so their
+# spacing can be irregular.
+version: 1
+state: Archivi di Stato (Guida generale)
+state_en: State Archives, from the Guida generale
+rules:
+  - id: as-perugia-stato-civile-1861-1899
+    title:
+      'Provincia di Perugia: secondo originale 1861–1899 all’Archivio di Stato di Perugia (Tribunale
+      di Perugia)'
+    territory:
+      provinces:
+        - PG
+    period:
+      from: '1861-01-01'
+      to: '1899-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - &id001
+        it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale (dal Tribunale) all’Archivio di Stato di Perugia
+          en: Second original (from the Tribunale) at the State Archive of Perugia
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote: T r i b u n a l e d i P e r u g i a , bb. 2.881, rubb. 31 e regg. 11.714 (1809-1940).
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote: < Stato civile > 1861-l 899, bb. 1.585 e regg, 11.025.
+    verified: true
+    reviewed_for:
+      - Umbria
+  - id: as-terni-stato-civile-1861-1900
+    title: 'Comuni del Tribunale di Terni: secondo originale 1861–1900 all’Archivio di Stato di Terni'
+    territory:
+      comuni:
+        - '055001'
+        - '055003'
+        - '055004'
+        - '055006'
+        - '055008'
+        - '055022'
+        - '055012'
+        - '055014'
+        - '055015'
+        - '055016'
+        - '055019'
+        - '055032'
+    period:
+      from: '1861-01-01'
+      to: '1900-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - *id001
+      - it: Pubblicazioni di matrimonio, atti di cittadinanza
+        en: Marriage banns, citizenship acts
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale (dal Tribunale) all’Archivio di Stato di Terni
+          en: Second original (from the Tribunale) at the State Archive of Terni
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+      - With gaps. Includes banns and citizenship acts.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+        quote: A t t i d e l l o s t a t o c i v i l e , regg. 3.011 (1861-1900 con lacune).
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+        quote: 'Il fondo, proveniente dal tribunale di Terni, comprende: atti di morte, atti di nasci-'
+    verified: true
+    reviewed_for:
+      - Umbria
+  - id: as-pistoia-stato-civile-1866-1903
+    title: 'Comuni del Tribunale di Pistoia: secondo originale 1866–1903 all’Archivio di Stato di Pistoia'
+    territory:
+      comuni:
+        - '047003'
+        - '047023'
+        - '047005'
+        - '047006'
+        - '047007'
+        - '047008'
+        - '047009'
+        - '047010'
+        - '047011'
+        - '047012'
+        - '047013'
+        - '047014'
+        - '047024'
+        - '047016'
+        - '047018'
+        - '047020'
+        - '047017'
+        - '047021'
+    period:
+      from: '1866-01-01'
+      to: '1903-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale (dal Tribunale) all’Archivio di Stato di Pistoia
+          en: Second original (from the Tribunale) at the State Archive of Pistoia
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+      - Napoleonic and Restoration registers of Pistoia stay in the comune archives.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pistoia_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pistoia_.pdf
+        quote: Atti dello stato civile, regg. 5.057 (1866-1903).
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-massa-stato-civile-1852-1865
+    title: 'Lunigiana e Garfagnana (Ducato di Modena): stato civile 1852–1865 all’Archivio di Stato di Massa'
+    territory:
+      first_provinces:
+        - MS
+    period:
+      from: '1852-01-01'
+      to: '1865-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: restoration_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Atti dello stato civile della Lunigiana e della Garfagnana, Archivio di Stato di Massa
+          en: Civil registers of Lunigiana and Garfagnana, State Archive of Massa
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+      - The Guida lists these series from 1852; earlier years are not stated.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: Atti dello stato civile della Lunigiana, bb. 223eregg. 603
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: Atti dello stato civile della Garfagnana, bb. 78 e regg.
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-lucca-stato-civile-principato-1807-1814
+    title: 'Principato di Lucca: stato civile 1807–1814 all’Archivio di Stato di Lucca'
+    territory:
+      first_provinces:
+        - LU
+    period:
+      from: '1807-01-01'
+      to: '1814-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: napoleonic
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Atti dello stato civile del principato (circondari di Lucca, Massa, Castelnuovo)
+          en: Civil registers of the Principality (Lucca, Massa, Castelnuovo districts)
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: A t t i d e l l o s t a t o c i v i l e d e l p r i n c i p a t o , r e g g . 100(1807-1814).
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-pesaro-parrocchiali-1861-1865
+    title: 'Provincia di Pesaro e Urbino 1861–1865: registri parrocchiali versati dal Tribunale'
+    territory:
+      provinces:
+        - PU
+    period:
+      from: '1861-01-01'
+      to: '1865-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: parish_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Libri parrocchiali 1861–1865 versati dal Tribunale (Archivio di Stato di Pesaro)
+          en: Parish registers 1861–1865 deposited by the Tribunale (State Archive of Pesaro)
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote: L i b r i p a r r o c c h i a l i , regg. 3.466 (1861-1865).
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote: Comprende i registri, versati dal tribunale italiano, delle parrocchie
+    verified: true
+    reviewed_for:
+      - Marche
+  - id: as-laquila-cittaducale
+    title:
+      'Ex circondario di Cittaducale (Regno di Napoli): atti dello stato civile all’Archivio di Stato
+      dell’Aquila'
+    territory:
+      regions:
+        - Lazio
+      first_provinces:
+        - AQ
+    period:
+      from: '1809-01-01'
+      to: '1865-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: restoration_civil
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Atti dello stato civile del circondario di Cittaducale (Archivio di Stato dell’Aquila)
+          en: Civil registers of the Cittaducale district (State Archive of L’Aquila)
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Primo originale presso il Comune
+        en: First original at the Comune
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more years
+        now.
+      - The Archivio di Stato di Rieti refers these registers to L’Aquila; find_archive_contact for Rieti
+        returns Rieti, so ask L’Aquila.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Rieti_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Rieti_.pdf
+        quote: Atti dello stato civile del circondario di Cittadu-
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Rieti_.pdf
+        quote: c a l e , vedi Guida, 11, AS L’Aquila, p. 458.
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: as-roma-militare
+    title: 'Provincia RM: documentazione di leva e matricolare all’Archivio di Stato di Roma'
+    territory:
+      provinces:
+        - RM
+    period:
+      from: '1843-01-01'
+      to: '1906-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Liste di leva (Ufficio di leva di Roma), classi 1850–1906, con lacune
+        en: Conscription lists, classes 1850–1906, with gaps
+      - it: Ruoli e fogli matricolari del Distretto militare di Roma, 1843 e 1845–1895
+        en: Service registers and records, Rome military district, 1843 and 1845–1895
+    holders:
+      - what:
+          it: Archivio di Stato di Roma
+          en: State Archive of Roma
+        office_type: archivio_di_stato
+    fallbacks: &id002
+      - it: 'Classi successive: Ufficio documentale del luogo di nascita'
+        en: 'Later classes: Army documentation office for the place of birth'
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - 'Also: conscription lists of the Civitavecchia district 1850–1899 and Orvieto district service registers
+        1859–1915.'
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Liste di leva, classi 1850-1906.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: D i s t r e t t o m i 1 i t a r e d i R o m a , regg. 543, bb. 2 e rubb. 30 (1843 e 1845-1895)
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: as-latina-militare
+    title: 'Provincia LT: documentazione di leva e matricolare all’Archivio di Stato di Latina'
+    territory:
+      provinces:
+        - LT
+    period:
+      from: '1854-01-01'
+      to: '1909-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Registri di leva e di estrazione, classi 1854–1901
+        en: Conscription and draw registers, classes 1854–1901
+      - it: Ruoli matricolari, classi 1876–1909
+        en: Service registers, classes 1876–1909
+    holders:
+      - what:
+          it: Archivio di Stato di Latina
+          en: State Archive of Latina
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Latina_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Latina_.pdf
+        quote: < Registri di leva e di estrazione > classi 1854-1901
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Latina_.pdf
+        quote: < Ruoli matricolari > classi 1876-1909
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: as-frosinone-militare
+    title: 'Provincia FR: documentazione di leva e matricolare all’Archivio di Stato di Frosinone'
+    territory:
+      provinces:
+        - FR
+    period:
+      from: '1877-01-01'
+      to: '1908-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ruoli matricolari del Distretto militare di Frosinone (anche del distretto di Gaeta), classi 1877–1908
+        en: Service registers, Frosinone military district (also Gaeta), classes 1877–1908
+    holders:
+      - what:
+          it: Archivio di Stato di Frosinone
+          en: State Archive of Frosinone
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Frosinon_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Frosinon_.pdf
+        quote: Distretto militare di Frosinone, regg. 229 (classi 1877-1908)
+    verified: true
+    reviewed_for:
+      - Lazio
+  - id: as-perugia-militare
+    title: 'Provincia PG: documentazione di leva e matricolare all’Archivio di Stato di Perugia'
+    territory:
+      provinces:
+        - PG
+    period:
+      from: '1843-01-01'
+      to: '1903-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ruoli matricolari del Distretto militare di Spoleto, classi 1843–1903
+        en: Service registers, Spoleto military district, classes 1843–1903
+    holders:
+      - what:
+          it: Archivio di Stato di Perugia
+          en: State Archive of Perugia
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote:
+          'D i s t r e t t o m i l i t a r e d i S p o l e t o , regg.282erubb. 36(classi 1843- 1903):
+          < Ruoli matricolari >'
+    verified: true
+    reviewed_for:
+      - Umbria
+  - id: as-terni-militare
+    title: 'Provincia TR: documentazione di leva e matricolare all’Archivio di Stato di Terni'
+    territory:
+      provinces:
+        - TR
+    period:
+      from: '1839-01-01'
+      to: '1931-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Terni, classi 1874–1919 e 1929–1931
+        en: Terni conscription office, classes 1874–1919 and 1929–1931
+      - it: Distretto militare di Orvieto (1839–1922)
+        en: Orvieto military district (1839–1922)
+    holders:
+      - what:
+          it: Archivio di Stato di Terni
+          en: State Archive of Terni
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+        quote: U f f i c i o d i l e v a d i . T e r n i , regg. e ~011. 315 (classi 1874-1919 e 1929-1931)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+        quote: D i s t r e t t o m i l i t a r e d i O r v i e t o , regg. 167 (1839-1922)
+    verified: true
+    reviewed_for:
+      - Umbria
+  - id: as-firenze-militare
+    title: 'Provincia FI: documentazione di leva e matricolare all’Archivio di Stato di Firenze'
+    territory:
+      provinces:
+        - FI
+    period:
+      from: '1842-01-01'
+      to: '1985-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Firenze, classi 1842–1916
+        en: Florence conscription office, classes 1842–1916
+      - it: Ruoli matricolari del Distretto militare di Firenze, classi 1871–1985
+        en: Service registers, Florence military district, classes 1871–1985
+    holders:
+      - what:
+          it: Archivio di Stato di Firenze
+          en: State Archive of Firenze
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - 'Also at the Archivio di Stato di Firenze: Arezzo district classes 1875–1895 and Pistoia district
+        classes 1871–1895.'
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: U f f i c i o d i l e v a d i F i r e n z e , regg. 4.463 (classi 1842- 19 16)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: D i s t r e t t o m i l i t a r e d i F i r e n z e , regg. 312 (classi 1871-1985)
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-arezzo-militare
+    title: 'Provincia AR: documentazione di leva e matricolare all’Archivio di Stato di Arezzo'
+    territory:
+      provinces:
+        - AR
+    period:
+      from: '1860-01-01'
+      to: '1949-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Arezzo, classi 1860–1949
+        en: Arezzo conscription office, classes 1860–1949
+    holders:
+      - what:
+          it: Archivio di Stato di Arezzo
+          en: State Archive of Arezzo
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - Arezzo district service registers (classes 1875–1895) are at the Archivio di Stato di Firenze.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Arezzo_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Arezzo_.pdf
+        quote:
+          Ufficio di leva di Arezzo, regg. 1.529 (classi 1860-1949). Distretto militare di Arezzo, vedi
+          AS Firenze.
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-grosseto-militare
+    title: 'Provincia GR: documentazione di leva e matricolare all’Archivio di Stato di Grosseto'
+    territory:
+      provinces:
+        - GR
+    period:
+      from: '1842-01-01'
+      to: '1909-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Grosseto, classi 1842–1906
+        en: Grosseto conscription office, classes 1842–1906
+      - it: Ruoli matricolari del Distretto militare di Grosseto, classi 1875–1905
+        en: Service registers, Grosseto military district, classes 1875–1905
+    holders:
+      - what:
+          it: Archivio di Stato di Grosseto
+          en: State Archive of Grosseto
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - Service registers of classes before 1875 (from 1841) are at the Archivio di Stato di Siena.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Grosseto_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Grosseto_.pdf
+        quote: U f f i c i o d i l e v a d i G r o s s e t o , regg. 134 (classi 1842-l 906)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Grosseto_.pdf
+        quote: < Ruoli matricolari > classi 1875-1905, regg. 76.
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-livorno-militare
+    title: 'Provincia LI: documentazione di leva e matricolare all’Archivio di Stato di Livorno'
+    territory:
+      provinces:
+        - LI
+    period:
+      from: '1842-01-01'
+      to: '1909-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Livorno, classi 1842–1909
+        en: Livorno conscription office, classes 1842–1909
+    holders:
+      - what:
+          it: Archivio di Stato di Livorno
+          en: State Archive of Livorno
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Livorno_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Livorno_.pdf
+        quote: U f f i c i o d i l e v a d i L i v o r n o , bb. e regg. 1.204 (classi 1842-1909)
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-lucca-militare
+    title: 'Provincia LU: documentazione di leva e matricolare all’Archivio di Stato di Lucca'
+    territory:
+      provinces:
+        - LU
+    period:
+      from: '1833-01-01'
+      to: '1918-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Lucca, classi 1833–1918
+        en: Lucca conscription office, classes 1833–1918
+    holders:
+      - what:
+          it: Archivio di Stato di Lucca
+          en: State Archive of Lucca
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: U f f i c i o d i l e v a d i L u c c a , regg. 1.389 (classi 1833-1918)
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-massa-militare
+    title: 'Provincia MS: documentazione di leva e matricolare all’Archivio di Stato di Massa'
+    territory:
+      provinces:
+        - MS
+    period:
+      from: '1828-01-01'
+      to: '1920-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Massa, classi 1828–1920
+        en: Massa conscription office, classes 1828–1920
+      - it: Distretto militare di Massa-Carrara, classi 1843–1896
+        en: Massa-Carrara military district, classes 1843–1896
+    holders:
+      - what:
+          it: Archivio di Stato di Massa
+          en: State Archive of Massa
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: U f f i c i o d i l e v a d i M a s s a , regg. 1.26 1 (classi 1828- 1920)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: Distretto militare di Massa-Carrara, bb. 489 e regg. 210 (classi 1843- 1896)
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-pisa-militare
+    title: 'Provincia PI: documentazione di leva e matricolare all’Archivio di Stato di Pisa'
+    territory:
+      provinces:
+        - PI
+    period:
+      from: '1844-01-01'
+      to: '1916-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Pisa, classi 1862–1916
+        en: Pisa conscription office, classes 1862–1916
+      - it: Ruoli matricolari del Distretto militare di Pisa, classi 1844–1906
+        en: Service registers, Pisa military district, classes 1844–1906
+    holders:
+      - what:
+          it: Archivio di Stato di Pisa
+          en: State Archive of Pisa
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pisa_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pisa_.pdf
+        quote: U f f i c i o d i l e v a d i P i s a , pacchi 72 e regg. 338 (classi 1862-1916)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pisa_.pdf
+        quote: D i s t r e t t o m i l i t a r e d i ’ P i s a , regg. e rubb. 196 (classi 1844- 1906)
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-siena-militare
+    title: 'Provincia SI: documentazione di leva e matricolare all’Archivio di Stato di Siena'
+    territory:
+      provinces:
+        - SI
+    period:
+      from: '1842-01-01'
+      to: '1920-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Siena, classi 1842–1920
+        en: Siena conscription office, classes 1842–1920
+      - it: Ruoli matricolari del Distretto militare di Siena, classi 1843–1908
+        en: Service registers, Siena military district, classes 1843–1908
+    holders:
+      - what:
+          it: Archivio di Stato di Siena
+          en: State Archive of Siena
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Siena_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Siena_.pdf
+        quote: U f f i c i o d i l e v a d i S i e n a , regg. e bb. 496 (classi 1842-1920)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Siena_.pdf
+        quote: D i s t r e t t o m i l i t a r e d i S i e n a , regg. 404 e bb. 2 (classi 1843-1908
+    verified: true
+    reviewed_for:
+      - Toscana
+  - id: as-ancona-militare
+    title: 'Provincia AN: documentazione di leva e matricolare all’Archivio di Stato di Ancona'
+    territory:
+      provinces:
+        - AN
+    period:
+      from: '1839-01-01'
+      to: '1904-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Ancona, liste di leva e di estrazione, classi 1839–1904
+        en: Ancona conscription office, conscription and draw lists, classes 1839–1904
+    holders:
+      - what:
+          it: Archivio di Stato di Ancona
+          en: State Archive of Ancona
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+        quote: U f f i c i o d i l e v a d i A n c o n a , regg. e fasce. 1.068 (classi 1839-1904)
+    verified: true
+    reviewed_for:
+      - Marche
+  - id: as-macerata-militare
+    title: 'Provincia MC: documentazione di leva e matricolare all’Archivio di Stato di Macerata'
+    territory:
+      provinces:
+        - MC
+    period:
+      from: '1842-01-01'
+      to: '1917-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Macerata, classi 1870–1917
+        en: Macerata conscription office, classes 1870–1917
+      - it: Ruoli matricolari del Distretto militare di Macerata, classi 1842–1909
+        en: Service registers, Macerata military district, classes 1842–1909
+    holders:
+      - what:
+          it: Archivio di Stato di Macerata
+          en: State Archive of Macerata
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Macerata_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Macerata_.pdf
+        quote: Ufficio di leva di Macerata, regg. 616 (classi 1870-1917)
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Macerata_.pdf
+        quote: < Ruoli matricolari > classi 1842-1909, regg. 315.
+    verified: true
+    reviewed_for:
+      - Marche
+  - id: as-ascoli-piceno-militare
+    title: 'Provincia AP: documentazione di leva e matricolare all’Archivio di Stato di Ascoli Piceno'
+    territory:
+      provinces:
+        - AP
+    period:
+      from: '1839-01-01'
+      to: '1908-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Ascoli Piceno, liste di leva, classi 1839–1908
+        en: Ascoli Piceno conscription office, conscription lists, classes 1839–1908
+      - it: Ruoli matricolari del Distretto militare di Ascoli Piceno, classi 1841–1898
+        en: Service registers, Ascoli Piceno military district, classes 1841–1898
+    holders:
+      - what:
+          it: Archivio di Stato di Ascoli Piceno
+          en: State Archive of Ascoli Piceno
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - The Guida does not say whether the Ascoli district also covered the former circondario of Fermo (today
+        province FM); for Fermo comuni ask the Archivio di Stato di Fermo as well.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ascolipi_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ascolipi_.pdf
+        quote: Ufficio di leva di Ascoli Piceno, regg. 649 (classi 1839-1908) < Liste di leva >
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ascolipi_.pdf
+        quote: Distretto militare di Ascoli Piceno, regg. 412 (classi 1841-1898) < Ruoli matricolari >
+    verified: true
+    reviewed_for:
+      - Marche
+  - id: as-pesaro-militare
+    title: 'Provincia PU: documentazione di leva e matricolare all’Archivio di Stato di Pesaro'
+    territory:
+      provinces:
+        - PU
+    period:
+      from: '1839-01-01'
+      to: '1916-12-31'
+    events:
+      - military
+    regime: military_records
+    records:
+      - it: Ufficio di leva di Pesaro, classi 1839–1916
+        en: Pesaro conscription office, classes 1839–1916
+      - it: Ruoli matricolari del Distretto militare di Pesaro, classi 1839–1870
+        en: Service registers, Pesaro military district, classes 1839–1870
+    holders:
+      - what:
+          it: Archivio di Stato di Pesaro
+          en: State Archive of Pesaro
+        office_type: archivio_di_stato
+    fallbacks: *id002
+    notes:
+      - Per the Guida generale degli Archivi di Stato (published 1981–1994); the archive may hold more classes
+        now.
+      - Pesaro district service registers for classes 1870–1879 are at the Archivio di Stato di Ancona.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote:
+          U f f i c i o d i l e v a d i P e s a r o , r e g g . 3 3 9 ( c l a s s i 1 8 3 9 - 1 9 1 6
+          )
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote:
+          D i s t r e t t o m i l i t a r e d i P e s a r o , r e g g . 108(classi 1 8 3 9 - 1 8 7 0
+          )
+    verified: true
+    reviewed_for:
+      - Marche

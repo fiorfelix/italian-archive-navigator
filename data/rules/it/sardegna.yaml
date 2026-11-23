@@ -1,0 +1,40 @@
+# Kingdom of Sardinia: parish-based registration from 1837 (in force from 1838). Each rule says
+# whether it is verified from an official source and cites its sources.
+version: 1
+state: Regno di Sardegna
+state_en: Kingdom of Sardinia
+rules:
+  - id: sardegna-parrocchiale-1837-1865
+    title: 'Regno di Sardegna: registri parrocchiali in duplice copia (1837–1865)'
+    territory:
+      regions:
+        - Piemonte
+        - Liguria
+        - Sardegna
+        - Valle d'Aosta/Vallée d'Aoste
+    period:
+      from: '1838-01-01'
+      to: '1865-12-31'
+    regime: parish_civil
+    records:
+      - it: Registri parrocchiali con valore civile, in duplice copia
+        en: Parish registers with civil validity, kept in duplicate
+    holders:
+      - what:
+          it: Esemplare parrocchiale
+          en: Parish copy
+        office_type: parrocchia
+      - what:
+          it: Seconda copia (Tribunale, oggi spesso all’Archivio di Stato)
+          en: Second copy (Tribunale, today often at the State Archive)
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []
+    events:
+      - birth
+      - marriage
+      - death

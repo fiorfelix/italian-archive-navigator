@@ -1,0 +1,76 @@
+{
+  "resultset": [
+    {
+      "ANNO": "1922",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058812",
+      "COMUNE": "Bagnorea",
+      "DATA_INIZIO_AMMINISTRATIVA": "1922-07-26T00:00:00Z",
+      "COMUNE_REL": "Bagnoregio",
+      "PRO_COM_T_REL": "058812",
+      "COD_UTS_REL": "058",
+      "SIGLA_UTS_REL": "RM"
+    },
+    {
+      "ANNO": "1922",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058964",
+      "COMUNE": "Corneto Tarquinia",
+      "DATA_INIZIO_AMMINISTRATIVA": "1922-06-10T00:00:00Z",
+      "COMUNE_REL": "Tarquinia",
+      "PRO_COM_T_REL": "058964",
+      "COD_UTS_REL": "058",
+      "SIGLA_UTS_REL": "RM"
+    },
+    {
+      "ANNO": "1911",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058975",
+      "COMUNE": "Toscanella",
+      "DATA_INIZIO_AMMINISTRATIVA": "1911-10-22T00:00:00Z",
+      "COMUNE_REL": "Tuscania",
+      "PRO_COM_T_REL": "058975",
+      "COD_UTS_REL": "058",
+      "SIGLA_UTS_REL": "RM"
+    },
+    {
+      "ANNO": "1872",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058839",
+      "COMUNE": "Castro",
+      "DATA_INIZIO_AMMINISTRATIVA": "1872-11-18T00:00:00Z",
+      "COMUNE_REL": "Castro dei Volsci",
+      "PRO_COM_T_REL": "058839",
+      "COD_UTS_REL": "058",
+      "SIGLA_UTS_REL": "RM"
+    },
+    {
+      "ANNO": "1872",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058964",
+      "COMUNE": "Corneto",
+      "DATA_INIZIO_AMMINISTRATIVA": "1872-10-18T00:00:00Z",
+      "COMUNE_REL": "Corneto Tarquinia",
+      "PRO_COM_T_REL": "058964",
+      "COD_UTS_REL": "058",
+      "SIGLA_UTS_REL": "RM"
+    },
+    {
+      "ANNO": "1863",
+      "SIGLA_UTS": "CN",
+      "COD_UTS": "004",
+      "PRO_COM_T": "004805",
+      "COMUNE": "Briga",
+      "DATA_INIZIO_AMMINISTRATIVA": "1863-01-11T00:00:00Z",
+      "COMUNE_REL": "Briga Marittima",
+      "PRO_COM_T_REL": "004805",
+      "COD_UTS_REL": "004",
+      "SIGLA_UTS_REL": "CN"
+    }
+  ]
+}

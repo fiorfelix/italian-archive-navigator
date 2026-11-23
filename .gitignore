@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+# Family-specific test cases: never committed (SPEC §3)
+tests/private/
+# Downloaded source files and the built database are reproducible via `npm run refresh-data`
+data/raw/
+data/*.sqlite
+data/*.sqlite-*
+.env
+*.log
+data/manual/*.csv
+# Private working notes and research (project brief, status, plans, saved sources): kept
+# locally, never published
+notes/
+research/

@@ -1,0 +1,707 @@
+# Year coverage of the Archivio di Stato di Viterbo civil-registry series, by comune, taken from its
+# inventory (64_Staciv.pdf, dated 3 August 2010). Parsed by word position and checked by hand.
+version: 1
+archive: Archivio di Stato di Viterbo
+fonds: Stato civile (1873–1992)
+source_url: https://archiviodistatoviterbo.cultura.gov.it/fileadmin/risorse/PDF/Inventari_on_line/64_Staciv.pdf
+source_date: '2010-08-03'
+read_on: '2026-11-19'
+verified: true
+notes:
+  - Second originals transferred by the Tribunale di Viterbo in 1993; registers and supporting papers.
+  - Viterbo city has a separate table by act type (from 1881) in the inventory; it is not encoded here.
+  - Magugnano could not be matched to a comune today and is listed by name only.
+series:
+  - name: Acquapendente
+    istat_code_today: '056001'
+    comune_today: Acquapendente
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1878
+      - 1879
+      - 1905
+      - 1906
+    inventory_note: 'MANCANO GLI ANNI: 1878, 1879, 1905 E 1906.'
+  - name: Arlena di Castro
+    istat_code_today: '056002'
+    comune_today: Arlena di Castro
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1887
+      - 1890
+      - 1893
+    inventory_note: 'MANCANO GLI ANNI: 1877, 1887, 1890 E 1893.'
+  - name: Attigliano
+    istat_code_today: '055006'
+    comune_today: Attigliano
+    from: 1923
+    to: 1928
+  - name: Bagnaia
+    istat_code_today: '056059'
+    comune_today: Viterbo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+      - 1888
+    inventory_note: 'MANCANO GLI ANNI: 1887 E 1888.'
+  - name: Bagnoregio
+    istat_code_today: '056003'
+    comune_today: Bagnoregio
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+      - 1899
+    inventory_note: 'MANCANO GLI ANNI: 1887 E 1899. MOLTI ANNI CONTENGONO ANCHE REGISTRI DI CASTEL CELLESI.'
+  - name: Barbarano Romano
+    istat_code_today: '056004'
+    comune_today: Barbarano Romano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+      - 1888
+    inventory_note: 'MANCANO GLI ANNI: 1887 E 1888.'
+  - name: Bassano in Teverina
+    istat_code_today: '056006'
+    comune_today: Bassano in Teverina
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1881
+      - 1898
+    inventory_note: 'MANCANO GLI ANNI: 1881 E 1898.'
+  - name: Bassano Romano
+    istat_code_today: '056005'
+    comune_today: Bassano Romano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1888
+    single_register_years:
+      - 1887
+    inventory_note: MANCA L'ANNO 1888. DEL 1887 C'E' UN SOLO REGISTRO.
+  - name: Blera
+    istat_code_today: '056007'
+    comune_today: Blera
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1881
+      - 1888
+    inventory_note: 'MANCANO GLI ANNI: 1881 E 1888.'
+  - name: Bolsena
+    istat_code_today: '056008'
+    comune_today: Bolsena
+    from: 1873
+    to: 1992
+    missing_years:
+      - 1888
+      - 1893
+      - 1909
+      - 1944
+      - 1963
+    inventory_note: 'MANCANO GLI ANNI: 1888, 1893, 1909, 1944, 1963.'
+  - name: Bomarzo
+    istat_code_today: '056009'
+    comune_today: Bomarzo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1883
+      - 1888
+      - 1893
+    inventory_note: MANCANO GLI ANNI 1883, 1888, 1893.
+  - name: Calcata
+    istat_code_today: '056010'
+    comune_today: Calcata
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1883
+      - 1887
+      - 1888
+      - 1893
+    inventory_note: MANCANO GLI ANNI 1883, 1887, 1888, 1893.
+  - name: Canepina
+    istat_code_today: '056011'
+    comune_today: Canepina
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1883
+      - 1887
+      - 1891
+      - 1895
+      - 1909
+      - 1941
+    inventory_note: 'MANCANO GLI ANNI: 1883, 1887, 1891, 1895, 1909, 1941.'
+  - name: Canino
+    istat_code_today: '056012'
+    comune_today: Canino
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1880
+      - 1895
+    inventory_note: 'MANCANO GLI ANNI: 1880 E 1895.'
+  - name: Capodimonte
+    istat_code_today: '056013'
+    comune_today: Capodimonte
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1876
+      - 1909
+    inventory_note: 'MANCANO GLI ANNI: 1876 E 1909.'
+  - name: Capranica
+    istat_code_today: '056014'
+    comune_today: Capranica
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1880
+      - 1895
+      - 1909
+    single_register_years:
+      - 1893
+    inventory_note: MANCANO GLI ANNI:1880, 1895, 1909. DEL 1893 C'E' UN SOLO REGISTRO.
+  - name: Caprarola
+    istat_code_today: '056015'
+    comune_today: Caprarola
+    from: 1876
+    to: 1992
+    missing_years:
+      - 1877
+      - 1889
+      - 1890
+      - 1967
+    single_register_years:
+      - 1880
+    inventory_note: "MANCANO GLI ANNI: 1877, 1889, 1890, 1967. DEL 1880 C'E' UN SOLO REGISTRO."
+  - name: Carbognano
+    istat_code_today: '056016'
+    comune_today: Carbognano
+    from: 1876
+    to: 1992
+    missing_years:
+      - 1877
+      - 1890
+    single_register_years:
+      - 1901
+    inventory_note: "MANCANO GLI ANNI: 1877, 1890. DEL 1901 C'E' UN SOLO REGISTRO."
+  - name: Castel Cellesi
+    istat_code_today: '056003'
+    comune_today: Bagnoregio
+    from: 1875
+    to: 1992
+    inventory_note: NOTEVOLMENTE INCOMPLETO ESSENDO STATA FRAZIONE DI BAGNOREGIO.
+  - name: Castel S'Elia
+    istat_code_today: '056017'
+    comune_today: Castel Sant'Elia
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1890
+      - 1966
+    inventory_note: 'MANCANO GLI ANNI: 1890 E 1966.'
+  - name: Castiglione in Teverina
+    istat_code_today: '056018'
+    comune_today: Castiglione in Teverina
+    from: 1875
+    to: 1992
+  - name: Celleno
+    istat_code_today: '056019'
+    comune_today: Celleno
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1966
+    inventory_note: MANCA L'ANNO 1966.
+  - name: Cellere
+    istat_code_today: '056020'
+    comune_today: Cellere
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1885
+    inventory_note: MANCA L'ANNO 1885.
+  - name: Civita Castellana
+    istat_code_today: '056021'
+    comune_today: Civita Castellana
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+      - 1881
+      - 1883
+      - 1885
+      - 1889
+      - 1890
+      - 1906
+    single_register_years:
+      - 1899
+      - 1907
+    inventory_note:
+      "MANCANO GLI ANNI: 1879, 1881, 1883, 1885, 1889, 1890, 1906. DEGLI ANNI 1899 E 1907
+      C'E' UN SOLO REGISTRO."
+  - name: Civitella d'Agliano
+    istat_code_today: '056022'
+    comune_today: Civitella d'Agliano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+      - 1883
+      - 1885
+      - 1889
+      - 1890
+    inventory_note: 'MANCANO GLI ANNI: 1879, 1883, 1885, 1889 E 1890.'
+  - name: Corchiano
+    istat_code_today: '056023'
+    comune_today: Corchiano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1889
+      - 1890
+    inventory_note: MANCANO GLI ANNI 1889 E 1890.
+  - name: Fabrica di Roma
+    istat_code_today: '056024'
+    comune_today: Fabrica di Roma
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+      - 1945
+    inventory_note: 'MANCANO GLI ANNI : 1887 E 1945.'
+  - name: Faleria
+    istat_code_today: '056025'
+    comune_today: Faleria
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+      - 1887
+      - 1945
+    inventory_note: 'MANCANO GLI ANNI: 1879, 1887, 1945.'
+  - name: Farnese
+    istat_code_today: '056026'
+    comune_today: Farnese
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1905
+      - 1909
+      - 1967
+    single_register_years:
+      - 1879
+    inventory_note: "MANCANO GLI ANNI: 1905, 1909, 1967. DEL 1879 C'E' UN SOLO REGISTRO."
+  - name: Gallese
+    istat_code_today: '056027'
+    comune_today: Gallese
+    from: 1873
+    to: 1992
+    missing_years:
+      - 1904
+      - 1907
+      - 1909
+    inventory_note: "MANCANO GLI ANNI: 1904, 1907, 1909. C'E' UN REGISTRO DEL 1873."
+  - name: Giove
+    istat_code_today: '055014'
+    comune_today: Giove
+    from: 1923
+    to: 1928
+    inventory_note: I REGISTRI VANNO DAL 1923 AL 1928.
+  - name: Gradoli
+    istat_code_today: '056028'
+    comune_today: Gradoli
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+    inventory_note: MANCA L'ANNO 1887.
+  - name: Graffignano
+    istat_code_today: '056029'
+    comune_today: Graffignano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1885
+    inventory_note: MANCA L'ANNO 1885.
+  - name: Grotte di Castro
+    istat_code_today: '056030'
+    comune_today: Grotte di Castro
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1885
+      - 1887
+      - 1893
+    inventory_note: 'MANCANO GLI ANNI: 1885, 1887 E 1893.'
+  - name: Grotte Santo Stefano
+    istat_code_today: '056059'
+    comune_today: Viterbo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1906
+      - 1953
+    inventory_note: 'MANCANO GLI ANNI: 1906 E 1953.'
+  - name: Ischia di Castro
+    istat_code_today: '056031'
+    comune_today: Ischia di Castro
+    from: 1875
+    to: 1992
+  - name: Latera
+    istat_code_today: '056032'
+    comune_today: Latera
+    from: 1875
+    to: 1992
+  - name: Lubriano
+    istat_code_today: '056033'
+    comune_today: Lubriano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1901
+    inventory_note: MANCA L'ANNO 1901.
+  - name: Magugnano
+    istat_code_today: null
+    comune_today: null
+    from: 1890
+    to: 1928
+    missing_years:
+      - 1908
+    single_register_years:
+      - 1894
+      - 1895
+      - 1910
+    inventory_note: MANCA L'ANNO 1908, DEGLI ANNI 1894, 1895 E 1910 C'E' UN SOLO REGISTRO.
+  - name: Marta
+    istat_code_today: '056034'
+    comune_today: Marta
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1886
+      - 1887
+      - 1901
+    inventory_note: 'MANCANO GLI ANNI: 1886, 1887 E 1901.'
+  - name: Montefiascone
+    istat_code_today: '056036'
+    comune_today: Montefiascone
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1885
+      - 1886
+      - 1893
+      - 1908
+    inventory_note: 'MANCANO GLI ANNI: 1885, 1886, 1893 E 1908.'
+  - name: Monte Romano
+    istat_code_today: '056037'
+    comune_today: Monte Romano
+    from: 1923
+    to: 1992
+    missing_years:
+      - 1928
+    inventory_note: MANCA L'ANNO 1928
+  - name: Monterosi
+    istat_code_today: '056038'
+    comune_today: Monterosi
+    from: 1875
+    to: 1992
+  - name: Nepi
+    istat_code_today: '056039'
+    comune_today: Nepi
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1885
+      - 1893
+    single_register_years:
+      - 1880
+    inventory_note: "MANCANO GLI ANNI: 1893,1885,1877. DEL 1880 C'E UN SOLO REGISTRO"
+  - name: Onano
+    istat_code_today: '056040'
+    comune_today: Onano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+      - 1885
+    single_register_years:
+      - 1893
+      - 1908
+    inventory_note: "MANCANO GLI ANNI: 1879 E 1885. DEGLI ANNI 1893 E 1908 C'E' UN SOLO REGISTRO."
+  - name: Oriolo Romano
+    istat_code_today: '056041'
+    comune_today: Oriolo Romano
+    from: 1948
+    to: 1992
+  - name: Orte
+    istat_code_today: '056042'
+    comune_today: Orte
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1879
+      - 1908
+    single_register_years:
+      - 1949
+    inventory_note: "MANCANO GLI ANNI: 1877, 1879, 1908. DEL 1949 C'E' UN SOLO REGISTRO."
+  - name: Orte Scalo
+    istat_code_today: '056042'
+    comune_today: Orte
+    from: 1939
+    to: 1992
+    single_register_years:
+      - 1947
+    inventory_note: COMPLETO, DEL 1947 C'E' UN SOLO REGISTRO
+  - name: Penna in Teverina
+    istat_code_today: '055026'
+    comune_today: Penna in Teverina
+    from: 1923
+    to: 1928
+  - name: Piansano
+    istat_code_today: '056043'
+    comune_today: Piansano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+      - 1880
+      - 1891
+    inventory_note: 'MANCANO GLI ANNI: 1879, 1880 E 1891.'
+  - name: Proceno
+    istat_code_today: '056044'
+    comune_today: Proceno
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1879
+    single_register_years:
+      - 1920
+    inventory_note: "MANCA L'ANNO: 1879. DELL'ANNO 1920 C'E' UN SOLO REGISTRO."
+  - name: Roccalvecce
+    istat_code_today: '056059'
+    comune_today: Viterbo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1880
+    inventory_note: MANCA L'ANNO 1880.
+  - name: Ronciglione
+    istat_code_today: '056045'
+    comune_today: Ronciglione
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1977
+    single_register_years:
+      - 1885
+      - 1980
+    inventory_note: "MANCA L'ANNO: 1977. DEGLI ANNI 1885 E 1980 C'E' UN SOLO REGISTRO."
+  - name: San Lorenzo Nuovo
+    istat_code_today: '056047'
+    comune_today: San Lorenzo Nuovo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1882
+      - 1888
+    inventory_note: 'MANCANO GLI ANNI : 1882 E 1888.'
+  - name: San Martino al Cimino
+    istat_code_today: '056059'
+    comune_today: Viterbo
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1929
+      - 1959
+    inventory_note: 'MANCANO GLI ANNI: 1929 E 1959.'
+  - name: San Michele in Teverina
+    istat_code_today: '056022'
+    comune_today: Civitella d'Agliano
+    from: 1875
+    to: 1927
+  - name: Sant'Oreste
+    istat_code_today: '058099'
+    comune_today: Sant'Oreste
+    from: 1932
+    to: 1947
+  - name: Sipicciano
+    istat_code_today: '056029'
+    comune_today: Graffignano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1875
+      - 1876
+      - 1880
+      - 1881
+      - 1882
+      - 1883
+      - 1884
+      - 1885
+      - 1886
+      - 1887
+      - 1888
+      - 1889
+      - 1890
+      - 1891
+      - 1892
+      - 1893
+      - 1894
+      - 1895
+      - 1896
+      - 1897
+      - 1898
+      - 1899
+      - 1900
+      - 1901
+      - 1902
+      - 1903
+      - 1904
+      - 1929
+      - 1930
+      - 1931
+    inventory_note: 'MANCANO GLI ANNI: 1875, 1876, DAL 1880 AL 1904 E DAL 1929 AL 1931.'
+  - name: Soriano nel Cimino
+    istat_code_today: '056048'
+    comune_today: Soriano nel Cimino
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1888
+      - 1889
+      - 1898
+      - 1907
+      - 1908
+    inventory_note: 'MANCANO GLI ANNI: 1888, 1889, 1898, 1907 E 1908.'
+  - name: Sutri
+    istat_code_today: '056049'
+    comune_today: Sutri
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1902
+      - 1943
+      - 1944
+    inventory_note: 'MANCANO GLI ANNI : 1902, 1943 E 1944.'
+  - name: Tessennano
+    istat_code_today: '056051'
+    comune_today: Tessennano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+    inventory_note: MANCA L'ANNO 1877.
+  - name: Tuscania
+    istat_code_today: '056052'
+    comune_today: Tuscania
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1878
+      - 1885
+      - 1908
+      - 1930
+      - 1931
+      - 1932
+      - 1933
+    single_register_years:
+      - 1904
+    inventory_note:
+      "MANCANO GLI ANNI: 1877, 1878, 1885, 1908, DAL 1930 AL 1933. DEL 1904 C'E' UN SOLO
+      REGISTRO."
+  - name: Valentano
+    istat_code_today: '056053'
+    comune_today: Valentano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1902
+    single_register_years:
+      - 1893
+    inventory_note: "MANCANO GLI ANNI: 1877 E 1902. DEL 1893 C'E' UN SOLO REGISTRO-"
+  - name: Vallerano
+    istat_code_today: '056054'
+    comune_today: Vallerano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+      - 1977
+    inventory_note: 'MANCANO GLI ANNI: 1887 E 1977.'
+  - name: Vasanello
+    istat_code_today: '056055'
+    comune_today: Vasanello
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+    inventory_note: MANCA L'ANNO 1887.
+  - name: Veiano
+    istat_code_today: '056056'
+    comune_today: Vejano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1887
+    inventory_note: MANCA L'ANNO 1887.
+  - name: Vetralla
+    istat_code_today: '056057'
+    comune_today: Vetralla
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1876
+      - 1877
+      - 1885
+      - 1887
+      - 1908
+      - 1964
+    inventory_note: 'MANCANO GLI ANNI: 1876, 1877, 1885, 1887, 1908, 1964.'
+  - name: Vignanello
+    istat_code_today: '056058'
+    comune_today: Vignanello
+    from: 1874
+    to: 1992
+    missing_years:
+      - 1875
+      - 1876
+      - 1877
+      - 1882
+      - 1885
+      - 1898
+    inventory_note: 'MANCANO GLI ANNI: 1875, 1876, 1877, 1882, 1885 E 1898.'
+  - name: Villa S. Giovanni in Tuscia
+    istat_code_today: '056046'
+    comune_today: Villa San Giovanni in Tuscia
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1882
+      - 1931
+    inventory_note: 'MANCANO GLI ANNI: 1882 E 1931.'
+  - name: Vitorchiano
+    istat_code_today: '056060'
+    comune_today: Vitorchiano
+    from: 1875
+    to: 1992
+    missing_years:
+      - 1877
+      - 1878
+    single_register_years:
+      - 1898
+    inventory_note: "MANCANO GLI ANNI: 1877 E 1878. DEL 1898 C'E' UN SOLO REGISTRO."

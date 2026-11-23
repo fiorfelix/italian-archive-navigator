@@ -1,0 +1,98 @@
+# Italian civil registration (stato civile italiano). Each rule says whether it is verified from an
+# official source and cites its sources.
+version: 1
+state: Regno d’Italia / Repubblica Italiana
+state_en: Kingdom of Italy / Italian Republic
+rules:
+  - id: it-civile-1866
+    title: Stato civile italiano dal 1° gennaio 1866
+    territory:
+      national: true
+    period:
+      from: '1866-01-01'
+      to: '9999-12-31'
+    regime: italian_civil
+    records:
+      - &id001
+        it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+      - it: Pubblicazioni di matrimonio
+        en: Marriage banns
+      - it: Allegati (processetti)
+        en: Supporting documents (processetti)
+    holders: &id002
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale (depositato al Tribunale, poi versato all’Archivio di Stato)
+          en: Second original (deposited at the Tribunale, later transferred to the State Archive)
+        office_type: archivio_di_stato
+      - what:
+          it: Allegati agli atti e pubblicazioni di matrimonio (solo nella serie del Tribunale)
+          en: Supporting papers (allegati) and marriage banns (only in the Tribunale series)
+        office_type: archivio_di_stato
+    fallbacks:
+      - &id003
+        it: Se manca un originale, l’altro (Comune o Archivio di Stato)
+        en: If one original is missing, the other (Comune or State Archive)
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - 'Registers in two originals: one kept by the Comune, the second deposited at the Tribunale and later
+        transferred to the Archivio di Stato.'
+      - The supporting papers (allegati) and the banns register exist in one copy only, filed with the Tribunale
+        series (R.D. 15 novembre 1865, n. 2602, artt. 41 and 64).
+      - When the Tribunale series reached the State Archive differs by archive (the law sets transfers after
+        thirty years); some are still being transferred.
+    source_url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+    sources:
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: "Art. 21: I due originali saranno sottoscritti contemporaneamente dalle parti, dai testimoni e dall'ufficiale dello stato civile."
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 30: ... per essere depositato entro i primi quindici giorni di gennaio coi registri stessi negli archivi del comune e presso la cancelleria del tribunale.'
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 41: I volumi sono trasmessi coi registri corrispondenti al procuratore del Re per essere depositati presso la cancelleria del tribunale.'
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602
+        quote: 'Art. 64: Questo registro fa parte del volume degli allegati al registro per gli atti di matrimonio.'
+      - url: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41
+        quote: Gli organi giudiziari e amministrativi dello Stato versano ... agli archivi di Stato i documenti relativi agli affari esauriti da oltre trent'anni
+    verified: true
+    reviewed_for:
+      - Lazio
+      - Umbria
+      - Toscana
+      - Marche
+    events: &id004
+      - birth
+      - marriage
+      - death
+  - id: it-veneto-mantova-transizione
+    title: 'Veneto e Mantova: avvio dello stato civile italiano (1866 o 1871)'
+    territory:
+      joined_italy:
+        from: '1866-01-01'
+        to: '1866-12-31'
+    period:
+      from: '1866-11-20'
+      to: '1871-12-31'
+    regime: italian_civil
+    records:
+      - *id001
+    holders: *id002
+    fallbacks:
+      - it: Registri parrocchiali (con valore civile fino all’introduzione dello stato civile italiano)
+        en: Parish registers (with civil validity until Italian civil registration began)
+      - *id003
+    notes:
+      - 'Sources disagree on when Italian civil registration began here: late 1866 (annexation, 20 Nov 1866
+        per ISTAT) or 1871. Check the specific Archivio di Stato; if the civil registers do not cover the
+        year, use the parish registers.'
+    source_url: https://antenati.cultura.gov.it/
+    sources:
+      - url: https://situas.istat.it/web/#/apiDetail
+        quote: 'ISTAT SITUAS report 100: annexation (AN) of Veneto and Mantova comuni on 1866-11-20'
+    verified: false
+    reviewed_for: []
+    events: *id004

@@ -1,0 +1,13 @@
+Oggetto: richiesta di ricerca nei registri parrocchiali – {{persona}}, {{anno}}
+
+Reverendo Parroco,
+
+per una ricerca sulla storia della mia famiglia Le chiedo cortesemente se nei registri della parrocchia sia conservato l'atto di {{evento_parrocchia}} seguente:
+
+• {{scheda_persona}}
+• anno o periodo: {{anno}}; luogo: {{luogo_parrocchia}}
+{{#scheda_coniuge}}• coniuge: {{scheda_coniuge}}
+{{/scheda_coniuge}}{{#dettagli}}{{dettagli}}
+{{/dettagli}}
+Se l'atto è presente, Le sarei grato di una copia o di un estratto, se possibile in formato PDF. Se i registri di quel periodo sono stati trasferiti all'archivio diocesano, La prego di indicarmelo. Sono disponibile a contribuire alle spese o con un'offerta per la parrocchia: La prego di indicarmi come preferisce.
+

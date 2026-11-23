@@ -1,0 +1,16 @@
+Oggetto: richiesta {{documento_militare}} {{grado_persona}} (classe {{classe}}), per ricerche storiche sulla famiglia
+
+{{sottoscritto}} {{richiedente}}, {{relazione}} di {{persona}}, chiede il rilascio di copia {{documento_militare}} del suddetto e di ogni altro documento matricolare conservato, per ricerche storiche sulla famiglia.
+
+{{intestazione_dati}}
+• {{scheda_persona}}
+• classe di leva: {{classe}}{{#distretto}}; distretto militare: {{distretto}}{{/distretto}}
+{{#matricola}}• matricola {{matricola}}
+{{/matricola}}{{#dettagli}}{{dettagli}}
+{{/dettagli}}
+{{#clausola_decesso}}{{clausola_decesso}}
+
+{{/clausola_decesso}}Se la documentazione fosse conservata presso un altro ufficio o archivio, vi prego di indicarmelo. Chiedo cortesemente l'indicazione di eventuali costi e l'invio in formato PDF a questo indirizzo e-mail.
+
+Allego copia del mio documento d'identità{{#allega_modulo}} e il modello di istanza per i privati previsto dall'ufficio, compilato e firmato{{/allega_modulo}}.
+

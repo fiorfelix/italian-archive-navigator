@@ -1,0 +1,270 @@
+# Offices beyond the Comuni (SPEC §4). Contact details (address, PEC) are NOT kept here:
+# refresh-data takes them from IndicePA (CC BY 4.0) and fails if a code below disappears.
+#
+# archivi_di_stato: which Archivio di Stato serves each province today, by IndicePA AOO code.
+#   Provinces not listed fall back to the Archivio di Stato with its seat in the same province.
+#   verified: true when the archive is the State Archive of that same province (IndicePA);
+#   false when we assign the archive of a historical parent province.
+# pointers: office types with no confirmed per-comune entry. The tool returns these as
+#   verified: false, with the official directory to consult.
+version: 1
+
+archivi_di_stato:
+  # Lazio
+  - {
+      province: RM,
+      aoo: mbac-as-rm,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: VT,
+      aoo: mbac-as-vt,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: RI,
+      aoo: mbac-as-ri,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: LT,
+      aoo: mbac-as-lt,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: FR,
+      aoo: mbac-as-fr,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  # Umbria
+  - {
+      province: PG,
+      aoo: mbac-as-pg,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: TR,
+      aoo: mbac-as-tr,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  # Toscana
+  - {
+      province: FI,
+      aoo: mbac-as-fi,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: AR,
+      aoo: mbac-as-ar,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: GR,
+      aoo: mbac-as-gr,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: LI,
+      aoo: mbac-as-li,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: LU,
+      aoo: mbac-as-lu,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: MS,
+      aoo: mbac-as-ms,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: PI,
+      aoo: mbac-as-pi,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: PT,
+      aoo: mbac-as-pt,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: PO,
+      aoo: mbac-as-po,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: SI,
+      aoo: mbac-as-si,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  # Marche
+  - {
+      province: AN,
+      aoo: mbac-as-an,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: AP,
+      aoo: mbac-as-ap,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: FM,
+      aoo: mbac-as-fm,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: MC,
+      aoo: mbac-as-mc,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  - {
+      province: PU,
+      aoo: mbac-as-ps,
+      verified: true,
+      source_url: 'https://indicepa.gov.it/ipa-dati/dataset/aoo',
+    }
+  # Provinces with no Archivio di Stato of their own (IndicePA, 2026-11-18). The archive of
+  # the province they were created from is assigned; confirm with the archive.
+  - province: KR
+    aoo: mbac-as-cz
+    verified: false
+    note: Crotone was part of the province of Catanzaro until 1992.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: LC
+    aoo: mbac-as-co
+    verified: false
+    note: Lecco was mostly part of the province of Como until 1992.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: LO
+    aoo: mbac-as-mi
+    verified: false
+    note: Lodi was part of the province of Milano until 1992.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: MB
+    aoo: mbac-as-mi
+    verified: false
+    note: Monza e della Brianza was part of the province of Milano until 2009.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: CI
+    aoo: mbac-as-ca
+    verified: false
+    note: Sulcis Iglesiente comuni were historically in the province of Cagliari.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: VS
+    aoo: mbac-as-ca
+    verified: false
+    note: Medio Campidano comuni were historically in the province of Cagliari.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: OG
+    aoo: mbac-as-nu
+    verified: false
+    note: Ogliastra comuni were historically in the province of Nuoro.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: OT
+    aoo: mbac-as-ss
+    verified: false
+    note: Gallura comuni were historically in the province of Sassari.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+  - province: AO
+    aoo: null
+    verified: false
+    note: >-
+      There is no Archivio di Stato in Valle d'Aosta; the region keeps its own historical
+      archive (Archivio storico regionale). Contact details not yet confirmed.
+    source_url: https://indicepa.gov.it/ipa-dati/dataset/aoo
+
+pointers:
+  ufficio_documentale_militare:
+    title: Ufficio documentale dell'Esercito (Army documentation office)
+    rule: >-
+      Esercito: for truppa, sottufficiali and ufficiali di complemento the competent office is
+      the Ufficio documentale of the place of birth. For career officers it is the Ufficio
+      documentale of residence until 10 years after death (20 for generals), then the
+      Direzione Generale per il Personale Militare, 6ª Divisione – Servizio Esercito.
+    rule_source_url: https://www.difesa.it/sgd/staff/dg/persomil/documentazione-matricolare/fogli-matricolaristato-di-servizio/24820.html
+    directory_url: https://www.esercito.difesa.it/organizzazione/i-centri-documentali/uffici-relazioni-con-il-pubblico/83097.html
+    directory_note: >-
+      List of the Army documentation offices. Offices for Lazio, Umbria, Toscana and Marche are
+      in our data; for other regions see this list.
+    offices: [EUDOCEI, GMIL]
+    verified: false
+    # Which Army documentation office covers each province (target regions), from each office's
+    # own page on esercito.difesa.it (read in a browser on 2026-11-19).
+    by_province:
+      - provinces: [FI, AR, GR, LI, LU, MS, PI, PO, PT, SI]
+        name: Comando Militare Esercito "Toscana" – Ufficio Documentale di Firenze
+        address: Via Cavour 49, 50129 Firenze
+        pec: cme_toscana@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/comter-nord/cme-toscana/comando-militare-esercito-toscana/125326.html
+        quote: L'Ufficio è competente per tutte le province della Toscana
+        verified: true
+      - provinces: [AN, AP, FM, MC, PU]
+        name: Comando Militare Esercito "Marche" – Ufficio Documentale di Ancona
+        address: Via Torrioni 10, 60122 Ancona
+        pec: cme_marche@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/comter-sud/cme-marche/l-ufficio-documentale-di-ancona/128044.html
+        quote: L'Ufficio è competente per tutte le province della Regione Marche.
+        verified: true
+      - provinces: [PG, TR]
+        name: Comando Militare Esercito "Umbria" – Ufficio Documentale
+        address: Piazza Lupattelli 1, 06123 Perugia
+        pec: cme_umbria@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/comter-sud/cme-umbria/l-ufficio-documentale-del-cme-umbria/128045.html
+        quote: E' competente per le province della regione Umbria (Perugia e Terni)
+        verified: true
+      - provinces: [VT]
+        name: Comando Militare Esercito "Umbria" – Ufficio Documentale
+        address: Piazza Lupattelli 1, 06123 Perugia
+        pec: cme_umbria@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/comter-sud/cme-umbria/l-ufficio-documentale-del-cme-umbria/128045.html
+        quote: e di Viterbo (purchè in congedo antecedentemente al 31.12.2001)
+        note: For soldiers discharged on or after 31 December 2001, the Ufficio Documentale di Roma.
+        verified: true
+      - provinces: [RM, LT, FR, RI]
+        name: Comando Territoriale Nazionale dell'Esercito – Ufficio Documentale di Roma
+        address: Caserma "Scipio Slataper", Via Scipio Slataper 2, Roma
+        pec: comter@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/l-ufficio-documentale-di-roma/125382.html
+        quote: inviarlo, corredato degli eventuali allegati, agli indirizzi comter@esercito.difesa.it oppure comter@postacert.difesa.it
+        note: The office page does not state which provinces it covers; Lazio is inferred because no other office lists them.
+        verified: false
+      - provinces: [RI]
+        name: Comando Militare Esercito "Umbria" – Ufficio Documentale
+        address: Piazza Lupattelli 1, 06123 Perugia
+        pec: cme_umbria@postacert.difesa.it
+        source_url: https://www.esercito.difesa.it/organizzazione/capo-di-sme/comando-territoriale-nazionale-esercito/comter-sud/cme-umbria/l-ufficio-documentale-del-cme-umbria/128045.html
+        quote: Rieti (dalla 1958 alla 1974 e dalla 1978 in poi purchè in congedo antecedentemente al 31.12.2001)
+        note: Only birth classes 1958–1974 and from 1978 (discharged before 31 December 2001); other classes most likely the Ufficio Documentale di Roma (not confirmed).
+        verified: true
+  diocesi:
+    title: Diocesi (diocesan archive)
+    rule: >-
+      Parish registers and diocesan copies are kept by the parish or the diocesan archive.
+      Which diocese covers this comune is not in our data.
+    directory_url: https://www.chiesacattolica.it/annuario-cei/regioni-diocesi-e-parrocchie/
+    directory_note: Directory of Italian dioceses and parishes by the Conferenza Episcopale Italiana.
+    offices: []
+    verified: false

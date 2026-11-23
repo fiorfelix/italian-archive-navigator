@@ -1,0 +1,9 @@
+# Test fixture only. The real file is data/curated/aliases.yaml.
+version: 1
+aliases:
+  - alias: Calcata Vecchia
+    kind: frazione
+    istat_code: '056010'
+    comune: Calcata
+    source_url: https://example.org/test-fixture
+    verified: false

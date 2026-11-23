@@ -1,0 +1,73 @@
+# Austrian Lombardy–Venetia after the Restoration. Each rule says whether it is verified from an
+# official source and cites its sources.
+version: 1
+state: Regno Lombardo-Veneto
+state_en: Kingdom of Lombardy–Venetia (Austrian)
+rules:
+  - id: lombardo-veneto-veneto-1816-1866
+    title: 'Veneto e Mantova sotto l’Austria: registri parrocchiali con valore civile'
+    territory:
+      joined_italy:
+        from: '1866-01-01'
+        to: '1866-12-31'
+    period:
+      from: '1816-01-01'
+      to: '1866-11-19'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: parish_civil
+    records:
+      - it: Registri parrocchiali tenuti con valore civile
+        en: Parish registers kept with civil validity
+    holders: &id001
+      - what:
+          it: Registri parrocchiali (con valore civile)
+          en: Parish registers (with civil validity)
+        office_type: parrocchia
+      - what:
+          it: Copie presso l’Archivio di Stato o l’archivio diocesano
+          en: Copies at the State Archive or the diocesan archive
+        office_type: archivio_di_stato
+    fallbacks: &id002
+      - it: Archivio diocesano
+        en: Diocesan archive
+    notes:
+      - Veneto and Mantova joined Italy on 20 November 1866 (ISTAT).
+    source_url: https://antenati.cultura.gov.it/
+    sources:
+      - url: https://situas.istat.it/web/#/apiDetail
+        quote: 'ISTAT SITUAS report 100: annexation (AN) of Veneto and Mantova comuni on 1866-11-20'
+    verified: false
+    reviewed_for: []
+  - id: lombardo-veneto-lombardia-1816-1859
+    title: 'Lombardia sotto l’Austria: registri parrocchiali con valore civile'
+    territory:
+      first_provinces:
+        - MI
+        - CO
+        - BG
+        - BS
+        - CR
+        - PV
+        - SO
+        - VA
+        - LC
+        - LO
+    period:
+      from: '1816-01-01'
+      to: '1859-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: parish_civil
+    records:
+      - it: Registri parrocchiali tenuti con valore civile
+        en: Parish registers kept with civil validity
+    holders: *id001
+    fallbacks: *id002
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []

@@ -1,0 +1,102 @@
+# Frazioni and historical aliases, mapped to the current comune that contains them.
+#
+# All inhabited localities of the 2021 census are loaded automatically by refresh-data.
+# Use this file for names the census lacks, for historical aliases, and for notes; an entry
+# here is shown instead of a census locality with the same name and comune.
+#
+# Every entry needs: alias, kind (frazione | historical_alias), istat_code, comune (the
+# current ISTAT name, checked by refresh-data), source_url, verified.
+# verified: true only when an official source states the membership. Otherwise false.
+#
+# Source for verified entries below: ISTAT, Basi territoriali 2021, file
+# LocalitaPuntuali_21.zip > Localita_2021_Point.csv (columns PRO_COM, LOC_ID, NOME),
+# read on 2026-11-17. Licence CC BY 4.0 (https://www.istat.it/note-legali/).
+version: 1
+aliases:
+  # --- Province of Viterbo (VT) ---
+  - alias: Calcata Vecchia
+    kind: frazione
+    istat_code: '056010'
+    comune: Calcata
+    note: ISTAT census 2021 locality LOC_ID 5601010002.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Capranica Scalo
+    kind: frazione
+    istat_code: '056014'
+    comune: Capranica
+    note: ISTAT census 2021 locality LOC_ID 5601410002 ("Capranica-Scalo").
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Civita
+    kind: frazione
+    istat_code: '056003'
+    comune: Bagnoregio
+    note: ISTAT census 2021 locality LOC_ID 5600310003.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Civita di Bagnoregio
+    kind: historical_alias
+    istat_code: '056003'
+    comune: Bagnoregio
+    note: Common name for the locality ISTAT lists as "Civita". The long form is not in the ISTAT file.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: false
+
+  - alias: Lido di Tarquinia
+    kind: frazione
+    istat_code: '056050'
+    comune: Tarquinia
+    note: ISTAT census 2021 locality LOC_ID 5605010001.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Grotte Santo Stefano
+    kind: frazione
+    istat_code: '056059'
+    comune: Viterbo
+    note: >-
+      ISTAT census 2021 locality LOC_ID 5605910002. Formerly a comune, suppressed in 1928
+      with its territory divided between Viterbo and Graffignano (SITUAS).
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Montecalvello
+    kind: frazione
+    istat_code: '056059'
+    comune: Viterbo
+    note: ISTAT census 2021 locality LOC_ID 5605910003.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: Roccalvecce
+    kind: frazione
+    istat_code: '056059'
+    comune: Viterbo
+    note: >-
+      ISTAT census 2021 locality LOC_ID 5605910004. Formerly a comune, suppressed in 1928
+      with its territory divided between Celleno and Graffignano (SITUAS); today in Viterbo.
+      When and how it passed to Viterbo is not in our data.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: San Martino al Cimino
+    kind: frazione
+    istat_code: '056059'
+    comune: Viterbo
+    note: ISTAT census 2021 locality LOC_ID 5605910005. Formerly a comune, suppressed in 1928 into Viterbo (SITUAS).
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: true
+
+  - alias: La Quercia
+    kind: frazione
+    istat_code: '056059'
+    comune: Viterbo
+    note: >-
+      Not listed separately in the ISTAT 2021 locality file (probably counted inside the
+      Viterbo built-up area). Needs confirmation from the Comune di Viterbo.
+    source_url: https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/
+    verified: false

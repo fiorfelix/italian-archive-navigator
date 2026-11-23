@@ -1,0 +1,350 @@
+# Grand Duchy of Tuscany after the Restoration, and the Duchy of Lucca (to 1847). Each rule says
+# whether it is verified from an official source and cites its sources.
+version: 1
+state: Granducato di Toscana
+state_en: Grand Duchy of Tuscany
+rules:
+  - id: toscana-stato-civile-1817-1865
+    title:
+      'Toscana 1814–1865: registri parrocchiali trasmessi allo Stato; servizio dello stato civile dal
+      1817'
+    territory:
+      first_provinces:
+        - FI
+        - AR
+        - GR
+        - LI
+        - PI
+        - SI
+    period:
+      from: '1814-05-10'
+      to: '1865-12-31'
+    regime: tuscan_civil
+    records:
+      - it: Note sommarie 1814–1817; dal 1818 registri, estratti mensili e duplicati dei registri parrocchiali
+        en: Summaries 1814–1817; from 1818 registers, monthly extracts and duplicates of the parish registers
+    holders:
+      - what:
+          it:
+            'Stato civile di Toscana (Archivio di Stato di Firenze): note sommarie 1814–1817, registri parziali
+            per comunità 1818–1838, estratti per comunità 1839–1865, repertori'
+          en:
+            'Tuscan civil registration (State Archive of Florence): summaries 1814–1817, community registers
+            1818–1838, extracts by community 1839–1865, indexes'
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - From 10 May 1814 parish priests kept the registers and sent monthly summaries to the gonfaloniere;
+        the motuproprio of 18 June 1817 created a state service that concentrated the acts for all of Tuscany
+        in Florence, abolished in 1865.
+      - Comuni in province LU in 1861 are covered by the rules below (Duchy of Lucca until 1847; grand-ducal
+        enclaves such as Barga and the Valdinievole).
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+    verified: true
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: Con decreto 1 O mag. 18 14 1 fu abolita l’organizzazione dello stato civile
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: proprio 18 giu. 18172 fu istituito il servizio dello stato civile
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: < Duplicati dei registri dei battezzati, dei matrimoni e dei morti > 1818-1865
+      - url: https://archiviodistatofirenze.cultura.gov.it/statocivile/pdf/inventario_M10.pdf
+        quote: REGISTRI PARZIALI PER COMUNITA’, 1818-1838
+  - id: toscana-granducato-comuni-lucchesia
+    title: 'Comuni granducali poi in provincia di Lucca (Barga, Valdinievole): stato civile toscano 1814–1865'
+    territory:
+      comuni:
+        - '046003'
+        - '047003'
+        - '047008'
+        - '047009'
+        - '046021'
+        - '047011'
+        - '047012'
+        - '047021'
+    period:
+      from: '1814-05-10'
+      to: '1865-12-31'
+    regime: tuscan_civil
+    records:
+      - it: Note sommarie 1814–1817; dal 1818 registri, estratti mensili e duplicati dei registri parrocchiali
+        en: Summaries 1814–1817; from 1818 registers, monthly extracts and duplicates of the parish registers
+    holders:
+      - what:
+          it:
+            'Stato civile di Toscana (Archivio di Stato di Firenze): note sommarie 1814–1817, registri parziali
+            per comunità 1818–1838, estratti per comunità 1839–1865, repertori'
+          en:
+            'Tuscan civil registration (State Archive of Florence): summaries 1814–1817, community registers
+            1818–1838, extracts by community 1839–1865, indexes'
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - These comuni were part of the Grand Duchy of Tuscany, not of the Duchy of Lucca; in 1861 they were in
+        the province of Lucca.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: Barga fu unita alla giurisdizione della prefettura di Lucca solamente nel 1848, essendo stata per l’addietro, sempre granducale.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: 'il territorio della Valdinievole fu diviso nel circondario di Monsummano e in quello di Pescia, ed ambedue passarono sotto la prefettura di Lucca'
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: 'Comprendeva i comuni di: Borgo a Buggiano, Massa e Cozzile, Monsummano, Montecarlo, Montecatini.'
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: 1 comuni sottoposti alla giurisdizione di questa delegazione furono quelli di Pescia, Uzzano e Vellano
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Firenze_.pdf
+        quote: proprio 18 giu. 18172 fu istituito il servizio dello stato civile
+    verified: true
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+  - id: toscana-granducato-comuni-lucchesia-probabili
+    title: 'Altri comuni probabilmente granducali poi in provincia di Lucca: stato civile toscano 1814–1865'
+    territory:
+      comuni:
+        - '046001'
+        - '046013'
+        - '046024'
+        - '046028'
+        - '046030'
+        - '047013'
+        - '047016'
+        - '047022'
+    period:
+      from: '1814-05-10'
+      to: '1865-12-31'
+    regime: tuscan_civil
+    records:
+      - it: Note sommarie 1814–1817; dal 1818 registri, estratti mensili e duplicati dei registri parrocchiali
+        en: Summaries 1814–1817; from 1818 registers, monthly extracts and duplicates of the parish registers
+    holders:
+      - what:
+          it:
+            'Stato civile di Toscana (Archivio di Stato di Firenze): note sommarie 1814–1817, registri parziali
+            per comunità 1818–1838, estratti per comunità 1839–1865, repertori'
+          en:
+            'Tuscan civil registration (State Archive of Florence): summaries 1814–1817, community registers
+            1818–1838, extracts by community 1839–1865, indexes'
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - 'Probably grand-ducal before 1847: Pietrasanta, Seravezza, Stazzema and Forte dei Marmi (the Pietrasanta
+        area), Altopascio, and comuni later formed in the Valdinievole (Pieve a Nievole, Ponte Buggianese,
+        Chiesina Uzzanese). Not confirmed from an official source; if the place was in the Duchy of Lucca, see
+        the parish registers.'
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: 'Delegazione di governo di Pietrasanta, filze 113 (1847-1865). La giurisdizione si estendeva sui comuni di Pietrasanta, Seravezza e Stazzema.'
+    verified: false
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+  - id: lucca-ducato-1814-1847
+    title: 'Ducato di Lucca 1814–1847: nessuno stato civile noto, registri parrocchiali'
+    territory:
+      first_provinces:
+        - LU
+    period:
+      from: '1814-05-10'
+      to: '1847-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali di battesimo, matrimonio e morte
+        en: Parish registers of baptisms, marriages and deaths
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano (arcidiocesi di Lucca)
+          en: Diocesan archive (archdiocese of Lucca)
+        office_type: diocesi
+    fallbacks:
+      - it: Archivi comunali (registri della popolazione)
+        en: Comune archives (population registers)
+    notes:
+      - Lucca was a principality under Elisa Baciocchi until 1814, a Bourbon duchy from 1817 and was ceded to
+        Tuscany in 1847. The State Archive of Lucca lists civil registers only for 1807–1814.
+      - That no civil registration was kept in the Duchy is inferred from the absence of any series; not
+        confirmed.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: il principato napoleonico di Elisa Baciocchi Buonaparte, sorella di Napoleone, fino al 1814 e il ducato borbonico dal 1817 al 1847.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: A t t i d e l l o s t a t o c i v i l e d e l p r i n c i p a t o , r e g g . 100(1807-1814).
+    verified: false
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+  - id: lucca-toscana-1848-1865
+    title: 'Ex ducato di Lucca nel Granducato di Toscana, 1848–1865'
+    territory:
+      first_provinces:
+        - LU
+    period:
+      from: '1848-01-01'
+      to: '1865-12-31'
+    regime: tuscan_civil
+    records:
+      - it: Note sommarie 1814–1817; dal 1818 registri, estratti mensili e duplicati dei registri parrocchiali
+        en: Summaries 1814–1817; from 1818 registers, monthly extracts and duplicates of the parish registers
+    holders:
+      - what:
+          it:
+            'Stato civile di Toscana (Archivio di Stato di Firenze): note sommarie 1814–1817, registri parziali
+            per comunità 1818–1838, estratti per comunità 1839–1865, repertori'
+          en:
+            'Tuscan civil registration (State Archive of Florence): summaries 1814–1817, community registers
+            1818–1838, extracts by community 1839–1865, indexes'
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - After the cession of 1847 Lucca was administered on the grand-ducal model; whether its registers were
+        sent to the Florence civil-registration service is not confirmed.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Lucca_.pdf
+        quote: Negli anni che intercorsero fra la cessione del ducato lucchese al granducato di Toscana e l’unità d’Italia (1847-1859), Lucca fu amministrata da una prefettura
+    verified: false
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+  - id: toscana-lunigiana-granducale-1814-1847
+    title: 'Fivizzano e Pontremoli, granducali fino al 1847: stato civile toscano'
+    territory:
+      comuni:
+        - '045007'
+        - '045014'
+    period:
+      from: '1814-05-10'
+      to: '1847-12-31'
+    regime: tuscan_civil
+    records:
+      - it: Note sommarie 1814–1817; dal 1818 registri, estratti mensili e duplicati dei registri parrocchiali
+        en: Summaries 1814–1817; from 1818 registers, monthly extracts and duplicates of the parish registers
+    holders:
+      - what:
+          it:
+            'Stato civile di Toscana (Archivio di Stato di Firenze): note sommarie 1814–1817, registri parziali
+            per comunità 1818–1838, estratti per comunità 1839–1865, repertori'
+          en:
+            'Tuscan civil registration (State Archive of Florence): summaries 1814–1817, community registers
+            1818–1838, extracts by community 1839–1865, indexes'
+        office_type: archivio_di_stato
+      - what:
+          it: Registri parrocchiali originali
+          en: Original parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - Fivizzano and Pontremoli (with its contado) were part of the Grand Duchy of Tuscany; in 1847 Pontremoli
+        and other Lunigiana comuni passed to the Bourbons of Parma, Fivizzano to Modena. Other Lunigiana comuni
+        of the Grand Duchy are not named in the source.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: facevano parte del granducato di Toscana Fivizzano, sede dal sec. XV di un vicariato, e Pontremoli e il suo contado
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: Pontremoli e altri comuni della Lunigiana passarono poi ai Borboni di Parma nel 1847.
+    verified: true
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death
+  - id: pontremoli-parma-1848-1859
+    title: 'Pontremoli nel Ducato di Parma, 1848–1859'
+    territory:
+      comuni:
+        - '045014'
+    period:
+      from: '1848-01-01'
+      to: '1859-12-31'
+    regime: restoration_civil
+    records:
+      - it: Atti di stato civile del Ducato di Parma, se tenuti; registri parrocchiali
+        en: Civil acts of the Duchy of Parma, if kept; parish registers
+    holders:
+      - what:
+          it: Comune di Pontremoli (esemplare comunale, se conservato)
+          en: Comune of Pontremoli (Comune copy, where it survives)
+        office_type: stato_civile
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+    fallbacks:
+      - it: Sezione di Archivio di Stato di Pontremoli
+        en: State Archive section of Pontremoli
+    notes:
+      - Pontremoli passed from Tuscany to the Bourbons of Parma in 1847. How civil registration was kept there
+        under Parma, and where the registers are, is not confirmed.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Massa_.pdf
+        quote: Pontremoli e altri comuni della Lunigiana passarono poi ai Borboni di Parma nel 1847.
+    verified: false
+    reviewed_for:
+      - Toscana
+    events:
+      - birth
+      - marriage
+      - death

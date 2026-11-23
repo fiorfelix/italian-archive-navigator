@@ -1,0 +1,39 @@
+# National default before 1866, used only when no more specific rule matches. Each rule says whether
+# it is verified from an official source and cites its sources.
+version: 1
+state: Prima dello stato civile italiano
+state_en: Before Italian civil registration
+rules:
+  - id: preunitario-generale
+    title: 'Prima del 1866: registri parrocchiali come fonte generale'
+    territory:
+      national: true
+    period:
+      from: '1500-01-01'
+      to: '1865-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali (dopo il Concilio di Trento, 1563)
+        en: Parish registers (after the Council of Trent, 1563)
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano
+          en: Diocesan archive
+        office_type: diocesi
+    fallbacks:
+      - it: Fonti notarili e catastali all’Archivio di Stato
+        en: Notarial and land records at the State Archive
+    notes:
+      - General default where no pre-unification state rule applies; civil registers may also exist depending
+        on the state.
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []
+    events:
+      - birth
+      - marriage
+      - death

@@ -1,0 +1,13 @@
+Oggetto: richiesta di copia integrale dell'atto di {{evento}} di {{persona}}, per ricerca genealogica
+
+{{sottoscritto}} {{richiedente}}, {{relazione}} di {{persona}}, chiede il rilascio della copia integrale del seguente atto, per ricerche storiche sulla famiglia (art. 107 del D.P.R. 3 novembre 2000, n. 396):
+
+• Atto di {{evento}}, {{comune_atto}}, {{data_o_anno}}{{#estremi_atto}}, {{estremi_atto}}{{/estremi_atto}}
+• {{scheda_persona}}
+{{#scheda_coniuge}}• {{scheda_coniuge}}
+{{/scheda_coniuge}}{{#dettagli}}{{dettagli}}
+{{/dettagli}}
+Chiedo cortesemente l'indicazione degli eventuali diritti o costi, delle modalità di pagamento e dei tempi di rilascio, e, se possibile, l'invio in formato PDF a questo indirizzo e-mail. Se l'atto fosse conservato presso un altro ufficio, vi sarei grato di indicarmelo.
+
+Allego copia del mio documento d'identità{{#allega_discendenza}} e la documentazione che attesta il rapporto di parentela{{/allega_discendenza}}.
+

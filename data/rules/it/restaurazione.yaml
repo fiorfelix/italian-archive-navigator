@@ -1,0 +1,106 @@
+# Civil registration continued after 1815 in the Kingdom of the Two Sicilies and the Duchy of Modena
+# and Reggio. Each rule says whether it is verified from an official source and cites its sources.
+version: 1
+state: Stati della Restaurazione
+state_en: Restoration states
+rules:
+  - id: rest-due-sicilie-continente-1816-1865
+    title: 'Regno delle Due Sicilie (continente): stato civile 1816–1865'
+    territory:
+      first_provinces:
+        - NA
+        - CE
+        - SA
+        - AV
+        - BN
+        - CB
+        - AQ
+        - CH
+        - TE
+        - FG
+        - BA
+        - LE
+        - PZ
+        - CS
+        - CZ
+        - RC
+    period:
+      from: '1816-01-01'
+      to: '1865-12-31'
+    regime: restoration_civil
+    records:
+      - &id001
+        it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+      - it: Processetti matrimoniali
+        en: Marriage files (processetti)
+    holders: &id002
+      - what:
+          it: Registri dello stato civile (copia del Tribunale all’Archivio di Stato)
+          en: Civil registers (Tribunale copy at the State Archive)
+        office_type: archivio_di_stato
+      - what:
+          it: Copia comunale
+          en: Comune copy
+        office_type: stato_civile
+    fallbacks: &id003
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - Includes the parts of today’s Lazio that belonged to the Kingdom (former provinces of Terra di Lavoro
+        and Abruzzo).
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for:
+      - Lazio
+    events: &id004
+      - birth
+      - marriage
+      - death
+  - id: rest-sicilia-1820-1865
+    title: 'Sicilia: stato civile dal 1820 al 1865'
+    territory:
+      first_provinces:
+        - PA
+        - ME
+        - CT
+        - SR
+        - TP
+        - AG
+        - CL
+    period:
+      from: '1820-01-01'
+      to: '1865-12-31'
+    regime: restoration_civil
+    records:
+      - *id001
+    holders: *id002
+    fallbacks: *id003
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []
+    events: *id004
+  - id: rest-modena-reggio-1815-1865
+    title: 'Ducato di Modena e Reggio: stato civile fino al 1865'
+    territory:
+      first_provinces:
+        - MO
+        - RE
+        - MS
+    period:
+      from: '1815-01-01'
+      to: '1865-12-31'
+    regime: restoration_civil
+    records:
+      - *id001
+    holders: *id002
+    fallbacks: *id003
+    notes:
+      - 'Massa-Carrara (Duchy of Modena) is in today’s Tuscany: check the Archivio di Stato di Massa.'
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for:
+      - Toscana
+    events: *id004

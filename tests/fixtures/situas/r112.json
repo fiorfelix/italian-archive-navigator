@@ -1,0 +1,35 @@
+{
+  "resultset": [
+    {
+      "ANNO": "2015",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "058",
+      "DEN_UTS": "Roma",
+      "SIGLA_UTS": "RM",
+      "COD_VARIAZIONE": "ESCT",
+      "DATA_INIZIO_AMMINISTRATIVA": "2015-01-01T00:00:00Z",
+      "COD_UTS_REL": "258",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "3",
+      "DESC_TIPO_UTS_REL": "Città metropolitana"
+    },
+    {
+      "ANNO": "1927",
+      "TIPO_UTS": "1",
+      "DESC_TIPO_UTS": "Provincia",
+      "COD_UTS": "061",
+      "DEN_UTS": "Caserta",
+      "SIGLA_UTS": "CE",
+      "COD_VARIAZIONE": "ES",
+      "FLAG_ES_SCORPORO": "1",
+      "DATA_INIZIO_AMMINISTRATIVA": "1927-01-12T00:00:00Z",
+      "COD_UTS_REL": "058",
+      "DEN_UTS_REL": "Roma",
+      "SIGLA_UTS_REL": "RM",
+      "TIPO_UTS_REL": "1",
+      "DESC_TIPO_UTS_REL": "Provincia"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# Render Blueprint for the public MCP server.
+# Reference: https://render.com/docs/blueprint-spec
+#
+# Node version: Render reads .nvmrc (26) from the repository root.
+# The build downloads ISTAT and IndicePA open data and builds the database. If a source is
+# down or changed shape, refresh-data fails, the build fails, and Render keeps the previous
+# version running.
+services:
+  - type: web
+    name: italian-archive-navigator-v2
+    runtime: node
+    # Free while testing (sleeps after 15 minutes idle, about a minute to wake).
+    # Switch to 0.5c-512mb (Starter, $7/month) before submitting to the directory.
+    plan: free
+    buildCommand: npm ci && npm run build && npm run refresh-data
+    startCommand: node dist/index.js
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
+    domains:
+      - archives-mcp.fiorfelix.com
+    envVars:
+      # Turns on public mode: MCP requests are accepted only for this host name (and the
+      # service's own onrender.com name), with rate limits. Without it the server would
+      # bind 127.0.0.1 and refuse all outside traffic.
+      - key: PUBLIC_HOST
+        value: archives-mcp.fiorfelix.com
+      - key: RATE_LIMIT_GLOBAL_PER_MINUTE
+        value: '600'
+      - key: RATE_LIMIT_CLIENT_PER_MINUTE
+        value: '120'
+      # Render's edge is Cloudflare, which puts the caller's address in this header and
+      # replaces any copy the caller sends (measured November 2026: three proxy hops in
+      # X-Forwarded-For, so the connection address is not the caller's).
+      - key: CLIENT_IP_HEADER
+        value: cf-connecting-ip

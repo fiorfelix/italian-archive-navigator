@@ -1,0 +1,146 @@
+{
+  "REPORT NAME": "Province-Uts soppresse o cedute a stato estero",
+  "REPORT DESCRIZIONE": "La funzione restituisce l’elenco delle Province/Unità territoriali sovracomunali (Uts) che, nel periodo di tempo impostato per la ricerca, sono state soppresse oppure, tra il 1861 e il 1947, sono state cedute ad uno Stato estero dall’ex Regno d’Italia.",
+  "COL_DETAILS": [
+    {
+      "COLNAME": "ANNO",
+      "LABEL": "Anno evento",
+      "NOTE": "Note non presenti",
+      "LINK": " ",
+      "GUIDA": "Anno di decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "TIPO_UTS",
+      "LABEL": "Tipologia Provincia/Uts",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Tipologia della Provincia o Unità territoriale sovracomunale (Uts) cessata alla data dell'evento:\n1=Provincia; 2=Provincia autonoma; 3=Città metropolitana; 4=Libero consorzio di comuni; 5=Unità non amministrativa (ex-Province del Friuli-Venezia Giulia)\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DESC_TIPO_UTS",
+      "LABEL": "Descrizione Tipologia",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Descrizione della tipologia di Provincia o Unità territoriale sovracomunale (Uts) cessata alla data dell'evento:\n1=Provincia; 2=Provincia autonoma; 3=Città metropolitana; 4=Libero consorzio di comuni; 5=Unità non amministrativa (ex-Province del Friuli-Venezia Giulia)\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS",
+      "LABEL": "Codice Provincia/Uts",
+      "NOTE": "Codice di tre caratteri alfanumerici con validità nell’intervallo 001-111 per le Province e 081-089 per i Liberi consorzi quando subentrati alle omonime ex Province. Il codice delle Città metropolitane è, invece, creato sommando '200' al codice della provincia corrispondente. Ai soli fini statistici, permangono i codici delle soppresse Province del Friuli-Venezia Giulia, cessate secondo le modalità espresse con L. r. n. 20/2016. Le Province soppresse e cedute a stato estero (anno 1947) sono così identificate: 701=Fiume, 702=Pola, 703=Zara. Le Province soppresse del Regno d'Italia (1861-1923) sono così identificate: 801=Venezia Giulia; 802= Venezia Tridentina.",
+      "LINK": "",
+      "GUIDA": "Codice Istat della Provincia o Unità territoriale sovracomunale (Uts) cessata alla data dell'evento. Le Unità territoriali sovracomunali, definite a fini statistici, ricomprendono, a partire dal 2015, oltre le Province anche le Città metropolitane, i Liberi consorzi e le unità non amministrative (ex Province del Friuli-Venezia Giulia).",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DEN_UTS",
+      "LABEL": "Provincia/Uts",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominazione della Provincia o Unità territoriale sovracomunale (uts) cessata alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS",
+      "LABEL": "Sigla Provincia/Uts",
+      "NOTE": "Alle province del Regno d’Italia (1861-1947) è assegnata la sigla automobilistica della corrispondente provincia esistente al 1948, e di quella al 1947 per Pola, Fiume Zara. Alla Venezia Giulia, dal 1921 scorporata nelle province di Udine, Trieste, Pola, Fiume e Zara, resta assegnata la denominazione estesa. Alla Venezia Tridentina è assegnata la sigla della corrispondente provincia di Trento. Con riferimento alla data del 1° gennaio 1999 viene registrato il cambio della sigla automobilistica della provincia di Pesaro e Urbino e Forlì-Cesena, rispettivamente, da PS in PU e da FO in FC.",
+      "LINK": "",
+      "GUIDA": "Elaborazione a fini statistici della sigla automobilistica associata alle provincia o unità territoriale sovracomunale cessata alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_VARIAZIONE",
+      "LABEL": "Tipo variazione",
+      "NOTE": "L'evento è descritto dal susseguirsi di un certo numero di righe, ognuna delle quali riferita all'unità coinvolta nella variazione (Unità incorporanti)",
+      "LINK": "",
+      "GUIDA": "ES-Estinzione; AS-Estinzione per cessione a stato estero; ESCT- estinzione per cambio tipologia",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "FLAG_ES_SCORPORO",
+      "LABEL": "Flag scorporo",
+      "NOTE": "Il valore 1 identifica l'unità il cui territorio, a seguito dell'estinzione, è incorporato in due o più unità esistenti o di nuova istituzione.",
+      "LINK": "",
+      "GUIDA": "1= Unità territoriale soppressa per scorporo; null altrimenti",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DATA_INIZIO_AMMINISTRATIVA",
+      "LABEL": "Data evento",
+      "NOTE": "Note non presenti",
+      "LINK": " ",
+      "GUIDA": "Data decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "DATA"
+    },
+    {
+      "COLNAME": "COD_UTS_REL",
+      "LABEL": "Codice Provincia/Uts associato",
+      "NOTE": "A fronte di un evento di soppressione, la o le e unità territoriali amministrative associate sono quelle che acquisiscono in tutto (costituzione per fusione) o in parte (incorporazione) il territorio dell'unità cessata.",
+      "LINK": "",
+      "GUIDA": "Codice Istat (alfanumerico) della Provincia/Uts associata all'evento della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DEN_UTS_REL",
+      "LABEL": "Provincia/Uts associata",
+      "NOTE": "A fronte di un evento di soppressione, la o le e unità territoriali amministrative associate sono quelle che acquisiscono in tutto (costituzione per fusione) o in parte (incorporazione) il territorio dell'unità cessata.",
+      "LINK": "",
+      "GUIDA": "Denominazione della Provincia/Uts associata all'evento della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS_REL",
+      "LABEL": "Sigla Provincia/Uts associata",
+      "NOTE": "Note non presenti",
+      "LINK": " ",
+      "GUIDA": "Guida non presente",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "TIPO_UTS_REL",
+      "LABEL": "Tipologia Provincia/Uts associata",
+      "NOTE": "1=Provincia; 2=Provincia autonoma; 3=Città metropolitana; 4=Libero consorzio di comuni; 5=Unità non amministrativa (ex- province del Friuli-Venezia Giulia)",
+      "LINK": "",
+      "GUIDA": "Tipologia della Provincia o Unità territoriale sovracomunale (Uts) associata all'evento della variazione; missing per gli eventi di tipo \"AN\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DESC_TIPO_UTS_REL",
+      "LABEL": "Descrizione tipologia associata",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Descrizione della tipologia di Provincia o Unità territoriale sovracomunale (Uts) associata all'evento: 1=Provincia; 2=Provincia autonoma; 3=Città metropolitana; 4=Libero consorzio di comuni; 5=Unità non amministrativa (ex-Province del Friuli-Venezia Giulia); missing per gli eventi di tipo \"AN- Annessione\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    }
+  ]
+}

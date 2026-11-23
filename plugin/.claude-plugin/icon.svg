@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Italian Archive Navigator">
+  <!-- Background: warm parchment -->
+  <rect width="64" height="64" rx="13" fill="#f5efe2"/>
+  <!-- Tricolore band along the top -->
+  <clipPath id="r"><rect width="64" height="64" rx="13"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect x="0" y="0" width="21.34" height="7" fill="#009246"/>
+    <rect x="21.33" y="0" width="21.34" height="7" fill="#ffffff"/>
+    <rect x="42.66" y="0" width="21.34" height="7" fill="#ce2b37"/>
+  </g>
+  <!-- Open archive register -->
+  <path d="M32 21c-5-3.2-11.5-4-18-3.2v28c6.5-.8 13 0 18 3.2 5-3.2 11.5-4 18-3.2v-28c-6.5-.8-13 0-18 3.2z" fill="#ffffff" stroke="#2b2a33" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 21v28" stroke="#2b2a33" stroke-width="2.2"/>
+  <!-- Lines of entries on the left page -->
+  <path d="M18 25.5c3.6-.3 7.2.2 10.5 1.6M18 31c3.6-.3 7.2.2 10.5 1.6M18 36.5c3.6-.3 7.2.2 10.5 1.6" stroke="#9c9486" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <!-- Tricolore ribbon bookmark hanging from the right page -->
+  <path d="M38 19.4h7.5v13l-3.75-3-3.75 3z" fill="#ffffff" stroke="#2b2a33" stroke-width="1.2" stroke-linejoin="round"/>
+  <rect x="38" y="19.4" width="2.5" height="11.4" fill="#009246"/>
+  <rect x="43" y="19.4" width="2.5" height="11.4" fill="#ce2b37"/>
+  <!-- Map pin on the right page: where the record is -->
+  <path d="M41 35.5c-3.1 0-5.6 2.4-5.6 5.4 0 4 5.6 8.6 5.6 8.6s5.6-4.6 5.6-8.6c0-3-2.5-5.4-5.6-5.4z" fill="#ce2b37" stroke="#2b2a33" stroke-width="1.2"/>
+  <circle cx="41" cy="40.9" r="2" fill="#ffffff"/>
+</svg>

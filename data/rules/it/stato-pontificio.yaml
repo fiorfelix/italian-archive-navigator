@@ -1,0 +1,337 @@
+# Papal States after the Restoration. Lazio comuni are identified by their ISTAT annexation date
+# (1871); Umbria, Marche and the Rieti area by their 1861 province (Perugia, Ancona, Ascoli
+# Piceno, Macerata, Pesaro-Urbino). Each rule says whether it is verified from an official source.
+version: 1
+state: Stato Pontificio
+state_en: Papal States
+rules:
+  - id: papa-lazio-1814-1870
+    title: 'Stato Pontificio (Lazio): nessuno stato civile dopo la Restaurazione'
+    territory:
+      joined_italy:
+        from: '1870-09-20'
+        to: '1871-12-31'
+    period:
+      from: '1814-05-13'
+      to: '1870-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali di battesimo, matrimonio e morte
+        en: Parish registers of baptisms, marriages and deaths
+      - it: Stati delle anime
+        en: Status animarum (parish censuses)
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano (registri trasferiti, stati delle anime)
+          en: Diocesan archive (transferred registers, status animarum)
+        office_type: diocesi
+    fallbacks:
+      - it: Atti e delibere del consiglio comunale, registri della popolazione
+        en: Comune council records and population registers
+      - &id002
+        it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - Rome and Lazio joined the Kingdom of Italy on 15 January 1871 (ISTAT); Italian civil registration
+        began 1870/71.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Il 13 mag. 1814 il governo pontificio soppresse lo stato civile ed ordinò di consegnare ai parroci tutte quelle scritture
+      - url: https://situas.istat.it/web/#/apiDetail
+        quote: 'ISTAT SITUAS report 100: annexation (AN) of the Rome province comuni on 1871-01-15'
+    verified: true
+    reviewed_for:
+      - Lazio
+    events: &id001
+      - birth
+      - marriage
+      - death
+  - id: papa-umbria-1814-1860
+    title: 'Stato Pontificio (Umbria e Sabina): nessuno stato civile fino all’annessione'
+    territory:
+      first_provinces:
+        - PG
+    period:
+      from: '1814-05-13'
+      to: '1860-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali
+        en: Parish registers
+      - it: Stati delle anime
+        en: Status animarum
+    holders: &papal_holders
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano
+          en: Diocesan archive
+        office_type: diocesi
+    fallbacks: &papal_fallbacks
+      - it: Atti del consiglio comunale
+        en: Comune council records
+    notes:
+      - Umbria returned to the Papal States with Rome in 1814 and was annexed in autumn 1860.
+      - The suppression of civil registration on 13 May 1814 is quoted from the Archivio di Stato di Roma entry
+        of the Guida generale; it was an act of the papal government, not of one province.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Il 13 mag. 1814 il governo pontificio soppresse lo stato civile ed ordinò di consegnare ai parroci tutte quelle scritture
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote: Libri parrocchiali, regg. 210 (1567-1863). < Battesimi > 1570- 1861 ... < Matrimoni > 1567-1861 ... < Morti > 1599-1863
+    verified: true
+    reviewed_for:
+      - Umbria
+      - Lazio
+    events: *id001
+  - id: marche-governo-napoletano-1814-1815
+    title: 'Marche sotto il governo provvisorio napoletano (Murat), 1814–1815'
+    territory:
+      first_provinces:
+        - AN
+        - AP
+        - MC
+        - PU
+    period:
+      from: '1814-05-24'
+      to: '1815-12-31'
+    regime: napoleonic
+    records:
+      - it: Atti di stato civile di tipo napoleonico, dove la registrazione continuò
+        en: Napoleonic-style civil acts, where registration continued
+      - it: Registri parrocchiali
+        en: Parish registers
+    holders:
+      - what:
+          it: Esemplare comunale o Archivio di Stato, se conservato
+          en: Comune copy or State Archive, where it survives
+        office_type: stato_civile
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+    fallbacks: *papal_fallbacks
+    notes:
+      - The Marche (provinces "di seconda recupera") returned to the Papal States only in 1815; in 1814–1815 they
+        were under a provisional Neapolitan government. Some comuni kept civil registers into 1815 (Rapagnano,
+        1810–1815). The exact date civil registration stopped is not given in the sources; for 1815 ask both the
+        Comune and the parish.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+        quote: Ad Ancona, come per le altre province dette di seconda recupera, la restaurazione dello Stato pontificio avvenne nel 1815.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+        quote: Governo provvisorio napoletano, bb. 46 (1814-1815).
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ascolipi_.pdf
+        quote: Rapagnano ... < Nascite, morti e matrimoni > 1810-1815
+    verified: false
+    reviewed_for:
+      - Marche
+    events: *id001
+  - id: papa-marche-1816-1860
+    title: 'Stato Pontificio (Marche): nessuno stato civile fino all’annessione'
+    territory:
+      first_provinces:
+        - AN
+        - AP
+        - MC
+        - PU
+    period:
+      from: '1816-01-01'
+      to: '1860-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali
+        en: Parish registers
+      - it: Stati delle anime
+        en: Status animarum
+    holders: *papal_holders
+    fallbacks: *papal_fallbacks
+    notes:
+      - The papal restoration in the Marche took place in 1815; the Marche were annexed in autumn 1860.
+      - Not yet confirmed that the 1814 suppression of civil registration was applied in the Marche in the same
+        form; parish registers are the expected source.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Ancona_.pdf
+        quote: Ad Ancona, come per le altre province dette di seconda recupera, la restaurazione dello Stato pontificio avvenne nel 1815.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Il 13 mag. 1814 il governo pontificio soppresse lo stato civile ed ordinò di consegnare ai parroci tutte quelle scritture
+    verified: false
+    reviewed_for:
+      - Marche
+    events: *id001
+  - id: papa-enclave-pontecorvo-1816-1860
+    title: 'Pontecorvo, enclave pontificia nel Regno delle Due Sicilie: nessuno stato civile fino al 1860'
+    territory:
+      comuni:
+        - '060056'
+    period:
+      from: '1816-07-06'
+      to: '1860-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali
+        en: Parish registers
+    holders: *papal_holders
+    fallbacks: *papal_fallbacks
+    notes:
+      - Pontecorvo was a papal enclave (district of the apostolic delegation of Frosinone), not part of the
+        Kingdom of the Two Sicilies; in 1861 it was placed in the province of Terra di Lavoro.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Frosinon_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Frosinon_.pdf
+        quote: 'la delegazione di Frosinone risultò divisa in due distretti: Frosinone e Pontecorvo.'
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Frosinon_.pdf
+        quote: Il distretto di Pontecorvo comprendeva solo il governo di Pontecorvo.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Il 13 mag. 1814 il governo pontificio soppresse lo stato civile ed ordinò di consegnare ai parroci tutte quelle scritture
+    verified: true
+    reviewed_for:
+      - Lazio
+    events: *id001
+  - id: papa-enclave-benevento-1815-1860
+    title: 'Benevento, enclave pontificia: nessuno stato civile fino al 1860'
+    territory:
+      comuni:
+        - '062008'
+    period:
+      from: '1815-07-01'
+      to: '1860-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali
+        en: Parish registers
+    holders: *papal_holders
+    fallbacks: *papal_fallbacks
+    notes:
+      - Benevento was a papal enclave in the Kingdom of the Two Sicilies. The start date (return to the Papal
+        States in 1815) is approximate; not confirmed from an official source.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Le amministrazioni principali risiedevano in Roma, Ancona e Bologna, con ricevitorie a Benevento e Pontecorvo.
+    verified: false
+    reviewed_for: []
+    events: *id001
+  - id: papa-romagna-1815-1859
+    title: 'Legazioni pontificie (Romagna): nessuno stato civile fino al 1859'
+    territory:
+      first_provinces:
+        - BO
+        - FE
+        - FC
+        - RA
+    period:
+      from: '1815-01-01'
+      to: '1859-12-31'
+    regime: parish_only
+    records:
+      - it: Registri parrocchiali
+        en: Parish registers
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano
+          en: Diocesan archive
+        office_type: diocesi
+    fallbacks:
+      - *id002
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []
+    events: *id001
+  - id: umbria-stato-civile-1861-1865
+    title: 'Umbria (e Sabina) 1861–1865: stato civile introdotto dopo l’annessione'
+    territory:
+      first_provinces:
+        - PG
+    period:
+      from: '1861-01-01'
+      to: '1865-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: italian_civil
+    records:
+      - it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+      - it: Pubblicazioni di matrimonio
+        en: Marriage banns
+    holders:
+      - what:
+          it: Primo originale dei registri
+          en: First original of the registers
+        office_type: stato_civile
+      - what:
+          it: Secondo originale (Tribunale, oggi all’Archivio di Stato)
+          en: Second original (Tribunale, today at the State Archive)
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Registri parrocchiali
+        en: Parish registers
+    notes:
+      - Civil registers from 1861 survive in the Tribunale series of Perugia (1861–1899) and Terni (1861–1900).
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote: < Stato civile > 1861-l 899, bb. 1.585 e regg, 11.025.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Terni_.pdf
+        quote: A t t i d e l l o s t a t o c i v i l e , regg. 3.011 (1861-1900 con lacune).
+    verified: true
+    reviewed_for:
+      - Umbria
+      - Lazio
+  - id: marche-parrocchiali-1861-1865
+    title: 'Marche 1861–1865: registri parrocchiali depositati presso il Tribunale'
+    territory:
+      first_provinces:
+        - AN
+        - AP
+        - MC
+        - PU
+    period:
+      from: '1861-01-01'
+      to: '1865-12-31'
+    events:
+      - birth
+      - marriage
+      - death
+    regime: parish_civil
+    records:
+      - it: Registri parrocchiali con copia depositata presso il Tribunale
+        en: Parish registers with a copy deposited at the Tribunale
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Copia del Tribunale (oggi all’Archivio di Stato)
+          en: Tribunale copy (today at the State Archive)
+        office_type: archivio_di_stato
+    fallbacks:
+      - it: Archivio diocesano
+        en: Diocesan archive
+    notes:
+      - Confirmed for the province of Pesaro e Urbino (parish registers 1861–1865 deposited by the Tribunale);
+        not yet confirmed for Ancona, Macerata and Ascoli Piceno.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote: Comprende i registri, versati dal tribunale italiano, delle parrocchie
+    verified: false
+    reviewed_for:
+      - Marche

@@ -1,0 +1,79 @@
+# Territories annexed after the First World War. Each rule says whether it is verified from an
+# official source and cites its sources.
+version: 1
+state: Territori annessi dopo la prima guerra mondiale
+state_en: Territories annexed after the First World War
+rules:
+  - id: trentino-parrocchiale-fino-1920
+    title: 'Trentino–Alto Adige prima dell’annessione: registri parrocchiali'
+    territory:
+      joined_italy:
+        from: '1920-01-01'
+        to: '1920-12-31'
+    period:
+      from: '1816-01-01'
+      to: '1920-10-15'
+    regime: foreign_parish
+    records:
+      - it: Registri parrocchiali (Matrikenbücher) con valore civile
+        en: Parish registers (Matrikenbücher) with civil validity
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano / copie presso l’Archivio di Stato
+          en: Diocesan archive / copies at the State Archive
+        office_type: diocesi
+    fallbacks:
+      - it: Archivio provinciale (Trento, Bolzano)
+        en: Provincial archive (Trento, Bolzano)
+    notes:
+      - Annexed on 16 October 1920 (ISTAT). Italian civil registration began after annexation; the exact start
+        date is not yet confirmed.
+    source_url: https://antenati.cultura.gov.it/
+    sources:
+      - url: https://situas.istat.it/web/#/apiDetail
+        quote: 'ISTAT SITUAS report 100: annexation (AN) of Trentino–Alto Adige comuni on 1920-10-16'
+    verified: false
+    reviewed_for: []
+    events: &id001
+      - birth
+      - marriage
+      - death
+  - id: venezia-giulia-parrocchiale-fino-1921
+    title: 'Venezia Giulia prima dell’annessione: registri parrocchiali'
+    territory:
+      joined_italy:
+        from: '1921-01-01'
+        to: '1924-12-31'
+    period:
+      from: '1816-01-01'
+      to: '1921-01-04'
+    regime: foreign_parish
+    records:
+      - it: Registri parrocchiali con valore civile
+        en: Parish registers with civil validity
+    holders:
+      - what:
+          it: Registri parrocchiali
+          en: Parish registers
+        office_type: parrocchia
+      - what:
+          it: Archivio diocesano
+          en: Diocesan archive
+        office_type: diocesi
+    fallbacks:
+      - it: Archivio di Stato (Trieste, Gorizia)
+        en: State Archive (Trieste, Gorizia)
+    notes:
+      - Annexed on 5 January 1921 (ISTAT; Fiume 1924). Italian civil registration began after annexation;
+        the exact start date is not yet confirmed.
+    source_url: https://antenati.cultura.gov.it/
+    sources:
+      - url: https://situas.istat.it/web/#/apiDetail
+        quote: 'ISTAT SITUAS report 100: annexation (AN) of Venezia Giulia comuni on 1921-01-05'
+    verified: false
+    reviewed_for: []
+    events: *id001

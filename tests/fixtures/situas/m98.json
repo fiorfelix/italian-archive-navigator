@@ -1,0 +1,156 @@
+{
+  "REPORT NAME": "Comuni soppressi o ceduti a stato estero",
+  "REPORT DESCRIZIONE": "Il report restituisce l’elenco dei comuni che, nel periodo di tempo impostato per la ricerca, sono stati soppressi oppure, tra il 1861 e il 1947, sono stati ceduti ad uno stato estero dall’ex Regno d’Italia. I codici e le denominazioni delle unità territoriali sono quelli validi alla data dell’evento. Tutti i campi sono descritti con maggior dettaglio nella legenda del file.",
+  "COL_DETAILS": [
+    {
+      "COLNAME": "ANNO",
+      "LABEL": "Anno evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Anno di decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS",
+      "LABEL": "Sigla Provincia/Uts",
+      "NOTE": "Alle province del Regno d’Italia (1861-1947) è assegnata la sigla automobilistica della corrispondente provincia esistente al 1948 e di quella al 1947 nel caso di Pola, Fiume e Zara. Alla Provincia della Venezia Giulia (nel 1923 scorporata nelle Province di Udine, Trieste, Pola, Fiume e Zara) è assegnata convenzionalmente la denominazione estesa. Alla Venezia Tridentina è assegnata la sigla della corrispondente Provincia di Trento.",
+      "LINK": "",
+      "GUIDA": "Elaborazione a fini statistici della sigla automobilistica assegnata alla provincia/unità territoriale sovracomunale di appartenenza del comune cessato",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS",
+      "LABEL": "Codice Provincia/Uts",
+      "NOTE": "Codice di tre caratteri alfanumerici con validità nell’intervallo 001-111 per le province e 081-089 per i liberi consorzi quando subentrati alle omonime ex province. Il codice delle città metropolitane è, invece, creato sommando '200' al codice della provincia corrispondente. Ai soli fini statistici, permangono i codici delle soppresse province del Friuli-Venezia Giulia, cessate secondo le modalità espresse con L. r. n. 20/2016. Le Province soppresse e cedute a stato estero sono così identificate: 701=Fiume, 702=Pola, 703=Zara. Le province soppresse del Regno d'Italia (1861-1923) sono così identificate: 801=Venezia Giulia; 802= Venezia Tridentina.",
+      "LINK": "",
+      "GUIDA": "Codice Istat della provincia o unità territoriale sovracomunale (uts) di appartenenza del comune cessato.\nLe unità territoriali sovracomunali, definite a fini statistici, ricomprendono, a partire dal 2015, oltre le province anche le città metropolitane, i liberi consorzi e le unità non amministrative (ex Province del Friuli-Venezia Giulia).\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "PRO_COM_T",
+      "LABEL": "Codice  Comune",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat di sei caratteri in formato alfanumerico del comune cessato",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_CATASTO",
+      "LABEL": "Codice catasto",
+      "NOTE": "Elaborazione Istat su dati dell'Agenzia delle Entrate.",
+      "LINK": "https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/archivio-comuni-e-stati-esteri/consultazione-archivio-comuni-stati-esteri",
+      "GUIDA": "Codice assegnato dall'Agenzia delle Entrate per finalità amministrative e utilizzato, tra l'altro, anche nella composizione del Codice Fiscale. N.d.=quando non disponibile",
+      "FORMATMASK": "",
+      "FONTE": "Agenzia delle Entrate",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE",
+      "LABEL": "Comune",
+      "NOTE": "La denominazione ufficiale dei comuni della provincia di Bolzano/Bozen e di alcuni comuni dell Friuli-Venezia Giulia è definita dall'associazione del nome italiano a quello straniero. Per le denominazioni bilingue è previsto l'uso del simbolo separatore: \"/\" per i comuni della provincia di Bolzano/Bozen, e \"-\" per tutti gli altri.",
+      "LINK": "",
+      "GUIDA": "Denominazione italiana e straniera del comune cessato",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_A",
+      "LABEL": "Comune (dizione straniera)",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominazione del comune in lingua straniera",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "FLAG_ES_SCORPORO",
+      "LABEL": "Flag Scorporo",
+      "NOTE": "Il valore 1 identifica l'unità il cui territorio, a seguito dell'evento di cessazione, è incorporato in due o più unità esistenti e/o di nuova istituzione.",
+      "LINK": "",
+      "GUIDA": "1= Comune soppresso per scorporo; null altrimenti",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_VARIAZIONE",
+      "LABEL": "Tipo variazione",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice e descrizione della variazione: ES-Estinzione; AS- Estinzione per cessione a stato estero",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "DATA_INIZIO_AMMINISTRATIVA",
+      "LABEL": "Data evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Data decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "DATA"
+    },
+    {
+      "COLNAME": "PRO_COM_T_REL",
+      "LABEL": "Codice Comune associato",
+      "NOTE": "I comuni associati alla variazione sono quelli che incorporano tutto (fusione) o in parte (incorporazione per scorporo) il territorio dell'unità cessata.",
+      "LINK": "",
+      "GUIDA": "Codice Istat in formato alfanumerico del comune associato alla variazione; missing negli eventi di tipo \"AS\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_CATASTO_REL",
+      "LABEL": "Codice catasto associato",
+      "NOTE": "Elaborazione Istat su dati dell'Agenzia delle Entrate",
+      "LINK": "https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/archivio-comuni-e-stati-esteri/consultazione-archivio-comuni-stati-esteri",
+      "GUIDA": "Codice catastale del comune associato alla variazione; missing nell'evento di tipo \"AS\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_REL",
+      "LABEL": "Comune associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominazione italiana e straniera del comune associato alla variazione. Per gli eventi di tipo \"AS\" viene riportata convenzionalmente la dizione \"Stato estero\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS_REL",
+      "LABEL": "Codice Provincia/Uts associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat della provincia/uts di appartenenza del comune associato alla variazione; missing nell'evento di tipo \"AS\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS_REL",
+      "LABEL": "Sigla Provincia/Uts associata",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Sigla della provincia/uts associata alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    }
+  ]
+}

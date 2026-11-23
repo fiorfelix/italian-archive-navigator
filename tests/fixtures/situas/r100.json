@@ -1,0 +1,189 @@
+{
+  "resultset": [
+    {
+      "ANNO": "1975",
+      "SIGLA_UTS": "LE",
+      "COD_UTS": "075",
+      "PRO_COM_T": "075096",
+      "COD_CATASTO": "M261",
+      "COMUNE": "Castro",
+      "COD_VARIAZIONE_M": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1975-05-28T00:00:00Z",
+      "PRO_COM_T_REL": "075027",
+      "COD_CATASTO_REL": "D305",
+      "COMUNE_REL": "Diso",
+      "COD_UTS_REL": "075",
+      "SIGLA_UTS_REL": "LE"
+    },
+    {
+      "ANNO": "1958",
+      "SIGLA_UTS": "VT",
+      "COD_UTS": "056",
+      "PRO_COM_T": "056006",
+      "COD_CATASTO": "A706",
+      "COMUNE": "Bassano in Teverina",
+      "COD_VARIAZIONE_M": "CS",
+      "DATA_INIZIO_AMMINISTRATIVA": "1958-10-25T00:00:00Z",
+      "PRO_COM_T_REL": "056042",
+      "COD_CATASTO_REL": "G135",
+      "COMUNE_REL": "Orte",
+      "COD_UTS_REL": "056",
+      "SIGLA_UTS_REL": "VT"
+    },
+    {
+      "ANNO": "1920",
+      "SIGLA_UTS": "TN",
+      "COD_UTS": "802",
+      "PRO_COM_T": "802039",
+      "COD_CATASTO": "A952",
+      "COMUNE": "Bolzano/Bozen",
+      "COMUNE_A": "Bozen",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1920-10-16T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058822",
+      "COD_CATASTO": "B388",
+      "COMUNE": "Calcata",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058811",
+      "COD_CATASTO": "A548",
+      "COMUNE": "Bagnaja",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058812",
+      "COD_CATASTO": "A577",
+      "COMUNE": "Bagnorea",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058814",
+      "COD_CATASTO": "A706",
+      "COMUNE": "Bassano in Teverina",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058839",
+      "COD_CATASTO": "C338",
+      "COMUNE": "Castro",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058841",
+      "COD_CATASTO": "C446",
+      "COMUNE": "Celleno",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058875",
+      "COD_CATASTO": "E128",
+      "COMUNE": "Graffignano",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058878",
+      "COD_CATASTO": "E211",
+      "COMUNE": "Grotte Santo Stefano",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058913",
+      "COD_CATASTO": "G135",
+      "COMUNE": "Orte",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058938",
+      "COD_CATASTO": "H419",
+      "COMUNE": "Roccalvecce",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058964",
+      "COD_CATASTO": "D024",
+      "COMUNE": "Corneto",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058975",
+      "COD_CATASTO": "L310",
+      "COMUNE": "Toscanella",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    },
+    {
+      "ANNO": "1871",
+      "SIGLA_UTS": "RM",
+      "COD_UTS": "058",
+      "PRO_COM_T": "058989",
+      "COD_CATASTO": "M082",
+      "COMUNE": "Viterbo",
+      "COD_VARIAZIONE_M": "AN",
+      "DATA_INIZIO_AMMINISTRATIVA": "1871-01-15T00:00:00Z",
+      "COMUNE_REL": "Stato estero"
+    }
+  ]
+}

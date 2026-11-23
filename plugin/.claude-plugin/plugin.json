@@ -1,0 +1,13 @@
+{
+  "name": "italian-archive-navigator",
+  "displayName": "Italian Archive Navigator",
+  "version": "0.1.0",
+  "description": "Italian family-history research: find what a place was called and which comune it belonged to, which civil, parish and military records exist for a year and who holds them today, and draft the request letter in Italian. Read-only; letters are returned for you to send.",
+  "author": {
+    "name": "fiorfelix"
+  },
+  "keywords": ["genealogy", "italy", "archives", "family-history", "civil-registration"],
+  "license": "MIT",
+  "homepage": "https://archives.fiorfelix.com",
+  "privacyPolicyUrl": "https://archives.fiorfelix.com/privacy"
+}

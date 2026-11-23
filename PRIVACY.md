@@ -1,0 +1,70 @@
+# Privacy policy
+
+Italian Archive Navigator · Last updated: 22 November 2026
+
+This policy covers the Italian Archive Navigator MCP server at
+`https://archives-mcp.fiorfelix.com/mcp`, the Claude plugin that connects to it, and the
+information pages at `archives.fiorfelix.com`. The service is run by fiorfelix.
+
+## What the service is
+
+A read-only service that answers questions about Italian places, records and archives, and
+drafts letters that you send yourself. It does not send e-mail, submit forms or contact any
+office on your behalf.
+
+## Accounts
+
+There are no accounts, logins or authentication. The service does not ask who you are.
+
+## What you send, and what happens to it
+
+When you use the connector, Claude sends the server the details a tool needs: place names,
+years and event types and, if you ask for a letter, the names, dates and contact details to be
+written into it.
+
+- This information is used only to produce the answer to that request.
+- It is **not stored**: not in a database, not in files, not in logs.
+- It is not sold or shared, and the server sends it nowhere: it makes no outgoing requests while
+  answering and reads only its own copy of public data.
+
+## Logs
+
+For each request the server logs only: the tool name, how long it took, whether it succeeded,
+and an error code if it failed. Logs never contain the content of a request or an answer, and
+never contain network addresses.
+
+- **Network addresses:** the server sees the network address of each request only to apply rate
+  limits, keeps it in memory for at most one minute, and never writes it down.
+- **Retention:** logs are kept for at most 30 days. The current host keeps them for 7 days.
+
+## Who else handles the traffic
+
+- **Hosting:** the server runs on Render (render.com), whose network uses Cloudflare. They carry
+  the requests to the server and may keep their own technical records under their own policies
+  ([Render privacy policy](https://render.com/privacy)). We use such records only to diagnose
+  problems.
+- **Domain:** the domain's DNS is managed by Cloudflare.
+- **Claude:** your conversations with Claude, including what you ask it to look up, are handled
+  by Anthropic under [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy). This
+  service receives only the tool calls Claude makes to it.
+
+## The information pages
+
+The pages at `archives.fiorfelix.com` use no cookies, no analytics and no tracking.
+
+## Data the service publishes
+
+Answers come from public open data (ISTAT and IndicePA, CC BY 4.0), from official archival
+guides and laws cited in each answer, and from this project's own curated files. Office contacts
+are those the offices publish themselves; names of office holders are not included, and only
+office mailboxes are kept.
+
+## Living people
+
+The service does not look up living people. Questions about events less than 100 years ago, or
+about people born after 1940, are directed to the Comune, which decides what it can release.
+
+## Changes and contact
+
+Changes to this policy are published on this page with a new date. For privacy questions, write
+to info@fiorfelix.com.

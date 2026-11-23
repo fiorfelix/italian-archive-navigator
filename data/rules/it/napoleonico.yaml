@@ -1,0 +1,187 @@
+# Napoleonic civil registration (stato civile napoleonico). Each rule says whether it is verified
+# from an official source and cites its sources.
+version: 1
+state: Periodo napoleonico
+state_en: Napoleonic period
+rules:
+  - id: nap-lazio-umbria-1809-1814
+    title: 'Lazio e Umbria annessi all’Impero francese: stato civile napoleonico'
+    territory:
+      regions:
+        - Lazio
+        - Umbria
+    period:
+      from: '1809-08-02'
+      to: '1814-05-12'
+    regime: napoleonic
+    records:
+      - &id001
+        it: Atti di nascita, matrimonio e morte
+        en: Birth, marriage and death acts
+      - it: Pubblicazioni di matrimonio, allegati
+        en: Marriage banns, supporting papers
+    holders:
+      - what:
+          it:
+            'Registri in duplice copia: uno al Comune, l’altro al Tribunale di prima istanza (oggi spesso
+            all’Archivio di Stato)'
+          en:
+            'Registers in duplicate: one for the Comune, one for the Tribunale di prima istanza (today often
+            at the State Archive)'
+        office_type: archivio_di_stato
+      - what:
+          it: Esemplare comunale, se conservato
+          en: Comune copy, where it survives
+        office_type: stato_civile
+    fallbacks: &id002
+      - it: Registri parrocchiali (battesimi, matrimoni, sepolture)
+        en: Parish registers (baptisms, marriages, burials)
+      - it: Archivio diocesano (copie dei registri, stati delle anime)
+        en: Diocesan archive (register copies, status animarum)
+    notes:
+      - Surviving registers mostly cover 1810–1813/1814 (Archivio di Stato di Roma 1810–1814; Trasimeno department
+        1810–1813; Rieti 1810–1812).
+      - Former Neapolitan parts of today’s Lazio (Gaeta, Sora, Cittaducale areas) had Neapolitan civil registration
+        from 1809.
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+    verified: true
+    reviewed_for:
+      - Lazio
+      - Umbria
+    events: &id003
+      - birth
+      - marriage
+      - death
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote: Fu istituito con ordine della consulta straordinaria degli Stati romani del 2 ag. 1809
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf
+        quote:
+          depositati il primo negli archivi del comune e l’altro presso la cancelleria del tribunale
+          di
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Perugia_.pdf
+        quote: < Stato civile del dipartimento del Trasimeno > 1810-1813, regg. 352.
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Rieti_.pdf
+        quote: Atti dello stato civile del dipartimento del Tevere, regg. 11 (1810-1812).
+  - id: nap-marche-1808-1814
+    title: 'Marche nel Regno d’Italia napoleonico: stato civile napoleonico'
+    territory:
+      regions:
+        - Marche
+    period:
+      from: '1808-04-02'
+      to: '1814-05-23'
+    regime: napoleonic
+    records:
+      - *id001
+    holders: &id004
+      - what:
+          it: Registri napoleonici (spesso conservati all’Archivio di Stato)
+          en: Napoleonic registers (often at the State Archive)
+        office_type: archivio_di_stato
+      - what:
+          it: Esemplare comunale, se conservato
+          en: Comune copy, where it survives
+        office_type: stato_civile
+    fallbacks: *id002
+    source_url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Macerata_.pdf
+    verified: true
+    reviewed_for:
+      - Marche
+    events: *id003
+    sources:
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Macerata_.pdf
+        quote: A t t i d e l l o s t a t o c i v i l e , pacchi 112 (1808- 18 14).
+      - url: https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Pesaro_.pdf
+        quote: Atti dello stato civile napoleonico, regg. 50 ca. (1809-
+    notes:
+      - 'Surviving series: Macerata 1808–1814 (Musone department localities), Pesaro 1809–1813.'
+  - id: nap-toscana-1808-1814
+    title: 'Toscana annessa all’Impero francese: stato civile napoleonico'
+    territory:
+      regions:
+        - Toscana
+    period:
+      from: '1808-01-01'
+      to: '1814-05-09'
+    regime: napoleonic
+    records:
+      - *id001
+    holders:
+      - what:
+          it: Registri di atti per comunità 1808–1814 (Archivio di Stato di Firenze, Stato civile di Toscana)
+          en: Registers of acts by community, 1808–1814 (State Archive of Florence, Tuscan civil registration)
+        office_type: archivio_di_stato
+      - what:
+          it: Esemplare comunale, se conservato
+          en: Comune copy, where it survives
+        office_type: stato_civile
+    fallbacks: *id002
+    source_url: https://archiviodistatofirenze.cultura.gov.it/statocivile/pdf/inventario_M10.pdf
+    verified: true
+    reviewed_for:
+      - Toscana
+    events: *id003
+    sources:
+      - url: https://archiviodistatofirenze.cultura.gov.it/statocivile/pdf/inventario_M10.pdf
+        quote: REGISTRI DI ATTI PER COMUNITA’, 1808-1814
+      - url: https://archiviodistatofirenze.cultura.gov.it/statocivile/pdf/inventario_M10.pdf
+        quote: STATO CIVILE DI TOSCANA 1808 - 1865
+  - id: nap-regno-italia-dipartimenti-1806-1815
+    title: 'Regno d’Italia napoleonico e dipartimenti annessi: stato civile napoleonico'
+    territory:
+      regions:
+        - Piemonte
+        - Liguria
+        - Lombardia
+        - Veneto
+        - Emilia-Romagna
+        - Friuli-Venezia Giulia
+        - Valle d'Aosta/Vallée d'Aoste
+    period:
+      from: '1806-01-01'
+      to: '1815-12-31'
+    regime: napoleonic
+    records:
+      - *id001
+    holders: *id004
+    fallbacks: *id002
+    notes:
+      - Start dates differ by territory (Piedmont and Liguria were French earlier).
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for: []
+    events: *id003
+  - id: nap-regno-napoli-1809-1815
+    title: 'Regno di Napoli: stato civile napoleonico dal 1809'
+    territory:
+      first_provinces:
+        - NA
+        - CE
+        - SA
+        - AV
+        - BN
+        - CB
+        - AQ
+        - CH
+        - TE
+        - FG
+        - BA
+        - LE
+        - PZ
+        - CS
+        - CZ
+        - RC
+    period:
+      from: '1809-01-01'
+      to: '1815-12-31'
+    regime: napoleonic
+    records:
+      - *id001
+    holders: *id004
+    fallbacks: *id002
+    source_url: https://antenati.cultura.gov.it/
+    verified: false
+    reviewed_for:
+      - Lazio
+    events: *id003

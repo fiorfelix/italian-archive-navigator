@@ -1,0 +1,7 @@
+Resto a disposizione per ogni chiarimento. {{ringraziamento}}
+
+Distinti saluti
+
+Luogo e data: {{luogo_data}}
+Firma: ______________________________
+({{richiedente}})

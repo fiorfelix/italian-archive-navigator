@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "italian-archive-navigator": {
+      "type": "http",
+      "url": "https://archives-mcp.fiorfelix.com/mcp"
+    }
+  }
+}

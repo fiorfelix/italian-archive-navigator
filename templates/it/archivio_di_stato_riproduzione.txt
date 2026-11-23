@@ -1,0 +1,10 @@
+Oggetto: richiesta di copie per ricerca genealogica – atto di {{evento}}, {{comune_atto}}, {{anno}}{{#estremi_atto}}, {{estremi_atto}}{{/estremi_atto}}
+
+Gentili Signori, per una ricerca sulla storia della mia famiglia chiedo cortesemente la ricerca e la riproduzione digitale dei documenti seguenti, e l'indicazione dei costi e delle modalità di pagamento.
+
+Stato civile italiano, Comune di {{comune_atto}}, {{serie}} {{anno}}
+• Atto{{#estremi_atto}} {{estremi_atto}}{{/estremi_atto}}{{#del_data_evento}} {{del_data_evento}}{{/del_data_evento}}: {{scheda_persona}}{{#scheda_coniuge}} e {{scheda_coniuge}}{{/scheda_coniuge}}.
+{{#allegati}}• Chiedo copia degli allegati a questo atto{{#pubblicazioni}} e dei documenti prodotti con la richiesta di pubblicazioni ({{pubblicazioni}}){{/pubblicazioni}}.
+• Se gli allegati non fossero conservati presso di voi, vi sarei grato di indicarmi dove potrebbero trovarsi.
+{{/allegati}}{{#dettagli}}{{dettagli}}
+{{/dettagli}}

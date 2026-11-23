@@ -1,0 +1,136 @@
+{
+  "REPORT NAME": "Comuni con variazione del codice statistico",
+  "REPORT DESCRIZIONE": "La funzione restituisce l’elenco dei comuni che, nel periodo di tempo impostato per la ricerca, hanno: 1) cambiato provincia di appartenenza. L’evento si verifica prevalentemente, seppure non solo, alla costituzione di nuove province e può implicare anche il cambio di appartenenza alla regione; 2) subito una variazione del codice statistico perché rinumerati nell’ambito della provincia di appartenenza in seguito alla cessione e/o acquisizione di altri comuni per costituzione/estinzione di un'altra provincia. Tutti i campi sono descritti con maggior dettaglio nella legenda del file.",
+  "COL_DETAILS": [
+    {
+      "COLNAME": "ANNO",
+      "LABEL": "Anno evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Anno di decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS",
+      "LABEL": "Sigla Provincia/Uts",
+      "NOTE": "Alle province del Regno d’Italia (1861-1947) è assegnata la sigla automobilistica della corrispondente provincia esistente al 1948 e di quella al 1947 nel caso di Pola, Fiume e Zara. Alla Provincia della Venezia Giulia (nel 1923 scorporata nelle Province di Udine, Trieste, Pola, Fiume e Zara) è assegnata convenzionalmente la denominazione estesa. Alla Venezia Tridentina è assegnata la sigla della corrispondente Provincia di Trento.",
+      "LINK": "",
+      "GUIDA": "Elaborazione a fini statistici della sigla automobilistica associata alla provincia/unità territoriale sovracomunale di appartenenza del comune prima dell'evento.\nAvvertenza: Per le nuove Province sarde istituite nel 2025 (con decorrenza 1° gennaio 2026), l'attribuzione delle sigle identificative (CI, VS, OG, OT) ha carattere provvisorio in attesa del formale decreto di attribuzione.",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS",
+      "LABEL": "Codice Provincia/Uts",
+      "NOTE": "Codice di tre caratteri alfanumerici con validità nell’intervallo 001-111 per le province e 081-089 per i liberi consorzi quando subentrati alle omonime ex province. Il codice delle città metropolitane è, invece, creato sommando '200' al codice della provincia corrispondente. Ai soli fini statistici, permangono i codici delle soppresse province del Friuli-Venezia Giulia, cessate secondo le modalità espresse con L. r. n. 20/2016. Le Province soppresse e cedute a stato estero sono così identificate: 701=Fiume, 702=Pola, 703=Zara. Le province soppresse del Regno d'Italia (1861-1923) sono così identificate: 801=Venezia Giulia; 802= Venezia Tridentina.",
+      "LINK": "",
+      "GUIDA": "Codice Istat della provincia o unità territoriale sovracomunale (uts) di appartenenza del comune prima dell'evento.\nLe unità territoriali sovracomunali, definite a fini statistici, ricomprendono, a partire dal 2015, oltre le province anche le città metropolitane, i liberi consorzi e le unità non amministrative (ex Province del Friuli-Venezia Giulia).\"",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "PRO_COM_T",
+      "LABEL": "Codice Comune",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat del comune di sei caratteri in formato alfanumerico precedente alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE",
+      "LABEL": "Comune",
+      "NOTE": "La denominazione ufficiale dei comuni della provincia di Bolzano/Bozen e di alcuni comuni dell Friuli-Venezia Giulia è definita dall'associazione del nome italiano a quello straniero. Per le denominazioni bilingue è previsto l'uso del simbolo separatore: \"/\" per i comuni della provincia di Bolzano/Bozen, e \"-\" per tutti gli altri.",
+      "LINK": "",
+      "GUIDA": "Denominazione italiana e straniera del comune",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_A",
+      "LABEL": "Comune (dizione straniera)",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominazione del comune in lingua diversa dall'italiano",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_VARIAZIONE",
+      "LABEL": "Tipo variazione",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice e descrizione della variazione: \nCDAP- Cambio di appartenenza provincia e contestuale cambio nome;\nAP- Cambio di appartenenza provincia; RN-rinumerazione del codice statistico",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "FLAG_CAMBIO_REGIONE",
+      "LABEL": "Flag cambio regione",
+      "NOTE": "",
+      "LINK": "",
+      "GUIDA": "1=Comune con contestuale cambio provincia e regione di appartenenza; 0=altrimenti.",
+      "FORMATMASK": "",
+      "FONTE": "",
+      "TYPE": "NUMBER"
+    },
+    {
+      "COLNAME": "DATA_INIZIO_AMMINISTRATIVA",
+      "LABEL": "Data evento",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Data decorrenza della variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "DATA"
+    },
+    {
+      "COLNAME": "PRO_COM_T_REL",
+      "LABEL": "Nuovo codice Comune",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Nuovo codice Istat (in formato alfanumerico) valido alla data dell'evento",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COMUNE_REL",
+      "LABEL": "Comune associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Denominzione del comune associato alla variazione o nuova denominazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "COD_UTS_REL",
+      "LABEL": "Codice Provincia/Uts associato",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Codice Istat dell'uts associato alla variazione",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    },
+    {
+      "COLNAME": "SIGLA_UTS_REL",
+      "LABEL": "Sigla provincia/uts associata",
+      "NOTE": "Note non presenti",
+      "LINK": "",
+      "GUIDA": "Sigla Provincia/Uts associata alla variazione. \nAvvertenza: Per le nuove Province sarde istituite nel 2025 (con decorrenza 1° gennaio 2026), l'attribuzione delle sigle identificative (CI, VS, OG, OT) ha carattere provvisorio in attesa del formale decreto di attribuzione.",
+      "FORMATMASK": "",
+      "FONTE": "Istat",
+      "TYPE": "VARCHAR"
+    }
+  ]
+}
