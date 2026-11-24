@@ -8,7 +8,7 @@ updated: 2026-11-24
 
 # Informativa sulla privacy
 
-Ultimo aggiornamento: 23 novembre 2026
+Ultimo aggiornamento: 24 novembre 2026
 
 Questa è una traduzione della [versione inglese](https://archives.fiorfelix.com/privacy). In caso di differenze fa fede la versione inglese.
 
@@ -42,6 +42,15 @@ Per ogni richiesta il server registra solo: il nome dello strumento, il tempo im
 - **Hosting:** il server funziona su Render (render.com), la cui rete usa Cloudflare. Trasportano le richieste fino al server e possono conservare propri dati tecnici secondo le proprie politiche ([informativa di Render](https://render.com/privacy)). Usiamo tali dati solo per diagnosticare problemi.
 - **Dominio e pagine informative:** il DNS del dominio e queste pagine sono serviti da Cloudflare, che applica regole di sicurezza (come i limiti di frequenza) alle richieste in arrivo e tratta gli indirizzi IP a tale scopo secondo l'[informativa di Cloudflare](https://www.cloudflare.com/privacypolicy/).
 - **Claude:** le tue conversazioni con Claude, comprese le ricerche che gli chiedi, sono gestite da Anthropic secondo l'[informativa di Anthropic](https://www.anthropic.com/legal/privacy). Questo servizio riceve solo le chiamate agli strumenti che Claude gli invia.
+
+## Il plugin per Claude
+
+Le skill del plugin funzionano nella tua app di Claude e sono solo istruzioni di testo. Ciò su cui lavorano resta a te:
+
+- Pagine dei registri, trascrizioni, elenco delle persone e altre note restano nella tua cartella d'archivio (Claude Code o Cowork) o nella tua chat, e non vengono mai inviati a questo progetto.
+- Quando chiedi a Claude Code o Cowork di scaricare pagine dei registri, le richieste vanno solo ai siti d'archivio che scegli, una pagina alla volta, con uno User-Agent che indica il plugin e la pagina dei contatti di questo sito. Non contengono dati personali.
+- Se chiedi una presentazione in Google Slides e hai un tuo connettore Google Drive o Google Slides in Claude, la presentazione e le immagini scelte vengono salvate nel tuo Google Drive tramite quel connettore, secondo i termini di Google. Altrimenti nulla va a Google.
+- L'unico servizio che il plugin contatta da solo è il connettore descritto sopra.
 
 ## Queste pagine informative
 

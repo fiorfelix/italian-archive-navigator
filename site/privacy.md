@@ -8,7 +8,7 @@ updated: 2026-11-24
 
 # Privacy policy
 
-Last updated: 23 November 2026
+Last updated: 24 November 2026
 
 This policy covers the Italian Archive Navigator MCP server at `https://archives-mcp.fiorfelix.com/mcp`, the Claude plugin that connects to it, and these information pages. The service is run by fiorfelix.
 
@@ -40,6 +40,15 @@ For each request the server logs only: the tool name, how long it took, whether 
 - **Hosting:** the server runs on Render (render.com), whose network uses Cloudflare. They carry the requests to the server and may keep their own technical records under their own policies ([Render privacy policy](https://render.com/privacy)). We use such records only to diagnose problems.
 - **Domain and information pages:** the domain's DNS and these pages are served by Cloudflare, which applies security rules (such as rate limits) to incoming requests and processes IP addresses for that purpose under the [Cloudflare privacy policy](https://www.cloudflare.com/privacypolicy/).
 - **Claude:** your conversations with Claude, including what you ask it to look up, are handled by Anthropic under [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy). This service receives only the tool calls Claude makes to it.
+
+## The Claude plugin
+
+The plugin's skills run inside your own Claude app and are text instructions only. What they work with stays with you:
+
+- Register pages, transcriptions, the list of people and other notes are kept in your own archive folder (Claude Code or Cowork) or in your chat, never sent to this project.
+- When you ask Claude Code or Cowork to download register pages, requests go only to the archive sites you choose, one page at a time, with a User-Agent naming the plugin and this site's contact page. No personal data is sent with them.
+- If you ask for a presentation in Google Slides and have your own Google Drive or Google Slides connector in Claude, the presentation and the images you chose are saved in your own Google Drive through that connector, under Google's terms. Nothing goes to Google otherwise.
+- The only service the plugin contacts on its own is the connector described above.
 
 ## These information pages
 
