@@ -54,6 +54,11 @@ describe('pages', () => {
     );
     expect(withMarkdownLink(once, 'https://e.org/a.md')).toBe(once);
     expect(withMarkdownLink(once, 'https://e.org/b.md')).not.toContain('a.md');
+    const twice = once.replace(
+      '<link rel="icon"',
+      '<link\n rel="alternate"\n type="text/markdown"\n href="x.md"\n />\n<link rel="icon"',
+    );
+    expect(withMarkdownLink(twice, 'https://e.org/a.md').match(/text\/markdown/g)).toHaveLength(1);
   });
   it('indexes only pages meant for search engines', () => {
     const paths = loadPages().map((p) => p.path);

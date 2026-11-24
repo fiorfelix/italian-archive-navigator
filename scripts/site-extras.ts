@@ -338,11 +338,14 @@ export function markdownFor(page: Page, updated: string): string {
 /** Adds or refreshes <link rel="alternate" type="text/markdown"> in the page's <head>. */
 export function withMarkdownLink(html: string, mdUrl: string): string {
   const tag = `<link rel="alternate" type="text/markdown" href="${mdUrl}" />`;
-  const existing = /<link\s+rel="alternate"\s+type="text\/markdown"\s+href="[^"]*"\s*\/>/;
-  if (existing.test(html)) return html.replace(existing, tag);
-  const m = /\n([ \t]*)<link rel="icon"/.exec(html);
+  // Remove every existing copy (in any formatting), then add exactly one.
+  const cleaned = html.replace(
+    /\n[ \t]*<link\s+rel="alternate"\s+type="text\/markdown"\s+href="[^"]*"\s*\/>/g,
+    '',
+  );
+  const m = /\n([ \t]*)<link rel="icon"/.exec(cleaned);
   if (!m) throw new Error('no <link rel="icon"> to place the Markdown link before');
-  return html.slice(0, m.index) + `\n${m[1]}${tag}` + html.slice(m.index);
+  return cleaned.slice(0, m.index) + `\n${m[1]}${tag}` + cleaned.slice(m.index);
 }
 
 // ---------------------------------------------------------------------------------------------
