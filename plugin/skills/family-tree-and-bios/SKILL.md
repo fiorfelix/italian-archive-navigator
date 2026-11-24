@@ -34,8 +34,8 @@ private use.
 
 ## 3. The tree
 
-- Copy `assets/tree-template.html` to `outputs/<family>-tree.html` and replace the JSON in the
-  `tree-data` block with the people from `people.yaml` (same fields). The page works offline,
+- Write the page in `references/tree-template.md` (the HTML inside its code block, unchanged) to
+  `outputs/<family>-tree.html` and replace the JSON in the `tree-data` block with the people from `people.yaml` (same fields). The page works offline,
   shows ancestors and descendants of any person, and lists each fact with its label and source.
   Adding `?view=descendants` to the address opens the descendants view.
 - One tree per family line, plus a combined one when lines meet.

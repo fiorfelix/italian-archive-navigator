@@ -1,3 +1,11 @@
+# Family tree page template
+
+The complete HTML page used by the `family-tree-and-bios` skill. To make a tree, write everything
+inside the fenced block below, exactly as it is, to `outputs/<family>-tree.html`, then replace
+the JSON in the `tree-data` block with the people from `people.yaml` (same fields). Change nothing
+else: the page works offline and needs no other files.
+
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -460,3 +468,4 @@
     </script>
   </body>
 </html>
+```
