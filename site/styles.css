@@ -165,3 +165,50 @@ header .name a {
   color: inherit;
   text-decoration: none;
 }
+form.contact {
+  display: grid;
+  gap: 6px;
+  margin: 20px 0;
+}
+form.contact label {
+  font-weight: 600;
+  margin-top: 12px;
+}
+form.contact input,
+form.contact select,
+form.contact textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+}
+form.contact .hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+form.contact .trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+form.contact .cf-turnstile {
+  margin-top: 16px;
+}
+form.contact button {
+  justify-self: start;
+  margin-top: 12px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 22px;
+  cursor: pointer;
+}

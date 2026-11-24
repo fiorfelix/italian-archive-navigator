@@ -70,8 +70,17 @@ office mailboxes are kept.
 The service does not look up living people. Questions about events less than 100 years ago, or
 about people born after 1940, are directed to the Comune, which decides what it can release.
 
+## The contact form
+
+If you use the contact form at https://archives.fiorfelix.com/contact, your message, the topic you
+choose and, if you give it, your e-mail address are sent by e-mail to the person who runs this
+project. They are not stored on any server or written to any log. Messages are kept in that mailbox
+only as long as needed to reply, and are never published or shared without your permission.
+Cloudflare Turnstile checks that the form is sent by a person, not a bot; it processes information
+about your browser and connection for that purpose under the
+[Cloudflare privacy policy](https://www.cloudflare.com/privacypolicy/).
+
 ## Changes and contact
 
-Changes to this policy are published on this page with a new date. For privacy questions, write
-to info@fiorfelix.com. Messages sent to that address are kept only as long as needed to reply, and are never
-published or shared without your permission.
+Changes to this policy are published on this page with a new date. For privacy questions, use the contact form at
+https://archives.fiorfelix.com/contact.

@@ -74,4 +74,4 @@ Full policy: https://archives.fiorfelix.com/privacy
 - **Retention:** request contents are not retained. Logs are kept for at most 30 days.
 - **Network addresses:** used only for rate limiting, held in memory for at most one minute,
   never logged.
-- **Contact:** info@fiorfelix.com
+- **Contact:** https://archives.fiorfelix.com/contact

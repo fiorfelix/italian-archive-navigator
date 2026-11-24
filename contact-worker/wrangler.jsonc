@@ -1,0 +1,16 @@
+// Contact form handler for archives.fiorfelix.com: verifies Cloudflare Turnstile, then e-mails the
+// message to the project's verified inbox through Email Routing. Nothing is stored.
+// The recipient (CONTACT_TO) and the Turnstile secret (TURNSTILE_SECRET) are Worker secrets set in
+// the Cloudflare dashboard; they are not in this repository.
+{
+  "name": "fiorfelix-contact",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "archives.fiorfelix.com/api/contact", "zone_name": "fiorfelix.com" }],
+  "send_email": [{ "name": "EMAIL" }],
+  // No request logging: messages must not end up in logs.
+  "observability": { "enabled": false },
+  "send_metrics": false,
+}
