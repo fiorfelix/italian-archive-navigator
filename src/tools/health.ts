@@ -20,6 +20,7 @@ export function registerHealthTool(server: McpServer): void {
       description: 'Returns the server name, version and uptime in seconds.',
       outputSchema: healthOutput,
       annotations: {
+        title: 'Server health',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

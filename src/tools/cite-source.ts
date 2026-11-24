@@ -46,6 +46,7 @@ export function registerCiteSource(server: McpServer): void {
         'Formats a citation for a genealogical record in one consistent style (archive, fonds, series, comune, year, record and act number, link and access date) and assigns an evidence label: VERIFIED, INDEX, SECONDARY, INFERENCE or FAMILY_ACCOUNT.',
       inputSchema: citeInput,
       annotations: {
+        title: 'Cite source',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

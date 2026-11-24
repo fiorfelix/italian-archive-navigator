@@ -44,6 +44,7 @@ export function registerWhichRecordsExist(
         'For a comune, year and event (birth, marriage, death, military), returns the registration regime in force, the record types to expect, which copy is held where today, fallbacks when the primary source is missing, and the source of the rule. Events less than 100 years old, or people born after 1940, are routed to the Comune.',
       inputSchema: recordsInput,
       annotations: {
+        title: 'Which records exist',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

@@ -33,6 +33,7 @@ export function registerResolveComuneHistory(server: McpServer, getStore: StoreP
         'Finds the Italian comune a place name refers to, from any period since 1861: current and former names, suppressed and re-established comuni, and frazioni. Returns the comune today (ISTAT code, province, region), its dated changes (renames, mergers, province moves, annexation), and its name and province in a given year.',
       inputSchema: resolveInput,
       annotations: {
+        title: 'Resolve comune history',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

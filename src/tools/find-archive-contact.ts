@@ -29,6 +29,7 @@ export function registerFindArchiveContact(server: McpServer, getStore: StorePro
         'Returns the office that holds records for a comune, by office type: name, postal address, PEC and other e-mail, website, source and date of the data. Comune and State Archive contacts come from IndicePA; Army documentation offices for Lazio, Umbria, Toscana and Marche come from the Army’s own pages. Elsewhere, and for dioceses, it returns the official directory to consult, marked unverified.',
       inputSchema: contactInput,
       annotations: {
+        title: 'Find archive contact',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

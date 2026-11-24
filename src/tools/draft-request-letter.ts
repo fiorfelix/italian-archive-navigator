@@ -122,6 +122,7 @@ export function registerDraftRequestLetter(server: McpServer, getStore: StorePro
         'Drafts a formal Italian letter requesting a record (from a Comune, State Archive, parish or military records office), with the recipient filled from official contact data, an English summary, a checklist of attachments and the list of details still missing. Fees and response times are never stated; the letter asks the office. The letter is returned as text and is not sent.',
       inputSchema: letterInput,
       annotations: {
+        title: 'Draft request letter',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

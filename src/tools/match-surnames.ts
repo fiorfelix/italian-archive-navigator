@@ -33,6 +33,7 @@ export function registerMatchSurnames(server: McpServer): void {
         'Compares surnames read from Italian records or indexes with the surnames being looked for, tolerating old spellings (doubled letters, j for i), changed endings (-i, -e, -o, -a) and letters that look alike in old handwriting. Returns each match with a score and the reason, from exact to similar. Stores nothing.',
       inputSchema: surnamesInput,
       annotations: {
+        title: 'Match surnames',
         readOnlyHint: true,
         destructiveHint: false,
         idempotentHint: true,

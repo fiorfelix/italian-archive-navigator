@@ -34,6 +34,18 @@ describe('MCP server (M0)', () => {
     await client.close();
   });
 
+  it('gives every tool the annotations the Claude directory asks for', async () => {
+    const client = await connect();
+    const { tools } = await client.listTools();
+    expect(tools).toHaveLength(8);
+    for (const t of tools) {
+      expect(t.annotations?.title, t.name).toBe(t.title);
+      expect(t.annotations?.readOnlyHint, t.name).toBe(true);
+      expect(t.annotations?.destructiveHint, t.name).toBe(false);
+    }
+    await client.close();
+  });
+
   it('calls the health tool and returns structured output', async () => {
     const client = await connect();
     const result = await client.callTool({ name: 'health', arguments: {} });
