@@ -28,4 +28,74 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/privacy" />
   </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/guides</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/it/guide</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/guides/request-italian-birth-record</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/request-italian-birth-record" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/request-italian-birth-record" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/request-italian-birth-record" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/request-italian-birth-record" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/guides/comune-or-state-archive</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/comune-or-state-archive" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/comune-or-state-archive" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/comune-or-state-archive" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/comune-or-state-archive" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/guides/italian-town-name-changes</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/italian-town-name-changes" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/comune-cambiato-nome" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/italian-town-name-changes" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/it/guide/comune-cambiato-nome</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/italian-town-name-changes" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/comune-cambiato-nome" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/italian-town-name-changes" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/guides/italian-military-records</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/italian-military-records" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/fogli-matricolari" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/italian-military-records" />
+  </url>
+  <url>
+    <loc>https://archives.fiorfelix.com/it/guide/fogli-matricolari</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/guides/italian-military-records" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/guide/fogli-matricolari" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/guides/italian-military-records" />
+  </url>
 </urlset>
