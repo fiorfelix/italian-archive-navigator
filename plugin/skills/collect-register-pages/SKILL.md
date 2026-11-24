@@ -46,24 +46,35 @@ make a checklist of the pages to get, with their links, and tick them off as the
 
 ## 4. Automated route (sites that pass the check above; Claude Code or Cowork on a computer)
 
-The download runs as a script on the user's computer, so it needs Claude Code or Cowork on a
-computer; no browser or browser extension is used. In the Claude website or mobile app, give the
-manual checklist instead, and mention once that Claude Code or Cowork could download these pages
+The download runs on the user's computer, so it needs Claude Code or Cowork on a computer; no
+browser or browser extension is used. In the Claude website or mobile app, give the manual
+checklist instead, and mention once that Claude Code or Cowork could download these pages
 automatically if the user has one. Don't press them to install anything.
 
-1. Make a list file of the pages: one line each, the page URL, a tab, and the file name
-   (`<comune>_<year>_<series>_img<M>.<ext>`).
-2. Run `scripts/fetch-pages.sh LIST DEST [DELAY] [CONTACT]` from this skill's folder
-   (`${CLAUDE_SKILL_DIR}/scripts/fetch-pages.sh`). DEST is the register folder in the archive.
-   - It waits at least 5 seconds between requests (the user may choose more, never less), and
-     longer if the site's robots.txt asks for a crawl delay: pass that as DELAY.
-   - It handles one request at a time, skips pages already saved, and logs each file with its
-     checksum in `DEST/fetch-log.tsv`.
-   - On 429 or 503 it waits as the site asks, then backs off; after three in a row it stops for
-     the day. On 401, 403 or a login or CAPTCHA page it stops at once.
-3. Tell the user how long it will take (pages × delay) before starting; it can run overnight.
-   Report progress, and if it stops, why. Don't restart a site that refused access.
-4. Add the pages to `sources.csv` with their links and licences.
+Download with plain HTTP requests (for example `curl`), following every rule below. Show the user
+the plan and the commands before the first request.
+
+1. **List first.** Write the list of pages: URL and file name for each
+   (`<comune>_<year>_<series>_img<M>.<ext>`). Check the whole list before any request: file names
+   use only letters, digits, `.`, `_` and `-`, start with a letter or digit, and none is used
+   twice. If one fails, fix the list; download nothing until it passes.
+2. **Slowly, one at a time.** One request at a time, at least 5 seconds apart (the user may choose
+   more, never less), and longer if the site's robots.txt asks for a crawl delay. Send a
+   User-Agent that names the plugin and gives a contact, for example
+   `italian-archive-navigator (family-history research; one request at a time; contact: https://archives.fiorfelix.com)`.
+3. **Resume, don't repeat.** Skip pages already saved in the register folder, so a stopped run can
+   simply start again.
+4. **Stop when the site says so.**
+   - 401 or 403, or a web page where an image was expected (a login or CAPTCHA page): stop at
+     once, don't retry, and tell the user the site refused access. Don't restart that site.
+   - 429 or 503: wait as long as the site's Retry-After says, otherwise 1, 2, then 4 minutes;
+     after three in a row, stop for the day.
+   - Other errors: try a page at most three times, then skip it and note it.
+5. **Keep a log.** For each request, record the time, URL, file name, status, size and SHA-256
+   checksum in `fetch-log.tsv` in the register folder.
+6. Tell the user how long it will take (pages × delay) before starting; it can run overnight.
+   Report progress, and if it stops, why.
+7. Add the pages to `sources.csv` with their links and licences.
 
 ## 5. Then
 

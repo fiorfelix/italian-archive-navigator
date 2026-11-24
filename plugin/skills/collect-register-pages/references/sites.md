@@ -39,6 +39,6 @@ series, year, act, image number, link) and request a copy from the holder if nee
 
 ## Automated route (sites marked "automated OK", or that pass the check in SKILL.md)
 
-Use the site's documented download links or API, one request at a time, through
-`scripts/fetch-pages.sh` (at least 5 seconds apart). Respect each item's licence and keep its
+Use the site's documented download links or API, one request at a time, at least 5 seconds
+apart, following the rules in `SKILL.md` section 4. Respect each item's licence and keep its
 link and licence in `sources.csv`.
