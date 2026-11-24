@@ -42,12 +42,15 @@ or presentations.
   exclude the pages and whose terms allow automated access or say nothing about it: one page at a
   time, at least 5 seconds apart, with a User-Agent naming the plugin and a contact address,
   stopping if a site refuses access or asks it to slow down repeatedly, and saving the pages and a
-  log in your own archive folder. Nothing else is sent anywhere.
+  log in your own archive folder.
 - The connector entry in `.mcp.json` points to the Italian Archive Navigator MCP server. Claude
   sends that server the details of your question (place, year, event, and, for a letter, the
   names and contact details you give). The server only reads its own copy of public data; it
   makes no outgoing requests while answering and sends nothing anywhere.
 - Letters are returned as text. Nothing is sent to any office; you send the letter yourself.
+- If you have your own Google Drive or Google Slides connector in Claude and ask for a
+  presentation in Google Slides, the `family-presentation` skill saves it, with the images you
+  chose, in your own Google Drive through that connector. Nothing goes to Google otherwise.
 
 ## Status
 
