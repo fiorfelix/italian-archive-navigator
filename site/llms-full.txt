@@ -1,0 +1,781 @@
+# Italian Archive Navigator
+
+> A free, read-only MCP connector for Claude for Italian family-history research. Given a place, a year and an event, it finds what the place was called and which comune it belonged to, which records exist (civil registration, parish registers, military records) and which office holds each copy today, the office's address and certified e-mail (PEC), drafts a request letter in Italian, and formats a citation. Published by fiorfelix.
+
+- Connector address (Streamable HTTP, no sign-in): https://archives-mcp.fiorfelix.com/mcp
+- To add it in Claude: Settings, Connectors, add a custom connector with the address above.
+- Claude Code: `claude mcp add --transport http italian-archive-navigator https://archives-mcp.fiorfelix.com/mcp`
+- Coverage is deepest for Lazio, Umbria, Toscana and Marche; place history and office contacts cover all of Italy.
+- It does not search Portale Antenati or FamilySearch, does not look up living people, never sends anything on the user's behalf, and does not store request contents.
+- Sources: ISTAT and IndicePA open data (CC BY 4.0), the Guida generale degli Archivi di Stato italiani, archive inventories and Italian law on Normattiva. Every rule cites its source; unconfirmed rules are marked unverified.
+- Every page below is also available as Markdown at the linked address. The full text of all pages is in https://archives.fiorfelix.com/llms-full.txt.
+
+---
+
+---
+
+<!-- https://archives.fiorfelix.com/ -->
+
+# Find where an Italian ancestor's record is kept, and ask for it
+
+A read-only connector for Claude. Ask about a place, a year and an event, and Claude finds what the place was called and which comune it belonged to, which records exist and which office holds each copy today, gives that office's address and PEC, drafts the request letter in Italian, and formats a citation for what you find.
+
+## Add it to Claude
+
+Two clicks to copy and open, then paste. It takes under a minute.
+
+On a phone? Adding is easiest on a computer: open claude.ai in any browser there and follow these steps. The connector then appears in the Claude app on your phone too.
+
+`https://archives-mcp.fiorfelix.com/mcp`
+
+[Open Claude's connector settings ↗](https://claude.ai/customize/connectors)
+
+1. Click **+ Add**, then **Add custom connector**.
+2. Name: `Italian Archive Navigator`. Paste the address in the URL field.
+3. Choose **No sign-in** (if asked), then **Add**. Done.
+
+Then, in a new chat, ask a question such as "Where is the 1880 birth record for Montefiore dell'Aso kept?". Add it once on the Claude website or desktop app and it also works in the Claude mobile apps. On Team and Enterprise plans, an Owner adds it under Organization settings, Connectors. No account is needed, and nothing is ever sent on your behalf.
+
+**Using Claude Code?**
+
+`claude mcp add --transport http italian-archive-navigator https://archives-mcp.fiorfelix.com/mcp`
+
+## Recommended setup
+
+Finding places, records, offices and request letters works in any Claude app, on any device, including the phone. Reading register pages works everywhere too: attach the page images to the chat.
+
+For a full family-history project, the best setup is Claude on a computer (your own or a remote one) with **Claude Code** or **Cowork**. There, Claude can also:
+
+- keep your register pages, transcriptions and notes in a folder on your computer;
+- download register pages automatically from sites that allow it, slowly and one page at a time (sites with a login or bot check, such as Portale Antenati, stay manual);
+- create the family tree, the biographies and the presentation as files.
+
+## What to ask
+
+- "My great-grandfather was born in Corneto in 1880. Where is his birth record?"
+- "Which archive has the 1895 marriage records of Orvieto?"
+- "Where would a baptism from Perugia in 1840 be recorded?"
+- "Which Army office holds the service record of a soldier born in Pescia in 1890?"
+- "Write the letter asking the Comune for a full copy of that birth act."
+- "How should I cite birth act no. 45 of 1880 that I found in the archive's index?"
+
+## What it does
+
+| Tool | What you get |
+| --- | --- |
+| Place history | Today's comune for any place name since 1861 (former names, merged comuni, hamlets), with its name and province in a given year. |
+| Which records exist | The registration system in force (Napoleonic, pre-unification states, Italian civil registration from 1866, parish registers, military records), what to expect, and who holds each copy today. |
+| Archive contact | Name, address and PEC of the Comune, State Archive or Army documentation office, from official sources. |
+| Request letter | A formal letter in Italian with an English summary and a checklist of attachments. Returned as text: you review it and send it yourself. |
+| Register guide | What to expect inside a register: how acts are numbered, where the index is, typical wording, and steps for reading it. |
+| Surname matching | Finds your surnames among names read from records, allowing for old spellings and letters that look alike in handwriting. |
+| Citation | One consistent citation format, with a label for how reliable the evidence is. |
+
+## Coverage and limits
+
+- Coverage is deepest for **Lazio, Umbria, Toscana and Marche**. Place history and office contacts cover all of Italy.
+- Every rule cites its source. Rules not yet confirmed from an official source are marked **unverified** in every answer, so you know to check with the office.
+- It does not search Portale Antenati, FamilySearch or other websites, and it can't tell whether a record has been put online.
+- It does not look up living people. Records of events less than 100 years old, or of people born after 1940, are left to the Comune, which decides what it can release.
+- Fees and response times are never stated: the letters ask the office for them.
+
+## Sources
+
+- Comuni, their history since 1861 and inhabited localities: [ISTAT](https://www.istat.it/) (Istituto Nazionale di Statistica).
+- Office addresses and PEC: [IndicePA](https://www.indicepa.gov.it/) (Agenzia per l'Italia Digitale), and the Italian Army's pages for its documentation offices.
+- Record rules: the *Guida generale degli Archivi di Stato italiani*, archive inventories, and the laws themselves on Normattiva, each cited in the answer.
+
+Contains data from ISTAT and IndicePA, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The data were selected, normalised for searching and combined into one database; names of office holders are not kept. Neither ISTAT nor AgID endorses this project.
+
+## Questions and answers
+
+### Where are Italian birth, marriage and death records kept?
+
+Italian civil registration (from 1866 in most of Italy, earlier where Napoleonic or pre-unification registration existed) was written in two copies. One copy stays with the Comune's civil registry office (Ufficio di Stato Civile). The other went to the local court and, for older years, is usually now at the State Archive (Archivio di Stato) of the province. Baptisms, marriages and burials before civil registration are in parish registers, kept by the parish or the diocesan archive. The navigator says which applies for a given place, year and event, and cites the source.
+
+### How do I ask for a copy of an ancestor's birth record from Italy?
+
+Write to the office that holds it: usually the Comune's Ufficio di Stato Civile, or the State Archive for older records. Give the person's name, the date and place of the event, and the act number if you know it, and say what kind of copy you need. The navigator finds the office's address and certified e-mail (PEC) and drafts the letter in Italian, with an English summary, for you to review and send yourself.
+
+### My ancestor's town has changed its name or no longer exists. How do I find it?
+
+Many Italian comuni have been renamed, merged or split since 1861, and many villages are hamlets (frazioni) of a larger comune. Ask the navigator about the old name: it finds today's comune, what the place was called and which province it belonged to in a given year, from ISTAT's official records.
+
+### What is a PEC address?
+
+PEC (posta elettronica certificata) is the certified e-mail that Italian public offices must have; requests for records are often sent to it. The navigator gives each office's PEC as published in IndicePA, the official index of Italian public administrations.
+
+### Does it search Portale Antenati or FamilySearch?
+
+No. It tells you where a record is kept and who to ask, but it does not search record images or indexes on other websites, and it can't tell whether a record has been put online.
+
+### Is it free? Do I need an account?
+
+The connector is free and needs no account or sign-in. You use it from Claude, by adding it as a custom connector (see [Add it to Claude](https://archives.fiorfelix.com/#add)). The source code is open under the MIT licence.
+
+## Guides
+
+- [How to request an Italian ancestor's birth record](https://archives.fiorfelix.com/guides/request-italian-birth-record)
+- [Italian civil records: Comune or State Archive?](https://archives.fiorfelix.com/guides/comune-or-state-archive)
+- [When your ancestor's Italian town changed its name](https://archives.fiorfelix.com/guides/italian-town-name-changes)
+- [Italian military service records: where to find them](https://archives.fiorfelix.com/guides/italian-military-records)
+
+## Contact
+
+Questions, wrong answers or a record rule that needs correcting: use the [contact form](https://archives.fiorfelix.com/contact) or open an issue on [GitHub](https://github.com/fiorfelix/italian-archive-navigator/issues). The source code is open, under the MIT licence.
+
+### Say thank you
+
+Did the navigator help you find an ancestor's record, or the right office to write to? A short note is always welcome: [send a thank-you](https://archives.fiorfelix.com/contact?topic=thanks). If you like, tell us which comune or kind of record it helped with; it shows which parts are worth improving. Please leave out details of living people. Messages are never published without your permission.
+
+Italian Archive Navigator is an independent project. It is not affiliated with Anthropic, the Italian Ministry of Culture, the Archivi di Stato, ISTAT, AgID or the Italian Army.
+
+---
+
+<!-- https://archives.fiorfelix.com/guides -->
+
+# Guides to Italian family-history records
+
+Short, sourced guides to finding and requesting Italian birth, marriage, death and military records.
+
+- [**How to request an Italian ancestor's birth record**](https://archives.fiorfelix.com/guides/request-italian-birth-record)
+  Who to write to, what to include, and which kind of copy to ask for (certificate, extract or full copy) when requesting a birth, marriage or death record from Italy.
+- [**Italian civil records: Comune or State Archive?**](https://archives.fiorfelix.com/guides/comune-or-state-archive)
+  Why Italian birth, marriage and death records exist in two originals, which one the Comune keeps, which one is at the Archivio di Stato, and where to look before 1866.
+- [**When your ancestor's Italian town changed its name**](https://archives.fiorfelix.com/guides/italian-town-name-changes)
+  Italian comuni have been renamed, merged, split and moved between provinces since 1861. How to find today's comune and the right office for an old place name.
+- [**Italian military service records: where to find them**](https://archives.fiorfelix.com/guides/italian-military-records)
+  Where Italian Army conscription lists and service records (fogli matricolari) are kept: the State Archive, the Army documentation office, or the Ministry of Defence.
+
+---
+
+<!-- https://archives.fiorfelix.com/guides/comune-or-state-archive -->
+
+[All guides](https://archives.fiorfelix.com/guides)
+
+# Italian civil records: Comune or State Archive?
+
+Every Italian civil record was written twice. Knowing where each copy went tells you whom to ask, and where the extra papers are.
+
+## Two originals, signed together
+
+Italian civil registration began on 1 January 1866 under the Royal Decree of 15 November 1865, n. 2602; areas that joined Italy later started when they joined. Each birth, marriage and death act was written in **two originals**, signed at the same time by the parties, the witnesses and the registrar. At the end of each year:
+
+- one original stayed in the **Comune's archive**;
+- the other was deposited at the **registry of the local court** (*cancelleria del tribunale*).
+
+State offices transfer to the State Archives the records of matters closed for more than thirty years. So for older years the court's original is usually now at the **State Archive** (*Archivio di Stato*) of the province. When each court series was transferred differs between archives, and some are still being transferred.
+
+## The papers that exist only once
+
+The supporting documents filed with marriage acts (*allegati* or *processetti*, such as the spouses' birth records and parents' consent) and the register of marriage banns were bound with the **court's** series only. If you need them, ask the State Archive (or the court, for recent years), not the Comune.
+
+## Which one to ask
+
+- **Recent records:** the Comune. It also decides what it can release about recent events and living people.
+- **Older records:** either. The State Archive's copy is often the easier one to consult, and many State Archive registers have been photographed and published on [Portale Antenati](https://antenati.cultura.gov.it/), the Ministry of Culture's portal. If one original is lost or damaged, ask for the other.
+- **Marriage allegati and banns:** the State Archive.
+
+## Before 1866
+
+It depends on the state the place belonged to. Many areas had Napoleonic civil registration in the early 1800s, and some pre-unification states kept civil registers after it; others, such as the Papal State in Lazio and Umbria, had no civil registration after the Restoration, so parish registers (baptisms, marriages, burials) are the main source. Parish registers are kept by the parish or the diocesan archive.
+
+## Ask Claude
+
+With the Italian Archive Navigator connector in Claude, you can ask this for any place and year, and get the office's address and PEC and a request letter. [Add it to Claude](https://archives.fiorfelix.com/#add); it is free and needs no account.
+
+## Sources
+
+- [R.D. 15 novembre 1865, n. 2602 (ordinamento dello stato civile), artt. 21, 30, 41, 64](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602)
+- [D.Lgs. 22 gennaio 2004, n. 42 (Codice dei beni culturali), art. 41](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41)
+- [Guida generale degli Archivi di Stato italiani, Archivio di Stato di Roma](https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf)
+- [Portale Antenati, Ministero della Cultura](https://antenati.cultura.gov.it/)
+
+Last updated: 24 November 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/guides/italian-military-records -->
+
+[All guides](https://archives.fiorfelix.com/guides)
+
+# Italian military service records: where to find them
+
+Italian men were registered for military service by comune and year of birth. Their conscription lists and service records can tell you a lot, if you know which office to ask.
+
+## What exists
+
+- **Conscription lists** (*liste di leva*): every young man of a comune, listed by birth year (*classe*).
+- **Service registers and records** (*ruoli matricolari* and *fogli matricolari*): one entry per man, with his description, postings, campaigns and discharge.
+
+## Who holds them (Army)
+
+- **Older birth classes:** the State Archive (*Archivio di Stato*) of the province. By law, conscription lists go to the State Archive seventy years after the birth year of the class; which classes of service registers an archive holds varies by archive.
+- **Later classes** (enlisted men, NCOs and reserve officers): the Army documentation office (*Ufficio documentale*) responsible for the man's **place of birth**.
+- **Career officers:** from the 10th year after death (20th for generals), the Ministry of Defence (Direzione generale per il personale militare, 6th Division); before that, the documentation office for the place of residence.
+- **If those fail:** the Comune may still have its own copy of the conscription lists.
+
+The Ministry of Defence publishes a table (*Guida matricolare*) of which office handles which requests; the request goes directly to the office it names. This guide covers the Army.
+
+## What to include in a request
+
+- The man's full name, date and comune of birth, and his father's name if known.
+- His birth class (year of birth) and, if known, his service number or unit.
+- That you are asking for a copy of the *foglio matricolare*, and your relationship.
+
+## Ask Claude
+
+With the Italian Archive Navigator connector in Claude, you can ask this for any place and year, and get the office's address and PEC and a request letter. [Add it to Claude](https://archives.fiorfelix.com/#add); it is free and needs no account.
+
+## Sources
+
+- [Ministero della Difesa, Persomil: fogli matricolari e stati di servizio](https://www.difesa.it/sgd/staff/dg/persomil/documentazione-matricolare/fogli-matricolaristato-di-servizio/24820.html)
+- [Ministero della Difesa, Guida matricolare (tabella Esercito)](https://www.difesa.it/assets/allegati/24820/tabella_sito_ei_2be_.2024.03.08.10.31.48.830.pdf)
+- [D.Lgs. 22 gennaio 2004, n. 42 (Codice dei beni culturali), art. 41](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41)
+
+Last updated: 24 November 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/guides/italian-town-name-changes -->
+
+[All guides](https://archives.fiorfelix.com/guides)
+
+# When your ancestor's Italian town changed its name
+
+The place name on an old document is often not the name of any comune today. Here is why, and how to find the office that now holds the records.
+
+## Why the name may not match
+
+- **Renamed comuni.** Many comuni changed their names after 1861.
+- **Merged or split comuni.** Small comuni were joined to others, and some were later restored.
+- **Hamlets.** Many villages were never comuni: they are *frazioni* or localities inside a larger comune, which keeps their records.
+- **New provinces.** Provinces were created and redrawn, so the province on an old record may not be the province today.
+- **Same name, different places.** The same name can belong to several localities in different parts of Italy.
+
+## An example: Corneto
+
+According to ISTAT's record of administrative changes:
+
+- 1871: Corneto, in the province of Rome, became part of Italy;
+- 1872: it was renamed **Corneto Tarquinia**;
+- 1922: it was renamed **Tarquinia**;
+- 1928: it moved to the new province of **Viterbo**.
+
+So a birth "in Corneto, province of Rome" in 1880 is today in the comune of Tarquinia (VT), and that is the Comune to write to. There are also small hamlets called Corneto in other regions, which is why the province and the year matter.
+
+## How to find the right comune
+
+1. Note the place name exactly as written, the year, and the province if given.
+2. Look it up in ISTAT's official lists: the codes of today's comuni, the history of changes since 1861, and the census list of localities and hamlets.
+3. Write to **today's** comune, or to the State Archive of today's province for older records. Mention the old name in your letter.
+
+## Ask Claude
+
+With the Italian Archive Navigator connector in Claude, you can ask this for any place and year, and get the office's address and PEC and a request letter. [Add it to Claude](https://archives.fiorfelix.com/#add); it is free and needs no account.
+
+## Sources
+
+- [ISTAT, Codici dei comuni, delle province e delle regioni](https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/)
+- [ISTAT SITUAS, variazioni amministrative dei comuni dal 1861](https://situas.istat.it/)
+- [ISTAT, Basi territoriali e variabili censuarie (località 2021)](https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/)
+
+Last updated: 24 November 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/guides/request-italian-birth-record -->
+
+[All guides](https://archives.fiorfelix.com/guides)
+
+# How to request an Italian ancestor's birth record
+
+Italian birth, marriage and death records can be requested by letter or certified e-mail. Here is who to write to, what to put in the request, and which kind of copy to ask for.
+
+## 1. Find the office that holds the record
+
+For Italian civil registration (from 1866 in most of Italy), the record exists in two originals: one at the civil registry office (*Ufficio di Stato Civile*) of the Comune, and one that went to the court and, for older years, is usually now at the State Archive (*Archivio di Stato*) of the province. Recent records are requested from the Comune. See [Comune or State Archive?](https://archives.fiorfelix.com/guides/comune-or-state-archive) for how to choose.
+
+Write to **today's** comune. If the town has been renamed or merged since your ancestor's time, find out first which comune it belongs to now: [when the town changed its name](https://archives.fiorfelix.com/guides/italian-town-name-changes).
+
+## 2. Choose the kind of copy
+
+The civil registry issues three kinds of document from its records:
+
+- **Certificate** (*certificato*): states the person's details and the references of the act.
+- **Extract** (*estratto per riassunto*): a summary of the act and its annotations.
+- **Full copy** (*estratto per copia integrale*): an exact transcription of the act with every annotation, certified as matching the original. The law allows it only when someone with an interest in the act asks for it explicitly, and only where the law does not forbid it.
+
+For family history a full copy says the most (parents, witnesses, later annotations), so say clearly that you want a *copia integrale* and why you have an interest in it, for example that the person is your direct ancestor.
+
+## 3. Write the request
+
+- The person's full name and, if known, the parents' names.
+- The event (birth, marriage or death), its date or year and the place.
+- The act number and year, if you found them in an index.
+- The kind of copy you need, and your interest in it.
+- Your name, postal address and e-mail, and a copy of an identity document.
+- A request to be told any fees and how to pay them.
+
+Italian public offices publish their certified e-mail (*PEC*) in IndicePA, the official index of public administrations; the law requires them to set up at least one PEC mailbox and list it there. Many offices accept requests sent to it. Fees, accepted channels and response times differ between offices, so ask rather than assume.
+
+Records of living people, and recent records, are protected: the Comune decides what it can release and to whom.
+
+## Ask Claude
+
+With the Italian Archive Navigator connector in Claude, you can ask this for any place and year, and get the office's address and PEC and a request letter. [Add it to Claude](https://archives.fiorfelix.com/#add); it is free and needs no account.
+
+## Sources
+
+- [D.P.R. 3 novembre 2000, n. 396, art. 106 (estratti per riassunto)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art106)
+- [D.P.R. 3 novembre 2000, n. 396, art. 107 (estratti per copia integrale)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art107)
+- [D.P.R. 3 novembre 2000, n. 396, art. 108 (contenuto di estratti e certificati)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art108)
+- [D.Lgs. 7 marzo 2005, n. 82 (CAD), art. 47 (PEC delle amministrazioni)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art47)
+- [IndicePA, Agenzia per l'Italia Digitale](https://www.indicepa.gov.it/)
+
+Last updated: 24 November 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/privacy -->
+
+# Privacy policy
+
+Last updated: 23 November 2026
+
+This policy covers the Italian Archive Navigator MCP server at `https://archives-mcp.fiorfelix.com/mcp`, the Claude plugin that connects to it, and these information pages. The service is run by fiorfelix.
+
+## What the service is
+
+A read-only service that answers questions about Italian places, records and archives, and drafts letters that you send yourself. It does not send e-mail, submit forms or contact any office on your behalf.
+
+## Accounts
+
+There are no accounts, logins or authentication. The service does not ask who you are.
+
+## What you send, and what happens to it
+
+When you use the connector, Claude sends the server the details a tool needs: place names, years and event types and, if you ask for a letter, the names, dates and contact details to be written into it.
+
+- This information is used only to produce the answer to that request.
+- It is **not stored**: not in a database, not in files, not in logs.
+- It is not sold or shared, and the server sends it nowhere: it makes no outgoing requests while answering and reads only its own copy of public data.
+
+## Logs
+
+For each request the server logs only: the tool name, how long it took, whether it succeeded, and an error code if it failed. Logs never contain the content of a request or an answer, and never contain network addresses.
+
+- **Network addresses:** the server sees the network address of each request only to apply rate limits, keeps it in memory for at most one minute, and never writes it down.
+- **Retention:** logs are kept for at most 30 days. The current host keeps them for 7 days.
+
+## Who else handles the traffic
+
+- **Hosting:** the server runs on Render (render.com), whose network uses Cloudflare. They carry the requests to the server and may keep their own technical records under their own policies ([Render privacy policy](https://render.com/privacy)). We use such records only to diagnose problems.
+- **Domain and information pages:** the domain's DNS and these pages are served by Cloudflare, which applies security rules (such as rate limits) to incoming requests and processes IP addresses for that purpose under the [Cloudflare privacy policy](https://www.cloudflare.com/privacypolicy/).
+- **Claude:** your conversations with Claude, including what you ask it to look up, are handled by Anthropic under [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy). This service receives only the tool calls Claude makes to it.
+
+## These information pages
+
+These pages use no cookies and no tracking. They use Cloudflare Web Analytics, which counts page views without cookies or other stored identifiers: which page was viewed, the referring site, the country, the type of browser and device, and page load times. It does not build profiles of visitors. The connector itself has no analytics script.
+
+## Data the service publishes
+
+Answers come from public open data (ISTAT and IndicePA, CC BY 4.0), from official archival guides and laws cited in each answer, and from this project's own curated files. Office contacts are those the offices publish themselves; names of office holders are not included, and only office mailboxes are kept.
+
+## Living people
+
+The service does not look up living people. Questions about events less than 100 years ago, or about people born after 1940, are directed to the Comune, which decides what it can release.
+
+## The contact form
+
+If you use the [contact form](https://archives.fiorfelix.com/contact), your message, the topic you choose and, if you give it, your e-mail address are sent by e-mail to the person who runs this project. They are not stored on any server or written to any log. Messages are kept in that mailbox only as long as needed to reply, and are never published or shared without your permission. Cloudflare Turnstile checks that the form is sent by a person, not a bot; it processes information about your browser and connection for that purpose under the [Cloudflare privacy policy](https://www.cloudflare.com/privacypolicy/).
+
+## Changes and contact
+
+Changes to this policy are published on this page with a new date. For privacy questions, use the [contact form](https://archives.fiorfelix.com/contact).
+
+---
+
+<!-- https://archives.fiorfelix.com/it/ -->
+
+# Scopri dove si trova l'atto di un antenato, e come richiederlo
+
+Un connettore per Claude, in sola lettura. Indica un luogo, un anno e un evento: Claude trova come si chiamava il luogo e a quale comune apparteneva, quali atti esistono e quale ufficio ne conserva oggi ciascuna copia, l'indirizzo e la PEC di quell'ufficio, scrive la lettera di richiesta e prepara la citazione di ciò che trovi.
+
+## Aggiungilo a Claude
+
+Copia l'indirizzo, apri le impostazioni e incolla. Basta un minuto.
+
+Sei sul telefono? È più semplice aggiungerlo da un computer: apri claude.ai in un browser e segui questi passaggi. Il connettore comparirà poi anche nell'app Claude sul telefono.
+
+`https://archives-mcp.fiorfelix.com/mcp`
+
+[Apri le impostazioni dei connettori di Claude ↗](https://claude.ai/customize/connectors)
+
+1. Fai clic su **+** e scegli l'opzione per aggiungere un connettore personalizzato (*Add custom connector*).
+2. Nome: `Italian Archive Navigator`. Incolla l'indirizzo nel campo URL.
+3. Se richiesto, scegli l'opzione senza accesso (*No sign-in*), poi conferma.
+
+Poi, in una nuova chat, fai una domanda come "Dove si trova l'atto di nascita del 1880 di Montefiore dell'Aso?". Basta aggiungerlo una volta dal sito o dall'app desktop di Claude e funziona anche nelle app per telefono. Nei piani Team ed Enterprise lo aggiunge un amministratore (Owner) nelle impostazioni dell'organizzazione. Non serve alcun account e nulla viene mai inviato a tuo nome.
+
+**Usi Claude Code?**
+
+`claude mcp add --transport http italian-archive-navigator https://archives-mcp.fiorfelix.com/mcp`
+
+## Configurazione consigliata
+
+La ricerca di luoghi, atti, uffici e lettere di richiesta funziona in qualsiasi app di Claude, su qualsiasi dispositivo, anche sul telefono. Anche la lettura dei registri funziona ovunque: allega alla chat le immagini delle pagine.
+
+Per un progetto completo di storia familiare, la configurazione migliore è Claude su un computer (il tuo o uno remoto) con **Claude Code** o **Cowork**. Lì Claude può anche:
+
+- tenere pagine dei registri, trascrizioni e note in una cartella sul tuo computer;
+- scaricare automaticamente le pagine dai siti che lo consentono, con calma e una pagina alla volta (i siti con accesso o controlli anti-bot, come il Portale Antenati, restano manuali);
+- creare l'albero genealogico, le biografie e la presentazione come file.
+
+## Cosa chiedere
+
+- "Il mio bisnonno è nato a Corneto nel 1880. Dove si trova il suo atto di nascita?"
+- "Quale archivio conserva gli atti di matrimonio di Orvieto del 1895?"
+- "Dove sarebbe registrato un battesimo a Perugia nel 1840?"
+- "Quale ufficio dell'Esercito ha il foglio matricolare di un soldato nato a Pescia nel 1890?"
+- "Scrivi la lettera per chiedere al Comune la copia integrale di quell'atto di nascita."
+- "Come cito l'atto di nascita n. 45 del 1880 che ho trovato nell'indice dell'archivio?"
+
+Puoi scrivere a Claude in italiano: risponde in italiano.
+
+## Cosa fa
+
+| Strumento | Cosa ottieni |
+| --- | --- |
+| Storia del luogo | Il comune di oggi per qualsiasi nome di luogo dal 1861 (nomi precedenti, comuni fusi, frazioni), con il nome e la provincia in un dato anno. |
+| Quali atti esistono | Il sistema di registrazione in vigore (napoleonico, stati preunitari, stato civile italiano dal 1866, registri parrocchiali, documenti militari), cosa aspettarsi e chi conserva oggi ciascuna copia. |
+| Contatti degli uffici | Nome, indirizzo e PEC del Comune, dell'Archivio di Stato o del centro documentale dell'Esercito, da fonti ufficiali. |
+| Lettera di richiesta | Una lettera formale in italiano, con un riepilogo in inglese e l'elenco degli allegati. Restituita come testo: la controlli e la invii tu. |
+| Guida ai registri | Cosa trovare in un registro: come sono numerati gli atti, dov'è l'indice, le formule tipiche e come leggerlo. |
+| Ricerca dei cognomi | Trova i tuoi cognomi tra i nomi letti negli atti, tenendo conto delle grafie antiche e delle lettere che nella scrittura a mano si somigliano. |
+| Citazione | Un formato di citazione uniforme, con un'indicazione di quanto è affidabile la fonte. |
+
+## Copertura e limiti
+
+- La copertura è più completa per **Lazio, Umbria, Toscana e Marche**. La storia dei luoghi e i contatti degli uffici coprono tutta Italia.
+- Ogni regola cita la sua fonte. Le regole non ancora confermate da una fonte ufficiale sono segnate come **non verificate** in ogni risposta, così sai che conviene chiedere conferma all'ufficio.
+- Non fa ricerche sul Portale Antenati, su FamilySearch o su altri siti, e non può sapere se un atto è stato pubblicato online.
+- Non fa ricerche su persone viventi. Gli atti di eventi di meno di 100 anni fa, o di persone nate dopo il 1940, sono lasciati al Comune, che decide cosa può rilasciare.
+- Non indica mai costi o tempi di risposta: le lettere li chiedono all'ufficio.
+
+## Fonti
+
+- Comuni, la loro storia dal 1861 e le località abitate: [ISTAT](https://www.istat.it/) (Istituto Nazionale di Statistica).
+- Indirizzi e PEC degli uffici: [IndicePA](https://www.indicepa.gov.it/) (Agenzia per l'Italia Digitale) e le pagine dell'Esercito sui suoi centri documentali.
+- Regole sugli atti: la *Guida generale degli Archivi di Stato italiani*, gli inventari degli archivi e le leggi stesse su Normattiva, citate in ogni risposta.
+
+Contiene dati ISTAT e IndicePA, rilasciati con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it). I dati sono stati selezionati, normalizzati per la ricerca e riuniti in un unico database; i nomi dei responsabili degli uffici non sono conservati. Né ISTAT né AgID sostengono questo progetto.
+
+## Domande frequenti
+
+### Dove si trovano gli atti di nascita, matrimonio e morte in Italia?
+
+Gli atti di stato civile (dal 1866 in quasi tutta Italia, prima dove esisteva lo stato civile napoleonico o quello degli stati preunitari) erano redatti in due originali. Uno resta all'Ufficio di Stato Civile del Comune. L'altro andava al tribunale e, per gli anni più antichi, di solito si trova oggi all'Archivio di Stato della provincia. Battesimi, matrimoni e sepolture precedenti allo stato civile sono nei registri parrocchiali, conservati dalla parrocchia o dall'archivio diocesano. Il navigatore indica quale caso vale per un luogo, un anno e un evento, e cita la fonte.
+
+### Come chiedo la copia dell'atto di nascita di un antenato?
+
+Scrivi all'ufficio che lo conserva: di solito l'Ufficio di Stato Civile del Comune, oppure l'Archivio di Stato per gli atti più antichi. Indica il nome della persona, la data e il luogo dell'evento e, se lo conosci, il numero dell'atto, e specifica che tipo di copia ti serve. Il navigatore trova l'indirizzo e la PEC dell'ufficio e scrive la lettera, che controlli e invii tu.
+
+### Il paese del mio antenato ha cambiato nome o non esiste più. Come lo trovo?
+
+Dal 1861 molti comuni italiani sono stati rinominati, fusi o divisi, e molti paesi sono frazioni di un comune più grande. Chiedi al navigatore il nome antico: trova il comune di oggi, come si chiamava il luogo e a quale provincia apparteneva in un dato anno, dai dati ufficiali ISTAT.
+
+### Cos'è la PEC?
+
+La PEC (posta elettronica certificata) è l'indirizzo che ogni pubblica amministrazione italiana deve avere; le richieste di atti vengono spesso inviate lì. Il navigatore indica la PEC di ogni ufficio come pubblicata in IndicePA, l'indice ufficiale delle pubbliche amministrazioni.
+
+### Fa ricerche sul Portale Antenati o su FamilySearch?
+
+No. Ti dice dove è conservato un atto e a chi chiederlo, ma non cerca immagini o indici di atti su altri siti e non può sapere se un atto è stato pubblicato online.
+
+### È gratuito? Serve un account?
+
+Il connettore è gratuito e non richiede account né accesso. Si usa da Claude, aggiungendolo come connettore personalizzato (vedi [Aggiungilo a Claude](https://archives.fiorfelix.com/it/#aggiungi)). Il codice sorgente è aperto, con licenza MIT.
+
+## Guide
+
+- [Come richiedere l'atto di nascita di un antenato](https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita)
+- [Atti di stato civile: Comune o Archivio di Stato?](https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato)
+- [Se il comune del tuo antenato ha cambiato nome](https://archives.fiorfelix.com/it/guide/comune-cambiato-nome)
+- [Fogli matricolari e liste di leva: dove trovarli](https://archives.fiorfelix.com/it/guide/fogli-matricolari)
+
+## Contatti
+
+Domande, risposte sbagliate o una regola da correggere: usa il [modulo di contatto](https://archives.fiorfelix.com/it/contatti) oppure apri una segnalazione su [GitHub](https://github.com/fiorfelix/italian-archive-navigator/issues). Il codice sorgente è aperto, con licenza MIT.
+
+### Dire grazie
+
+Il navigatore ti ha aiutato a trovare l'atto di un antenato, o l'ufficio giusto a cui scrivere? Un breve messaggio fa sempre piacere: [invia un ringraziamento](https://archives.fiorfelix.com/it/contatti?topic=thanks). Se vuoi, indica per quale comune o tipo di atto ti è stato utile: aiuta a capire cosa migliorare. Non inserire dati di persone viventi. I messaggi non vengono mai pubblicati senza il tuo permesso.
+
+Italian Archive Navigator è un progetto indipendente. Non è collegato ad Anthropic, al Ministero della Cultura, agli Archivi di Stato, all'ISTAT, all'AgID o all'Esercito Italiano.
+
+---
+
+<!-- https://archives.fiorfelix.com/it/guide -->
+
+# Guide alla ricerca genealogica in Italia
+
+Guide brevi, con le fonti, per trovare e richiedere atti di nascita, matrimonio e morte e documenti militari.
+
+- [**Come richiedere l'atto di nascita di un antenato**](https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita)
+  A chi scrivere, cosa indicare e quale documento chiedere (certificato, estratto per riassunto o per copia integrale) per un atto di nascita, matrimonio o morte.
+- [**Atti di stato civile: Comune o Archivio di Stato?**](https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato)
+  Perché gli atti di nascita, matrimonio e morte esistono in due originali, quale conserva il Comune, quale l'Archivio di Stato, e dove cercare prima del 1866.
+- [**Se il comune del tuo antenato ha cambiato nome**](https://archives.fiorfelix.com/it/guide/comune-cambiato-nome)
+  Dal 1861 i comuni italiani sono stati rinominati, fusi, divisi e spostati tra province. Come trovare il comune di oggi e l'ufficio giusto per un vecchio nome di luogo.
+- [**Fogli matricolari e liste di leva: dove trovarli**](https://archives.fiorfelix.com/it/guide/fogli-matricolari)
+  Dove si trovano le liste di leva e i fogli matricolari dell'Esercito: Archivio di Stato, Ufficio documentale dell'Esercito o Ministero della Difesa.
+
+---
+
+<!-- https://archives.fiorfelix.com/it/guide/comune-cambiato-nome -->
+
+[Tutte le guide](https://archives.fiorfelix.com/it/guide)
+
+# Se il comune del tuo antenato ha cambiato nome
+
+Il luogo scritto su un vecchio documento spesso non corrisponde al nome di un comune di oggi. Ecco perché, e come trovare l'ufficio che oggi conserva gli atti.
+
+## Perché il nome può non corrispondere
+
+- **Comuni rinominati.** Molti comuni hanno cambiato nome dopo il 1861.
+- **Comuni fusi o divisi.** Piccoli comuni sono stati uniti ad altri, e alcuni sono stati poi ricostituiti.
+- **Frazioni.** Molti paesi non sono mai stati comuni: sono frazioni o località di un comune più grande, che ne conserva gli atti.
+- **Nuove province.** Le province sono state create e ridisegnate: la provincia su un vecchio atto può non essere quella di oggi.
+- **Stesso nome, luoghi diversi.** Lo stesso nome può appartenere a più località in parti diverse d'Italia.
+
+## Un esempio: Corneto
+
+Secondo l'archivio ISTAT delle variazioni amministrative:
+
+- 1871: Corneto, in provincia di Roma, entra a far parte dell'Italia;
+- 1872: viene rinominato **Corneto Tarquinia**;
+- 1922: viene rinominato **Tarquinia**;
+- 1928: passa alla nuova provincia di **Viterbo**.
+
+Una nascita "a Corneto, provincia di Roma" nel 1880 si trova quindi oggi nel comune di Tarquinia (VT), ed è a quel Comune che bisogna scrivere. Esistono anche piccole località chiamate Corneto in altre regioni: per questo provincia e anno sono importanti.
+
+## Come trovare il comune giusto
+
+1. Annota il nome del luogo esattamente come scritto, l'anno e, se c'è, la provincia.
+2. Cercalo negli elenchi ufficiali ISTAT: i codici dei comuni di oggi, la storia delle variazioni dal 1861 e l'elenco delle località del censimento.
+3. Scrivi al comune **di oggi**, oppure all'Archivio di Stato della provincia di oggi per gli atti più antichi. Indica nella lettera anche il nome antico.
+
+## Chiedilo a Claude
+
+Con il connettore Italian Archive Navigator in Claude puoi chiederlo per qualsiasi luogo e anno, e ottenere indirizzo e PEC dell'ufficio e la lettera di richiesta. [Aggiungilo a Claude](https://archives.fiorfelix.com/it/#aggiungi): è gratuito e non serve un account.
+
+## Fonti
+
+- [ISTAT, Codici dei comuni, delle province e delle regioni](https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/)
+- [ISTAT SITUAS, variazioni amministrative dei comuni dal 1861](https://situas.istat.it/)
+- [ISTAT, Basi territoriali e variabili censuarie (località 2021)](https://www.istat.it/notizia/basi-territoriali-e-variabili-censuarie/)
+
+Ultimo aggiornamento: 24 novembre 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato -->
+
+[Tutte le guide](https://archives.fiorfelix.com/it/guide)
+
+# Atti di stato civile: Comune o Archivio di Stato?
+
+Ogni atto di stato civile italiano è stato scritto due volte. Sapere dove è finita ciascuna copia ti dice a chi chiedere, e dove si trovano gli allegati.
+
+## Due originali, firmati insieme
+
+Lo stato civile italiano è iniziato il 1° gennaio 1866 con il Regio Decreto 15 novembre 1865, n. 2602; i territori uniti all'Italia più tardi lo hanno adottato al momento dell'unione. Ogni atto di nascita, matrimonio e morte era redatto in **due originali**, firmati contemporaneamente dalle parti, dai testimoni e dall'ufficiale dello stato civile. Alla fine di ogni anno:
+
+- un originale restava nell'**archivio del Comune**;
+- l'altro veniva depositato presso la **cancelleria del tribunale**.
+
+Gli uffici dello Stato versano agli Archivi di Stato i documenti relativi agli affari esauriti da oltre trent'anni. Per gli anni più antichi, quindi, l'originale del tribunale si trova di solito oggi all'**Archivio di Stato** della provincia. I tempi dei versamenti variano da archivio ad archivio, e alcuni sono ancora in corso.
+
+## I documenti che esistono una sola volta
+
+Gli allegati agli atti di matrimonio (i *processetti*, con gli atti di nascita degli sposi, il consenso dei genitori e altro) e il registro delle pubblicazioni di matrimonio erano uniti solo alla serie del **tribunale**. Se ti servono, chiedili all'Archivio di Stato (o al tribunale per gli anni recenti), non al Comune.
+
+## A chi chiedere
+
+- **Atti recenti:** al Comune, che decide anche cosa può rilasciare su eventi recenti e persone viventi.
+- **Atti antichi:** a entrambi. La copia dell'Archivio di Stato è spesso la più facile da consultare, e molti registri degli Archivi di Stato sono stati fotografati e pubblicati sul [Portale Antenati](https://antenati.cultura.gov.it/) del Ministero della Cultura. Se un originale è perduto o danneggiato, chiedi l'altro.
+- **Allegati e pubblicazioni di matrimonio:** all'Archivio di Stato.
+
+## Prima del 1866
+
+Dipende dallo stato a cui apparteneva il luogo. Molte zone ebbero lo stato civile napoleonico nei primi anni dell'Ottocento, e alcuni stati preunitari tennero registri civili anche dopo; altri, come lo Stato Pontificio nel Lazio e in Umbria, non ebbero stato civile dopo la Restaurazione, e la fonte principale sono i registri parrocchiali (battesimi, matrimoni, sepolture), conservati dalla parrocchia o dall'archivio diocesano.
+
+## Chiedilo a Claude
+
+Con il connettore Italian Archive Navigator in Claude puoi chiederlo per qualsiasi luogo e anno, e ottenere indirizzo e PEC dell'ufficio e la lettera di richiesta. [Aggiungilo a Claude](https://archives.fiorfelix.com/it/#aggiungi): è gratuito e non serve un account.
+
+## Fonti
+
+- [R.D. 15 novembre 1865, n. 2602 (ordinamento dello stato civile), artt. 21, 30, 41, 64](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1865-11-15;2602)
+- [D.Lgs. 22 gennaio 2004, n. 42 (Codice dei beni culturali), art. 41](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41)
+- [Guida generale degli Archivi di Stato italiani, Archivio di Stato di Roma](https://archivi.cultura.gov.it/fileadmin/risorse/Guida_Generale_A_S/Roma_.pdf)
+- [Portale Antenati, Ministero della Cultura](https://antenati.cultura.gov.it/)
+
+Ultimo aggiornamento: 24 novembre 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/it/guide/fogli-matricolari -->
+
+[Tutte le guide](https://archives.fiorfelix.com/it/guide)
+
+# Fogli matricolari e liste di leva: dove trovarli
+
+Gli uomini venivano iscritti alla leva per comune e anno di nascita. Liste di leva e fogli matricolari dicono molto di un antenato, se sai a quale ufficio chiederli.
+
+## Cosa esiste
+
+- **Liste di leva**: tutti i giovani di un comune, elencati per anno di nascita (classe).
+- **Ruoli matricolari e fogli matricolari**: una registrazione per ogni uomo, con connotati, reparti, campagne e congedo.
+
+## Chi li conserva (Esercito)
+
+- **Classi più vecchie:** l'Archivio di Stato della provincia. Per legge le liste di leva sono versate all'Archivio di Stato settant'anni dopo l'anno di nascita della classe; quali classi di ruoli matricolari conservi un archivio varia da archivio ad archivio.
+- **Classi più recenti** (truppa, sottufficiali e ufficiali di complemento): l'Ufficio documentale dell'Esercito competente per il **luogo di nascita**.
+- **Ufficiali in servizio permanente:** dal 10° anno dalla morte (20° per i generali), il Ministero della Difesa (Direzione generale per il personale militare, 6ª Divisione); prima, l'Ufficio documentale del luogo di residenza.
+- **Se non si trova:** il Comune può conservare la propria copia delle liste di leva.
+
+Il Ministero della Difesa pubblica una tabella (*Guida matricolare*) con l'ufficio competente per ogni richiesta; la domanda va inviata direttamente a quell'ufficio. Questa guida riguarda l'Esercito.
+
+## Cosa indicare nella richiesta
+
+- Nome e cognome, data e comune di nascita e, se lo conosci, il nome del padre.
+- La classe (anno di nascita) e, se li conosci, il numero di matricola o il reparto.
+- Che chiedi copia del foglio matricolare, e il tuo grado di parentela.
+
+## Chiedilo a Claude
+
+Con il connettore Italian Archive Navigator in Claude puoi chiederlo per qualsiasi luogo e anno, e ottenere indirizzo e PEC dell'ufficio e la lettera di richiesta. [Aggiungilo a Claude](https://archives.fiorfelix.com/it/#aggiungi): è gratuito e non serve un account.
+
+## Fonti
+
+- [Ministero della Difesa, Persomil: fogli matricolari e stati di servizio](https://www.difesa.it/sgd/staff/dg/persomil/documentazione-matricolare/fogli-matricolaristato-di-servizio/24820.html)
+- [Ministero della Difesa, Guida matricolare (tabella Esercito)](https://www.difesa.it/assets/allegati/24820/tabella_sito_ei_2be_.2024.03.08.10.31.48.830.pdf)
+- [D.Lgs. 22 gennaio 2004, n. 42 (Codice dei beni culturali), art. 41](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art41)
+
+Ultimo aggiornamento: 24 novembre 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita -->
+
+[Tutte le guide](https://archives.fiorfelix.com/it/guide)
+
+# Come richiedere l'atto di nascita di un antenato
+
+Gli atti di nascita, matrimonio e morte si possono richiedere per lettera o per PEC. Ecco a chi scrivere, cosa indicare nella richiesta e quale documento chiedere.
+
+## 1. Trova l'ufficio che conserva l'atto
+
+Gli atti di stato civile italiani (dal 1866 in quasi tutta Italia) esistono in due originali: uno all'Ufficio di Stato Civile del Comune, l'altro andato al tribunale e, per gli anni più antichi, di solito oggi all'Archivio di Stato della provincia. Gli atti recenti si chiedono al Comune. Vedi [Comune o Archivio di Stato?](https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato) per capire a chi rivolgerti.
+
+Scrivi al comune **di oggi**. Se il paese ha cambiato nome o è stato fuso con un altro comune, verifica prima a quale comune appartiene ora: [se il comune ha cambiato nome](https://archives.fiorfelix.com/it/guide/comune-cambiato-nome).
+
+## 2. Scegli il tipo di documento
+
+Dagli atti di stato civile l'ufficio rilascia tre tipi di documento:
+
+- **Certificato**: riporta le generalità della persona e gli estremi dell'atto.
+- **Estratto per riassunto**: un riassunto dell'atto e delle annotazioni.
+- **Estratto per copia integrale**: la trascrizione esatta dell'atto con tutte le annotazioni, attestata conforme all'originale. La legge lo consente solo quando ne fa espressa richiesta chi vi ha interesse, e se il rilascio non è vietato dalla legge.
+
+Per la ricerca genealogica la copia integrale è la più completa (genitori, testimoni, annotazioni successive): chiedila in modo esplicito e spiega il tuo interesse, per esempio che si tratta di un tuo antenato diretto.
+
+## 3. Scrivi la richiesta
+
+- Nome e cognome della persona e, se li conosci, i nomi dei genitori.
+- L'evento (nascita, matrimonio o morte), la data o l'anno e il luogo.
+- Numero e anno dell'atto, se li hai trovati in un indice.
+- Il tipo di documento richiesto e il tuo interesse.
+- Nome, indirizzo, e-mail e copia di un documento d'identità.
+- La richiesta di indicare eventuali costi e come pagarli.
+
+Le pubbliche amministrazioni pubblicano la loro PEC in IndicePA, l'indice ufficiale delle pubbliche amministrazioni: la legge le obbliga ad avere almeno una casella PEC e a pubblicarla lì. Molti uffici accettano le richieste inviate a quell'indirizzo. Costi, canali accettati e tempi variano da ufficio a ufficio: meglio chiedere.
+
+Gli atti recenti e quelli di persone viventi sono protetti: il Comune decide cosa può rilasciare e a chi.
+
+## Chiedilo a Claude
+
+Con il connettore Italian Archive Navigator in Claude puoi chiederlo per qualsiasi luogo e anno, e ottenere indirizzo e PEC dell'ufficio e la lettera di richiesta. [Aggiungilo a Claude](https://archives.fiorfelix.com/it/#aggiungi): è gratuito e non serve un account.
+
+## Fonti
+
+- [D.P.R. 3 novembre 2000, n. 396, art. 106 (estratti per riassunto)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art106)
+- [D.P.R. 3 novembre 2000, n. 396, art. 107 (estratti per copia integrale)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art107)
+- [D.P.R. 3 novembre 2000, n. 396, art. 108 (contenuto di estratti e certificati)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2000-11-03;396~art108)
+- [D.Lgs. 7 marzo 2005, n. 82 (CAD), art. 47 (PEC delle amministrazioni)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art47)
+- [IndicePA, Agenzia per l'Italia Digitale](https://www.indicepa.gov.it/)
+
+Ultimo aggiornamento: 24 novembre 2026
+
+---
+
+<!-- https://archives.fiorfelix.com/it/privacy -->
+
+# Informativa sulla privacy
+
+Ultimo aggiornamento: 23 novembre 2026
+
+Questa è una traduzione della [versione inglese](https://archives.fiorfelix.com/privacy). In caso di differenze fa fede la versione inglese.
+
+Questa informativa riguarda il server MCP Italian Archive Navigator all'indirizzo `https://archives-mcp.fiorfelix.com/mcp`, il plugin per Claude che vi si collega e queste pagine informative. Il servizio è gestito da fiorfelix.
+
+## Cos'è il servizio
+
+Un servizio in sola lettura che risponde a domande su luoghi, atti e archivi italiani e scrive lettere che invii tu. Non invia e-mail, non compila moduli e non contatta alcun ufficio a tuo nome.
+
+## Account
+
+Non ci sono account, accessi o autenticazione. Il servizio non chiede chi sei.
+
+## Cosa invii e cosa ne succede
+
+Quando usi il connettore, Claude invia al server i dati che servono a uno strumento: nomi di luoghi, anni e tipi di evento e, se chiedi una lettera, i nomi, le date e i recapiti da scrivervi.
+
+- Queste informazioni servono solo a produrre la risposta a quella richiesta.
+- **Non vengono conservate**: né in un database, né in file, né nei log.
+- Non vengono vendute né condivise, e il server non le invia da nessuna parte: mentre risponde non fa richieste verso l'esterno e legge solo la propria copia di dati pubblici.
+
+## Log
+
+Per ogni richiesta il server registra solo: il nome dello strumento, il tempo impiegato, l'esito e un codice d'errore in caso di problemi. I log non contengono mai il contenuto di una richiesta o di una risposta, né indirizzi di rete.
+
+- **Indirizzi di rete:** il server vede l'indirizzo di rete di ogni richiesta solo per applicare i limiti di frequenza, lo tiene in memoria al massimo per un minuto e non lo scrive mai.
+- **Conservazione:** i log sono conservati al massimo 30 giorni. L'attuale fornitore di hosting li conserva per 7 giorni.
+
+## Chi altro gestisce il traffico
+
+- **Hosting:** il server funziona su Render (render.com), la cui rete usa Cloudflare. Trasportano le richieste fino al server e possono conservare propri dati tecnici secondo le proprie politiche ([informativa di Render](https://render.com/privacy)). Usiamo tali dati solo per diagnosticare problemi.
+- **Dominio e pagine informative:** il DNS del dominio e queste pagine sono serviti da Cloudflare, che applica regole di sicurezza (come i limiti di frequenza) alle richieste in arrivo e tratta gli indirizzi IP a tale scopo secondo l'[informativa di Cloudflare](https://www.cloudflare.com/privacypolicy/).
+- **Claude:** le tue conversazioni con Claude, comprese le ricerche che gli chiedi, sono gestite da Anthropic secondo l'[informativa di Anthropic](https://www.anthropic.com/legal/privacy). Questo servizio riceve solo le chiamate agli strumenti che Claude gli invia.
+
+## Queste pagine informative
+
+Queste pagine non usano cookie né tracciamento. Usano Cloudflare Web Analytics, che conta le visite senza cookie né altri identificativi memorizzati: quale pagina è stata vista, il sito di provenienza, il paese, il tipo di browser e di dispositivo e i tempi di caricamento. Non crea profili dei visitatori. Il connettore non ha alcuno script di analisi.
+
+## Dati pubblicati dal servizio
+
+Le risposte provengono da dati pubblici aperti (ISTAT e IndicePA, CC BY 4.0), dalle guide archivistiche ufficiali e dalle leggi citate in ogni risposta, e dai file curati da questo progetto. I contatti degli uffici sono quelli che gli uffici stessi pubblicano; i nomi dei responsabili non sono inclusi e sono conservate solo le caselle degli uffici.
+
+## Persone viventi
+
+Il servizio non fa ricerche su persone viventi. Le domande su eventi di meno di 100 anni fa, o su persone nate dopo il 1940, sono indirizzate al Comune, che decide cosa può rilasciare.
+
+## Il modulo di contatto
+
+Se usi il [modulo di contatto](https://archives.fiorfelix.com/it/contatti), il tuo messaggio, l'argomento scelto e, se lo indichi, il tuo indirizzo e-mail vengono inviati per e-mail alla persona che gestisce il progetto. Non vengono conservati su alcun server né scritti in alcun log. I messaggi restano in quella casella solo per il tempo necessario a rispondere e non vengono mai pubblicati o condivisi senza il tuo permesso. Cloudflare Turnstile verifica che il modulo sia inviato da una persona e non da un programma automatico; a tale scopo tratta informazioni sul browser e sulla connessione secondo l'[informativa di Cloudflare](https://www.cloudflare.com/privacypolicy/).
+
+## Modifiche e contatti
+
+Le modifiche a questa informativa sono pubblicate in questa pagina con una nuova data. Per domande sulla privacy usa il [modulo di contatto](https://archives.fiorfelix.com/it/contatti).

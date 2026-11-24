@@ -5,31 +5,7 @@
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
-        <loc>https://archives.fiorfelix.com/it/</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
-        <loc>https://archives.fiorfelix.com/privacy</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
-        <loc>https://archives.fiorfelix.com/it/privacy</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
         <loc>https://archives.fiorfelix.com/guides</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
-        <loc>https://archives.fiorfelix.com/it/guide</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
-        <loc>https://archives.fiorfelix.com/guides/request-italian-birth-record</loc>
-        <lastmod>2026-11-24</lastmod>
-    </url>
-    <url>
-        <loc>https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita</loc>
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
@@ -37,7 +13,7 @@
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
-        <loc>https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato</loc>
+        <loc>https://archives.fiorfelix.com/guides/italian-military-records</loc>
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
@@ -45,15 +21,39 @@
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
+        <loc>https://archives.fiorfelix.com/guides/request-italian-birth-record</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://archives.fiorfelix.com/privacy</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://archives.fiorfelix.com/it/</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://archives.fiorfelix.com/it/guide</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
         <loc>https://archives.fiorfelix.com/it/guide/comune-cambiato-nome</loc>
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
-        <loc>https://archives.fiorfelix.com/guides/italian-military-records</loc>
+        <loc>https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato</loc>
         <lastmod>2026-11-24</lastmod>
     </url>
     <url>
         <loc>https://archives.fiorfelix.com/it/guide/fogli-matricolari</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita</loc>
+        <lastmod>2026-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://archives.fiorfelix.com/it/privacy</loc>
         <lastmod>2026-11-24</lastmod>
     </url>
 </urlset>

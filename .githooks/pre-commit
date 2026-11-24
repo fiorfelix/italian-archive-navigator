@@ -1,0 +1,10 @@
+#!/bin/sh
+# Rebuild the site's Markdown copies, llms.txt, llms-full.txt and sitemap.xml from the HTML pages,
+# and add the files it changed to the commit. Installed by `npm install`
+# (git config core.hooksPath .githooks).
+set -e
+if git diff --cached --name-only | grep -q '^site/'; then
+  npx --no-install tsx scripts/site-extras.ts --print-written | while IFS= read -r f; do
+    git add -- "$f"
+  done
+fi

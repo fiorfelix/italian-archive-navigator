@@ -8,20 +8,29 @@
 - Coverage is deepest for Lazio, Umbria, Toscana and Marche; place history and office contacts cover all of Italy.
 - It does not search Portale Antenati or FamilySearch, does not look up living people, never sends anything on the user's behalf, and does not store request contents.
 - Sources: ISTAT and IndicePA open data (CC BY 4.0), the Guida generale degli Archivi di Stato italiani, archive inventories and Italian law on Normattiva. Every rule cites its source; unconfirmed rules are marked unverified.
+- Every page below is also available as Markdown at the linked address. The full text of all pages is in https://archives.fiorfelix.com/llms-full.txt.
 
-## Pages
+## Pages (English)
 
-- [Home (English)](https://archives.fiorfelix.com/): what it does, how to add it, example questions, coverage, sources, questions and answers
-- [Home (Italiano)](https://archives.fiorfelix.com/it/): the same in Italian
-- [Guides (English)](https://archives.fiorfelix.com/guides): sourced guides to Italian records
-  - [How to request an Italian ancestor's birth record](https://archives.fiorfelix.com/guides/request-italian-birth-record)
-  - [Italian civil records: Comune or State Archive?](https://archives.fiorfelix.com/guides/comune-or-state-archive)
-  - [When your ancestor's Italian town changed its name](https://archives.fiorfelix.com/guides/italian-town-name-changes)
-  - [Italian military service records: where to find them](https://archives.fiorfelix.com/guides/italian-military-records)
-- [Guide (Italiano)](https://archives.fiorfelix.com/it/guide): the same guides in Italian
-- [Privacy policy](https://archives.fiorfelix.com/privacy)
-- [Contact form](https://archives.fiorfelix.com/contact)
+- [Italian Archive Navigator](https://archives.fiorfelix.com/index.md): Find where an Italian ancestor's birth, marriage, death or military record is kept today, the office's address and PEC, and a request letter in Italian. A free connector for Claude.
+- [Guides to Italian genealogy records](https://archives.fiorfelix.com/guides.md): Short guides with official sources: where Italian civil records are kept, how to request a copy, renamed towns, and military service records.
+- [Italian civil records: Comune or State Archive?](https://archives.fiorfelix.com/guides/comune-or-state-archive.md): Why Italian birth, marriage and death records exist in two originals, which one the Comune keeps, which one is at the Archivio di Stato, and where to look before 1866.
+- [Italian military service records (fogli matricolari): where to find them](https://archives.fiorfelix.com/guides/italian-military-records.md): Where Italian Army conscription lists and service records (fogli matricolari) are kept: the State Archive, the Army documentation office, or the Ministry of Defence.
+- [When your ancestor's Italian town changed its name](https://archives.fiorfelix.com/guides/italian-town-name-changes.md): Italian comuni have been renamed, merged, split and moved between provinces since 1861. How to find today's comune and the right office for an old place name.
+- [How to request an Italian ancestor's birth record](https://archives.fiorfelix.com/guides/request-italian-birth-record.md): Who to write to, what to include, and which kind of copy to ask for (certificate, extract or full copy) when requesting a birth, marriage or death record from Italy.
+- [Privacy](https://archives.fiorfelix.com/privacy.md): Privacy policy of the Italian Archive Navigator connector for Claude: no accounts, request contents not stored, logs without addresses.
+
+## Pagine (italiano)
+
+- [Italian Archive Navigator](https://archives.fiorfelix.com/it/index.md): Scopri dove si trova oggi l'atto di nascita, matrimonio, morte o il foglio matricolare di un antenato, l'indirizzo e la PEC dell'ufficio e la lettera di richiesta. Un connettore gratuito per Claude.
+- [Guide alla ricerca degli atti degli antenati](https://archives.fiorfelix.com/it/guide.md): Guide brevi con fonti ufficiali: dove si trovano gli atti di stato civile, come chiederne copia, comuni che hanno cambiato nome, fogli matricolari.
+- [Se il comune del tuo antenato ha cambiato nome](https://archives.fiorfelix.com/it/guide/comune-cambiato-nome.md): Dal 1861 i comuni italiani sono stati rinominati, fusi, divisi e spostati tra province. Come trovare il comune di oggi e l'ufficio giusto per un vecchio nome di luogo.
+- [Atti di stato civile: Comune o Archivio di Stato?](https://archives.fiorfelix.com/it/guide/comune-o-archivio-di-stato.md): Perché gli atti di nascita, matrimonio e morte esistono in due originali, quale conserva il Comune, quale l'Archivio di Stato, e dove cercare prima del 1866.
+- [Fogli matricolari e liste di leva: dove trovarli](https://archives.fiorfelix.com/it/guide/fogli-matricolari.md): Dove si trovano le liste di leva e i fogli matricolari dell'Esercito: Archivio di Stato, Ufficio documentale dell'Esercito o Ministero della Difesa.
+- [Come richiedere l'atto di nascita di un antenato](https://archives.fiorfelix.com/it/guide/richiedere-atto-di-nascita.md): A chi scrivere, cosa indicare e quale documento chiedere (certificato, estratto per riassunto o per copia integrale) per un atto di nascita, matrimonio o morte.
+- [Privacy](https://archives.fiorfelix.com/it/privacy.md): Informativa sulla privacy del connettore Italian Archive Navigator per Claude: nessun account, contenuti delle richieste non conservati, log senza indirizzi.
 
 ## Optional
 
+- [Contact form](https://archives.fiorfelix.com/contact)
 - [Source code (MIT)](https://github.com/fiorfelix/italian-archive-navigator)

@@ -19,7 +19,9 @@
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
     "inspect": "npx -y @modelcontextprotocol/inspector@2.15.0 --server-url http://127.0.0.1:${PORT:-8788}/mcp --transport http",
     "refresh-data": "tsx scripts/refresh-data.ts",
-    "usage-summary": "tsx scripts/usage-summary.ts"
+    "usage-summary": "tsx scripts/usage-summary.ts",
+    "site:build": "tsx scripts/site-extras.ts",
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@modelcontextprotocol/express": "2.0.2",
