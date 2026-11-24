@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contatti · Italian Archive Navigator</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css?v=5" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="/contact.js" defer></script>
+  </head>
+  <body>
+    <div class="tricolore"></div>
+    <header>
+      <img src="/icon.svg" alt="" />
+      <div>
+        <div class="name"><a href="/it/">Italian Archive Navigator</a></div>
+        <div class="by">di fiorfelix</div>
+      </div>
+      <a class="lang" href="/contact" hreflang="en" lang="en">English</a>
+    </header>
+    <nav class="site" aria-label="Sito">
+      <div class="inner">
+        <a href="/it/">Home</a>
+        <a href="/it/#aggiungi">Aggiungi a Claude</a>
+        <a href="/it/#domande">Cosa chiedere</a>
+        <a href="/it/#copertura">Copertura</a>
+        <a href="/it/#fonti">Fonti</a>
+        <a href="/it/#faq">Domande frequenti</a>
+        <a href="/it/privacy">Privacy</a>
+        <a href="/it/contatti" aria-current="page">Contatti</a>
+      </div>
+    </nav>
+    <main>
+      <h1>Contatti</h1>
+      <p class="lead">
+        Una domanda, una risposta sbagliata, una regola da correggere o un ringraziamento: scrivi
+        qui.
+      </p>
+      <div class="card">
+        <form class="contact" method="post" action="/api/contact">
+          <input type="hidden" name="lang" value="it" />
+          <fieldset class="field">
+            <legend>Di cosa si tratta?</legend>
+            <div class="topics">
+              <input type="radio" id="t-question" name="topic" value="question" checked />
+              <label for="t-question">Una domanda</label>
+              <input type="radio" id="t-correction" name="topic" value="correction" />
+              <label for="t-correction">Qualcosa da correggere</label>
+              <input type="radio" id="t-thanks" name="topic" value="thanks" />
+              <label for="t-thanks">Un ringraziamento</label>
+              <input type="radio" id="t-other" name="topic" value="other" />
+              <label for="t-other">Altro</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="message">Il tuo messaggio</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              maxlength="5000"
+              required
+              placeholder="Scrivi qui. Se il navigatore ti è stato utile, indica per quale comune o tipo di atto."
+            ></textarea>
+            <p class="hint">Non inserire dati di persone viventi.</p>
+          </div>
+
+          <div class="field">
+            <label for="reply"
+              >La tua e-mail
+              <span class="optional">(facoltativa, solo se vuoi una risposta)</span></label
+            >
+            <input
+              id="reply"
+              name="reply"
+              type="email"
+              maxlength="254"
+              autocomplete="email"
+              placeholder="nome@esempio.it"
+            />
+          </div>
+
+          <div class="trap" aria-hidden="true" hidden>
+            <label for="website">Lascia vuoto</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAAGP9rtefgSPZAyTl"
+            data-action="contact"
+            data-language="it"
+          ></div>
+
+          <button type="submit" data-sending="Invio in corso…">Invia il messaggio</button>
+        </form>
+      </div>
+      <p class="note">
+        Il messaggio viene inviato per e-mail alla persona che gestisce il progetto e non viene
+        conservato su alcun server. Cloudflare Turnstile verifica che il modulo sia inviato da una
+        persona e non da un programma automatico. I messaggi sono conservati solo per il tempo
+        necessario a rispondere e non vengono mai pubblicati senza il tuo permesso. Vedi l'<a
+          href="/it/privacy"
+          >informativa sulla privacy</a
+        >.
+      </p>
+    </main>
+    <footer>
+      fiorfelix · <a href="/it/privacy">Informativa sulla privacy</a> ·
+      <a href="https://github.com/fiorfelix/italian-archive-navigator">Codice sorgente</a>
+    </footer>
+  </body>
+</html>

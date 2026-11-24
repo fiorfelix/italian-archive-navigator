@@ -2,12 +2,13 @@
 (function () {
   document.querySelectorAll('button[data-copy]').forEach(function (button) {
     var label = button.textContent;
+    var copied = button.getAttribute('data-copied') || 'Copied ✓';
     button.addEventListener('click', function () {
       var source = document.getElementById(button.getAttribute('data-copy'));
       if (!source) return;
       var text = source.textContent.trim();
       var done = function () {
-        button.textContent = 'Copied ✓';
+        button.textContent = copied;
         setTimeout(function () {
           button.textContent = label;
         }, 2000);

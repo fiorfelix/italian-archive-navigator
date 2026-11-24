@@ -8,6 +8,8 @@ export const HOST = 'archives.fiorfelix.com';
 export const SENDER = 'contact-form@fiorfelix.com';
 export const SENT_PAGE = '/contact-sent';
 export const ERROR_PAGE = '/contact-error';
+/** The Italian form sends lang=it and gets the Italian result pages. */
+export const PAGES_IT = { sent: '/it/contatti-inviato', error: '/it/contatti-errore' };
 export const MAX_BODY_BYTES = 20_000;
 export const MAX_MESSAGE = 5000;
 
@@ -137,18 +139,21 @@ export async function handle(request: Request, env: Env, deps: Deps): Promise<Re
   } catch {
     return redirect(ERROR_PAGE);
   }
+  const italian = form.get('lang') === 'it';
+  const sent = italian ? PAGES_IT.sent : SENT_PAGE;
+  const failed = italian ? PAGES_IT.error : ERROR_PAGE;
   const parsed = parseForm(form);
-  if (parsed === 'bot') return redirect(SENT_PAGE); // say nothing useful to bots
-  if (parsed === 'invalid') return redirect(ERROR_PAGE);
+  if (parsed === 'bot') return redirect(sent); // say nothing useful to bots
+  if (parsed === 'invalid') return redirect(failed);
 
-  if (!env.TURNSTILE_SECRET || !env.CONTACT_TO) return redirect(ERROR_PAGE);
+  if (!env.TURNSTILE_SECRET || !env.CONTACT_TO) return redirect(failed);
   const ok = await verifyTurnstile(
     deps.fetch,
     env.TURNSTILE_SECRET,
     parsed.token,
     request.headers.get('cf-connecting-ip'),
   );
-  if (!ok) return redirect(ERROR_PAGE);
+  if (!ok) return redirect(failed);
 
   const { raw } = buildMime(
     parsed,
@@ -159,7 +164,7 @@ export async function handle(request: Request, env: Env, deps: Deps): Promise<Re
   try {
     await env.EMAIL.send(deps.makeMessage(SENDER, env.CONTACT_TO, raw));
   } catch {
-    return redirect(ERROR_PAGE);
+    return redirect(failed);
   }
-  return redirect(SENT_PAGE);
+  return redirect(sent);
 }

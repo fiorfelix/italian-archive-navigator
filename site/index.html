@@ -3,13 +3,70 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Italian Archive Navigator</title>
+    <title>Italian Archive Navigator · Find Italian birth, marriage and death records</title>
     <meta
       name="description"
-      content="A read-only connector for Claude that helps with Italian family-history research: places, records, archives and request letters."
+      content="Find where an Italian ancestor's birth, marriage, death or military record is kept today, the office's address and PEC, and a request letter in Italian. A free connector for Claude."
     />
+    <link rel="canonical" href="https://archives.fiorfelix.com/" />
+    <link rel="alternate" hreflang="en" href="https://archives.fiorfelix.com/" />
+    <link rel="alternate" hreflang="it" href="https://archives.fiorfelix.com/it/" />
+    <link rel="alternate" hreflang="x-default" href="https://archives.fiorfelix.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Italian Archive Navigator" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:url" content="https://archives.fiorfelix.com/" />
+    <meta
+      property="og:title"
+      content="Italian Archive Navigator: find where an Italian ancestor's record is kept"
+    />
+    <meta
+      property="og:description"
+      content="Which records exist for a place and year, which office holds them today, its address and PEC, and a request letter in Italian. A free connector for Claude."
+    />
+    <meta property="og:image" content="https://archives.fiorfelix.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=4" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://archives.fiorfelix.com/#website",
+            "url": "https://archives.fiorfelix.com/",
+            "name": "Italian Archive Navigator",
+            "inLanguage": ["en", "it"],
+            "publisher": { "@id": "https://archives.fiorfelix.com/#publisher" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://archives.fiorfelix.com/#publisher",
+            "name": "fiorfelix",
+            "url": "https://archives.fiorfelix.com/",
+            "sameAs": ["https://github.com/fiorfelix"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Italian Archive Navigator",
+            "url": "https://archives.fiorfelix.com/",
+            "applicationCategory": "ReferenceApplication",
+            "operatingSystem": "Web (a connector for Claude)",
+            "description": "A read-only connector for Claude for Italian family-history research: place history since 1861, which civil, parish and military records exist and which office holds them, office addresses and PEC, request letters in Italian, and citations.",
+            "inLanguage": ["en", "it"],
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "license": "https://opensource.org/licenses/MIT",
+            "sameAs": ["https://github.com/fiorfelix/italian-archive-navigator"],
+            "publisher": { "@id": "https://archives.fiorfelix.com/#publisher" }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css?v=5" />
     <script src="/site.js" defer></script>
   </head>
   <body>
@@ -20,6 +77,7 @@
         <div class="name"><a href="/">Italian Archive Navigator</a></div>
         <div class="by">by fiorfelix</div>
       </div>
+      <a class="lang" href="/it/" hreflang="it" lang="it">Italiano</a>
     </header>
     <nav class="site" aria-label="Site">
       <div class="inner">
@@ -28,6 +86,7 @@
         <a href="/#ask">What to ask</a>
         <a href="/#limits">Coverage</a>
         <a href="/#sources">Sources</a>
+        <a href="/#faq">FAQ</a>
         <a href="/privacy">Privacy</a>
         <a href="/contact">Contact</a>
       </div>
@@ -189,6 +248,58 @@
         selected, normalised for searching and combined into one database; names of office holders
         are not kept. Neither ISTAT nor AgID endorses this project.
       </p>
+
+      <h2 id="faq">Questions and answers</h2>
+      <div class="faq">
+        <h3>Where are Italian birth, marriage and death records kept?</h3>
+        <p>
+          Italian civil registration (from 1866 in most of Italy, earlier where Napoleonic or
+          pre-unification registration existed) was written in two copies. One copy stays with the
+          Comune's civil registry office (Ufficio di Stato Civile). The other went to the local
+          court and, for older years, is usually now at the State Archive (Archivio di Stato) of the
+          province. Baptisms, marriages and burials before civil registration are in parish
+          registers, kept by the parish or the diocesan archive. The navigator says which applies
+          for a given place, year and event, and cites the source.
+        </p>
+
+        <h3>How do I ask for a copy of an ancestor's birth record from Italy?</h3>
+        <p>
+          Write to the office that holds it: usually the Comune's Ufficio di Stato Civile, or the
+          State Archive for older records. Give the person's name, the date and place of the event,
+          and the act number if you know it, and say what kind of copy you need. The navigator finds
+          the office's address and certified e-mail (PEC) and drafts the letter in Italian, with an
+          English summary, for you to review and send yourself.
+        </p>
+
+        <h3>My ancestor's town has changed its name or no longer exists. How do I find it?</h3>
+        <p>
+          Many Italian comuni have been renamed, merged or split since 1861, and many villages are
+          hamlets (frazioni) of a larger comune. Ask the navigator about the old name: it finds
+          today's comune, what the place was called and which province it belonged to in a given
+          year, from ISTAT's official records.
+        </p>
+
+        <h3>What is a PEC address?</h3>
+        <p>
+          PEC (posta elettronica certificata) is the certified e-mail that Italian public offices
+          must have; requests for records are often sent to it. The navigator gives each office's
+          PEC as published in IndicePA, the official index of Italian public administrations.
+        </p>
+
+        <h3>Does it search Portale Antenati or FamilySearch?</h3>
+        <p>
+          No. It tells you where a record is kept and who to ask, but it does not search record
+          images or indexes on other websites, and it can't tell whether a record has been put
+          online.
+        </p>
+
+        <h3>Is it free? Do I need an account?</h3>
+        <p>
+          The connector is free and needs no account or sign-in. You use it from Claude, by adding
+          it as a custom connector (see <a href="#add">Add it to Claude</a>). The source code is
+          open under the MIT licence.
+        </p>
+      </div>
 
       <h2 id="contact">Contact</h2>
       <p>

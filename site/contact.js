@@ -11,7 +11,7 @@
     var button = form.querySelector('button[type="submit"]');
     if (button) {
       button.disabled = true;
-      button.textContent = 'Sending…';
+      button.textContent = button.getAttribute('data-sending') || 'Sending…';
     }
   });
 })();

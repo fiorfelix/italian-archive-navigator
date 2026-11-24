@@ -5,6 +5,7 @@ import {
   parseForm,
   SENT_PAGE,
   ERROR_PAGE,
+  PAGES_IT,
   type Env,
 } from '../contact-worker/src/handler.js';
 
@@ -146,6 +147,15 @@ describe('contact form: handle', () => {
     const r = await s.post(good);
     expect(location(r)).toBe(ERROR_PAGE);
     expect(s.sent).toHaveLength(0);
+  });
+  it('sends people who used the Italian form to the Italian result pages', async () => {
+    const ok = setup();
+    expect(location(await ok.post({ ...good, lang: 'it' }))).toBe(PAGES_IT.sent);
+    expect(ok.sent).toHaveLength(1);
+    const bad = setup({ success: false });
+    expect(location(await bad.post({ ...good, lang: 'it' }))).toBe(PAGES_IT.error);
+    expect(location(await bad.post({ ...good, lang: 'it', message: '' }))).toBe(PAGES_IT.error);
+    expect(location(await bad.post({ ...good, lang: 'fr' }))).toBe(ERROR_PAGE);
   });
   it('pretends success to bots without checking or sending', async () => {
     const s = setup();
