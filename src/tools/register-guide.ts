@@ -19,7 +19,7 @@ export function registerRegisterGuide(
     {
       title: 'Register guide',
       description:
-        'For a comune, year and event (birth, marriage, death, military), explains what to expect inside the register: which registers and volumes exist, where the index usually is, how acts are numbered and laid out, and steps for reading it. Each note says whether it is confirmed from an official source. Use alongside which_records_exist when reading register pages.',
+        'For a comune, year and event (birth, marriage, death, military), explains what to expect inside the register: which registers and volumes exist, where the index usually is, how acts are numbered and laid out, and steps for reading it. Each note says whether it is confirmed from an official source.',
       inputSchema: recordsInput,
       annotations: {
         title: 'Register guide',
