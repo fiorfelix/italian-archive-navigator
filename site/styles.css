@@ -101,6 +101,10 @@ h2 {
   padding-top: 8px;
   border-top: 1px solid var(--border);
 }
+h3 {
+  font-size: 1.05rem;
+  margin: 24px 0 8px;
+}
 .lead {
   font-size: 1.1rem;
   color: var(--muted);

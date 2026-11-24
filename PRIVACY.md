@@ -73,4 +73,5 @@ about people born after 1940, are directed to the Comune, which decides what it 
 ## Changes and contact
 
 Changes to this policy are published on this page with a new date. For privacy questions, write
-to info@fiorfelix.com.
+to info@fiorfelix.com. Messages sent to that address are kept only as long as needed to reply, and are never
+published or shared without your permission.
