@@ -1,8 +1,9 @@
 # Security headers for every page (Cloudflare Pages _headers format).
-# The site has no scripts and no inline styles: only its own stylesheet and icon.
+# The site has no scripts of its own and no inline styles. The only script is Cloudflare Web
+# Analytics, which Cloudflare Pages injects and which reports to cloudflareinsights.com.
 /*
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'none'; script-src https://static.cloudflareinsights.com; connect-src https://cloudflareinsights.com; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

@@ -1,6 +1,6 @@
 # Privacy policy
 
-Italian Archive Navigator · Last updated: 22 November 2026
+Italian Archive Navigator · Last updated: 23 November 2026
 
 This policy covers the Italian Archive Navigator MCP server at
 `https://archives-mcp.fiorfelix.com/mcp`, the Claude plugin that connects to it, and the
@@ -43,14 +43,20 @@ never contain network addresses.
   the requests to the server and may keep their own technical records under their own policies
   ([Render privacy policy](https://render.com/privacy)). We use such records only to diagnose
   problems.
-- **Domain:** the domain's DNS is managed by Cloudflare.
+- **Domain and information pages:** the domain's DNS and the information pages are served by
+  Cloudflare, which applies security rules (such as rate limits) to incoming requests and
+  processes IP addresses for that purpose under the
+  [Cloudflare privacy policy](https://www.cloudflare.com/privacypolicy/).
 - **Claude:** your conversations with Claude, including what you ask it to look up, are handled
   by Anthropic under [Anthropic's privacy policy](https://www.anthropic.com/legal/privacy). This
   service receives only the tool calls Claude makes to it.
 
 ## The information pages
 
-The pages at `archives.fiorfelix.com` use no cookies, no analytics and no tracking.
+The pages at `archives.fiorfelix.com` use no cookies and no tracking. They use Cloudflare Web
+Analytics, which counts page views without cookies or other stored identifiers: which page was
+viewed, the referring site, the country, the type of browser and device, and page load times. It
+does not build profiles of visitors. The connector itself has no analytics script.
 
 ## Data the service publishes
 
