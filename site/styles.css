@@ -392,3 +392,18 @@ details.more summary {
     text-align: center;
   }
 }
+
+/* Shown only on touch screens up to tablet width */
+.phone-note {
+  display: none;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--warn-bg);
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) and (pointer: coarse) {
+  .phone-note {
+    display: block;
+  }
+}
