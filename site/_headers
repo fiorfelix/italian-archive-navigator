@@ -13,6 +13,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
 
-# The sitemap: plain XML, UTF-8.
+# The sitemap: plain XML, UTF-8. No CSP here: the browser's built-in XML viewer styles the tree
+# itself, and the site-wide CSP blocks that, which shows the sitemap as unformatted text.
 /sitemap.xml
+  ! Content-Security-Policy
   Content-Type: text/xml; charset=UTF-8
