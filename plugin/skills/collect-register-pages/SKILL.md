@@ -29,6 +29,12 @@ check. Tell the user what you found and the route:
 Never try to get around a login, CAPTCHA, block or limit, and never use another site's or
 third-party tool to do so. If access is refused, stop and use the manual route.
 
+On manual-route sites, don't drive the user's browser either: no browser extension, computer
+use or other automation paging through the site's viewer, opening pages or taking screenshots
+for the user. The user gets the pages themselves; you guide them. Nothing beyond the Claude app
+they already use is needed, so never ask them to install Claude Code, a browser extension or
+other software for this.
+
 ## 3. Manual route
 
 Give the user the steps for that site from `references/sites.md`: where the register is, how

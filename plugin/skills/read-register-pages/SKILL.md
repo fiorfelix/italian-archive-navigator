@@ -9,6 +9,11 @@ Find the user's surnames in register pages, transcribe the matching acts careful
 every result with its page reference so the user can check it against the image. Accuracy
 matters more than speed: read slowly, never guess, and say when something is unclear.
 
+This works in every Claude app: the user attaches the page images to the chat. In Claude Code or
+Cowork they can also point to a folder of images. Don't ask the user to install anything, and
+don't fetch pages from Portale Antenati, FamilySearch or similar sites yourself: if the user has
+no images yet, hand over to `collect-register-pages`, which explains how they get them.
+
 ## Before reading
 
 1. Ask (or confirm) the **surnames** the user is looking for and, if known, given names,
