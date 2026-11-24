@@ -37,8 +37,9 @@ or presentations.
 ## What it runs and sends
 
 - The skills are text, plus one small shell script, `skills/collect-register-pages/scripts/fetch-pages.sh`.
-  It runs only when you ask Claude Code or Cowork to download pages, and only from sites whose
-  terms allow automated access. It downloads one page at a time, at least 5 seconds apart, sends
+  It runs only when you ask Claude Code or Cowork to download pages, and only from sites with no
+  login or bot check, whose robots.txt doesn't exclude the pages and whose terms allow automated
+  access or say nothing about it. It downloads one page at a time, at least 5 seconds apart, sends
   a User-Agent naming the plugin and a contact address, stops if a site refuses access or asks it
   to slow down repeatedly, and saves the pages and a log in your own archive folder. It sends
   nothing else anywhere. The plugin has no hooks and no local servers.

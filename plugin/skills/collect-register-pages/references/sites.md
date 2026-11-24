@@ -3,9 +3,10 @@
 Checked November 2026 (terms pages and robots.txt read; register images not downloaded).
 Terms change: if a site's page says something different now, follow the site.
 
-**Summary:** no site that holds Italian civil, parish or military register images in bulk clearly
-allows automated downloading. Use the manual route for real register sources. Automated download
-is possible only on sites marked "automated OK", which hold few registers.
+**Summary:** the big sources of Italian civil, parish and military register images all need the
+manual route. Automated download is possible on sites marked "automated OK", and on any other
+site that passes the check in `SKILL.md` (no login or check, robots.txt doesn't exclude the
+pages, terms allow it or say nothing about it). Check each site afresh; don't assume.
 
 | Site                                              | Holds                                                  | Route                            | Why                                                                                                                                                            |
 | ------------------------------------------------- | ------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +37,7 @@ formats), or photograph in the reading room where the archive allows it, under i
 **Sites with a viewer but no download.** Read on screen, write down the reference (archive,
 series, year, act, image number, link) and request a copy from the holder if needed.
 
-## Automated route (sites marked "automated OK" only)
+## Automated route (sites marked "automated OK", or that pass the check in SKILL.md)
 
 Use the site's documented download links or API, one request at a time, through
 `scripts/fetch-pages.sh` (at least 5 seconds apart). Respect each item's licence and keep its

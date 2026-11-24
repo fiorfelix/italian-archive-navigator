@@ -21,10 +21,12 @@ robots.txt before anything else, and check whether images need a login, a CAPTCH
 check. Tell the user what you found and the route:
 
 - **Manual:** the site needs a login, shows a CAPTCHA or bot check, excludes the pages in
-  robots.txt, forbids automated access, or its terms are unclear. This is the case for every
-  major Italian register source, including Portale Antenati and FamilySearch.
-- **Automated:** only when the terms clearly allow it, robots.txt doesn't exclude the pages,
-  and no login or check stands in the way.
+  robots.txt, or its terms forbid automated access or bulk downloading. This is the case for
+  every major Italian register source, including Portale Antenati and FamilySearch.
+- **Automated:** when no login or check stands in the way, robots.txt doesn't exclude the pages,
+  and the terms allow automated access or say nothing about it. When the terms are silent, tell
+  the user so before starting. If the terms are ambiguous and could be read as forbidding it,
+  use the manual route.
 
 Never try to get around a login, CAPTCHA, block or limit, and never use another site's or
 third-party tool to do so. If access is refused, stop and use the manual route.
@@ -42,7 +44,12 @@ to use the site's own download (or a request to the archive), and exactly how to
 each page so the `read-register-pages` and `organise-archive` skills pick it up. For a long list,
 make a checklist of the pages to get, with their links, and tick them off as the user adds them.
 
-## 4. Automated route (allowed sites only; Claude Code or Cowork on a computer)
+## 4. Automated route (sites that pass the check above; Claude Code or Cowork on a computer)
+
+The download runs as a script on the user's computer, so it needs Claude Code or Cowork on a
+computer; no browser or browser extension is used. In the Claude website or mobile app, give the
+manual checklist instead, and mention once that Claude Code or Cowork could download these pages
+automatically if the user has one. Don't press them to install anything.
 
 1. Make a list file of the pages: one line each, the page URL, a tab, and the file name
    (`<comune>_<year>_<series>_img<M>.<ext>`).
