@@ -455,3 +455,16 @@ ul.guides {
 ul.guides li {
   margin: 16px 0;
 }
+/* Wider screens: show every menu button, wrapping to a second line if needed, instead of the
+   sideways scroll used on phones. */
+@media (min-width: 640px) {
+  nav.site .inner {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 6px;
+  }
+  nav.site a {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+  }
+}
