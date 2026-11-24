@@ -9,5 +9,8 @@
   "keywords": ["genealogy", "italy", "archives", "family-history", "civil-registration"],
   "license": "MIT",
   "homepage": "https://archives.fiorfelix.com",
+  "repository": "https://github.com/fiorfelix/italian-archive-navigator",
+  "documentationUrl": "https://archives.fiorfelix.com",
+  "supportUrl": "https://archives.fiorfelix.com/contact",
   "privacyPolicyUrl": "https://archives.fiorfelix.com/privacy"
 }
