@@ -26,14 +26,15 @@ npm run dev            # starts the server with reload
 Then connect an MCP client to `http://127.0.0.1:8788/mcp`, or run `npm run inspect` to open MCP
 Inspector against it.
 
-| Command                       | What it does                                                  |
-| ----------------------------- | ------------------------------------------------------------- |
-| `npm run dev`                 | Run the server from source with reload                        |
-| `npm run build` / `npm start` | Compile to `dist/` and run it                                 |
-| `npm test`                    | Vitest suite (public tests, plus `tests/private/` if present) |
-| `npm run check`               | Typecheck, lint, format check, tests                          |
-| `npm run inspect`             | Open MCP Inspector against the running server                 |
-| `npm run refresh-data`        | Rebuild `data/navigator.sqlite` from the official sources     |
+| Command                       | What it does                                                                                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `npm run dev`                 | Run the server from source with reload                                                                                    |
+| `npm run build` / `npm start` | Compile to `dist/` and run it                                                                                             |
+| `npm test`                    | Vitest suite (public tests, plus `tests/private/` if present)                                                             |
+| `npm run check`               | Typecheck, lint, format check, tests                                                                                      |
+| `npm run inspect`             | Open MCP Inspector against the running server                                                                             |
+| `npm run refresh-data`        | Rebuild `data/navigator.sqlite` from the official sources                                                                 |
+| `npm run site:build`          | Rebuild the site's Markdown copies, `llms.txt`, `llms-full.txt` and sitemap from its pages (also runs before each commit) |
 
 `PORT=xxxx` overrides the port for `dev`, `start` and `inspect`. The host is always 127.0.0.1;
 it cannot be changed. The server accepts requests only with a localhost `Host` and `Origin`.
