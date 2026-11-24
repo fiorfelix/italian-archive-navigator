@@ -7,7 +7,7 @@
 # version running.
 services:
   - type: web
-    name: italian-archive-navigator-v2
+    name: italian-archive-navigator-v3
     runtime: node
     # Free while testing (sleeps after 15 minutes idle, about a minute to wake).
     # Switch to 0.5c-512mb (Starter, $7/month) before submitting to the directory.
@@ -16,8 +16,8 @@ services:
     startCommand: node dist/index.js
     healthCheckPath: /healthz
     autoDeployTrigger: commit
-    domains:
-      - archives-mcp.fiorfelix.com
+    # Custom domain: archives-mcp.fiorfelix.com. Left out while it moves from the old service;
+    # added back once this service serves it.
     envVars:
       # Turns on public mode: MCP requests are accepted only for this host name (and the
       # service's own onrender.com name), with rate limits. Without it the server would
