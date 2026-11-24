@@ -44,7 +44,8 @@ import {
 import { writeSourcesMd } from './sources-md.js';
 
 const USER_AGENT = `${SERVER_NAME}/${SERVER_VERSION} (open-data refresh)`;
-const TIMEOUT_MS = 180_000;
+/** Per attempt, including reading the whole file: IndicePA's larger files can take minutes. */
+const TIMEOUT_MS = 600_000;
 const MANUAL_DIR = `${DATA_DIR}/manual`;
 const RAW_DIR = `${DATA_DIR}/raw`;
 
@@ -57,7 +58,8 @@ const MAX_RETRY_AFTER_MS = 300_000;
 const isRetryable = (status: number) => status === 429 || status >= 500;
 
 /**
- * Downloads a URL. A dropped connection, 429 or 5xx is tried again up to twice, after a
+ * Downloads a URL. A dropped connection or timeout (also while the file is arriving), 429 or 5xx
+ * is tried again up to twice, after a
  * pause (the site's Retry-After when it gives one, up to 5 minutes); other errors fail at once.
  */
 export async function httpGet(
@@ -69,11 +71,14 @@ export async function httpGet(
     const last = attempt >= RETRY_WAITS_MS.length;
     let wait = RETRY_WAITS_MS[attempt] ?? 0;
     let res: Response;
+    let body: Uint8Array | null = null;
     try {
       res = await doFetch(url, {
         headers: { 'User-Agent': USER_AGENT },
         signal: AbortSignal.timeout(TIMEOUT_MS),
       });
+      // Read the body inside the try: a timeout or dropped connection mid-download is retried too.
+      if (res.ok) body = new Uint8Array(await res.arrayBuffer());
     } catch (err) {
       if (!last) {
         console.log(`  network error, trying again in ${wait / 1000} s`);
@@ -87,7 +92,7 @@ export async function httpGet(
         { cause: err },
       );
     }
-    if (res.ok) return new Uint8Array(await res.arrayBuffer());
+    if (body) return body;
     if (!isRetryable(res.status) || last) throw new Error(`HTTP ${res.status} for ${url}`);
     const retryAfter = Number(res.headers.get('retry-after'));
     if (Number.isFinite(retryAfter) && retryAfter > 0) {

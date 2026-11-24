@@ -27,6 +27,28 @@ describe('httpGet retries (refresh-data)', () => {
     expect(waits).toEqual([RETRY_WAITS_MS[0]]);
   });
 
+  it('tries again when the download times out after the headers arrived', async () => {
+    quiet();
+    let calls = 0;
+    const f = vi.fn(async () => {
+      calls++;
+      if (calls === 1) {
+        const stalled = new ReadableStream({
+          start(c) {
+            c.error(new DOMException('The operation was aborted due to timeout', 'TimeoutError'));
+          },
+        });
+        return new Response(stalled, { status: 200 });
+      }
+      return new Response('ok', { status: 200 });
+    }) as unknown as typeof fetch;
+    const waits: number[] = [];
+    const body = await httpGet('https://example.org/slow', f, async (ms) => void waits.push(ms));
+    expect(new TextDecoder().decode(body)).toBe('ok');
+    expect(calls).toBe(2);
+    expect(waits).toEqual([RETRY_WAITS_MS[0]]);
+  });
+
   it('follows Retry-After on 429 and 503, capped at 5 minutes', async () => {
     quiet();
     const waits: number[] = [];

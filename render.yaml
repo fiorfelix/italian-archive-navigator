@@ -16,6 +16,16 @@ services:
     startCommand: node dist/index.js
     healthCheckPath: /healthz
     autoDeployTrigger: commit
+    # Rebuild only when something the server uses changes, not for website, plugin or contact
+    # form commits (each rebuild downloads all the official data again).
+    buildFilter:
+      paths:
+        - src/**
+        - data/**
+        - templates/**
+        - package.json
+        - package-lock.json
+        - tsconfig.json
     domains:
       - archives-mcp.fiorfelix.com
     envVars:
