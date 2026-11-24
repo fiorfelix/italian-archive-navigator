@@ -105,6 +105,13 @@ export async function startServer(
   const app = createMcpExpressApp(
     pub ? { host: bindHost, allowedHosts: pub.allowedHosts } : { host: bindHost },
   );
+  if (pub) {
+    // Public mode is HTTPS only (the host terminates TLS): tell browsers to stay on HTTPS.
+    app.use((_req, res, next) => {
+      res.set('Strict-Transport-Security', 'max-age=31536000');
+      next();
+    });
+  }
   app.get(HEALTH_PATH, (_req, res) => {
     res.type('text/plain').send('ok');
   });

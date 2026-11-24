@@ -174,6 +174,7 @@ describe('server in public mode', () => {
   it('answers the health check for the public host, revealing nothing but "ok"', async () => {
     const r = await send(running.port, { method: 'GET', path: '/healthz', host: PUBLIC });
     expect(r).toMatchObject({ status: 200, text: 'ok' });
+    expect(r.headers['strict-transport-security']).toBe('max-age=31536000');
     const other = await send(running.port, { method: 'GET', path: '/healthz', host: 'x.test' });
     expect(other.status).toBe(403);
   });

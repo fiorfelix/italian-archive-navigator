@@ -19,4 +19,9 @@ export default tseslint.config(
     files: ['src/log.ts', 'src/refresh/**', 'scripts/**'],
     rules: { 'no-console': 'off' },
   },
+  {
+    // The information pages' small scripts run in the browser.
+    files: ['site/**/*.js'],
+    languageOptions: { globals: globals.browser },
+  },
 );
