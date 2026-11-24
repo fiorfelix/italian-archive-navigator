@@ -8,25 +8,29 @@
       name="description"
       content="A read-only connector for Claude that helps with Italian family-history research: places, records, archives and request letters."
     />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css?v=3" />
+    <script src="/site.js" defer></script>
   </head>
   <body>
     <div class="tricolore"></div>
     <header>
-      <img src="icon.svg" alt="" />
+      <img src="/icon.svg" alt="" />
       <div>
-        <div class="name">Italian Archive Navigator</div>
+        <div class="name"><a href="/">Italian Archive Navigator</a></div>
         <div class="by">by fiorfelix</div>
       </div>
     </header>
-    <nav>
-      <a href="#add">Add to Claude</a>
-      <a href="#ask">What to ask</a>
-      <a href="#limits">Coverage and limits</a>
-      <a href="#sources">Sources</a>
-      <a href="privacy">Privacy</a>
-      <a href="#contact">Contact</a>
+    <nav class="site" aria-label="Site">
+      <div class="inner">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/#add">Add to Claude</a>
+        <a href="/#ask">What to ask</a>
+        <a href="/#limits">Coverage</a>
+        <a href="/#sources">Sources</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/contact">Contact</a>
+      </div>
     </nav>
     <main>
       <h1>Find where an Italian ancestor's record is kept, and ask for it</h1>
@@ -38,26 +42,40 @@
       </p>
 
       <h2 id="add">Add it to Claude</h2>
-      <div class="card">
-        <p><strong>Server address</strong></p>
-        <span class="url">https://archives-mcp.fiorfelix.com/mcp</span>
-        <ol>
-          <li>
-            In Claude, open
-            <a href="https://claude.ai/customize/connectors">Connectors</a>, select
-            <strong>Add</strong>, then <strong>Add custom connector</strong>.
-          </li>
-          <li>
-            Name it <code>Italian Archive Navigator</code> and paste the address above. Click
-            <strong>Continue</strong>.
-          </li>
-          <li>Choose <strong>No sign-in</strong>, then <strong>Add</strong>.</li>
-          <li>In a new chat, turn the connector on from the tools menu and ask a question.</li>
+      <div class="card add">
+        <p class="add-lead">Two clicks to copy and open, then paste. It takes under a minute.</p>
+        <div class="copy-row">
+          <code id="server-url" class="url">https://archives-mcp.fiorfelix.com/mcp</code>
+          <button type="button" class="btn" data-copy="server-url">Copy address</button>
+        </div>
+        <a
+          class="btn btn-primary"
+          href="https://claude.ai/customize/connectors"
+          target="_blank"
+          rel="noopener"
+          >Open Claude's connector settings ↗</a
+        >
+        <ol class="steps">
+          <li>Click <strong>+ Add</strong>, then <strong>Add custom connector</strong>.</li>
+          <li>Name: <code>Italian Archive Navigator</code>. Paste the address in the URL field.</li>
+          <li>Choose <strong>No sign-in</strong> (if asked), then <strong>Add</strong>. Done.</li>
         </ol>
-        <p>
-          On Team and Enterprise plans, an Owner adds it under Organization settings, Connectors. No
-          account is needed; nothing is ever sent on your behalf.
+        <p class="hint">
+          Then, in a new chat, ask a question such as "Where is the 1880 birth record for Montefiore
+          dell'Aso kept?". Add it once on the Claude website or desktop app and it also works in the
+          Claude mobile apps. On Team and Enterprise plans, an Owner adds it under Organization
+          settings, Connectors. No account is needed, and nothing is ever sent on your behalf.
         </p>
+        <details class="more">
+          <summary>Using Claude Code?</summary>
+          <div class="copy-row">
+            <code id="cc-cmd" class="url"
+              >claude mcp add --transport http italian-archive-navigator
+              https://archives-mcp.fiorfelix.com/mcp</code
+            >
+            <button type="button" class="btn" data-copy="cc-cmd">Copy</button>
+          </div>
+        </details>
       </div>
 
       <h2 id="ask">What to ask</h2>
@@ -180,9 +198,9 @@
       <p>
         Did the navigator help you find an ancestor's record, or the right office to write to? A
         short note is always welcome:
-        <a href="/contact">send a thank-you</a>. If you like, tell us which comune or kind of record
-        it helped with; it shows which parts are worth improving. Please leave out details of living
-        people. Messages are never published without your permission.
+        <a href="/contact?topic=thanks">send a thank-you</a>. If you like, tell us which comune or
+        kind of record it helped with; it shows which parts are worth improving. Please leave out
+        details of living people. Messages are never published without your permission.
       </p>
 
       <p class="note">

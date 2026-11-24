@@ -78,15 +78,6 @@ header .by {
   color: var(--muted);
   font-size: 0.9rem;
 }
-nav {
-  max-width: 760px;
-  margin: 14px auto 0;
-  padding: 0 16px;
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-}
 a {
   color: var(--accent);
 }
@@ -165,28 +156,136 @@ header .name a {
   color: inherit;
   text-decoration: none;
 }
-form.contact {
-  display: grid;
-  gap: 6px;
-  margin: 20px 0;
+/* Site navigation: same on every page; sticky; on narrow screens it scrolls sideways. */
+nav.site {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-top: 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
-form.contact label {
-  font-weight: 600;
-  margin-top: 12px;
+nav.site .inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
-form.contact input,
-form.contact select,
-form.contact textarea {
-  font: inherit;
+nav.site .inner::-webkit-scrollbar {
+  display: none;
+}
+nav.site a {
+  flex: none;
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
   color: var(--text);
+  font-size: 0.92rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+nav.site a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+nav.site a[aria-current='page'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+h2,
+h3 {
+  scroll-margin-top: 70px;
+}
+
+/* Cards (contact form, result pages) */
+.card {
+  margin: 22px 0;
+  padding: 22px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 12px;
+  border-radius: 14px;
+}
+.card.result h1 {
+  margin-top: 0;
+}
+
+/* Contact form */
+form.contact .field {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+form.contact legend,
+form.contact .field > label {
+  display: block;
+  margin-bottom: 8px;
+  padding: 0;
+  font-weight: 600;
+}
+form.contact .optional {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+form.contact .topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+form.contact .topics input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+form.contact .topics label {
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  cursor: pointer;
+}
+form.contact .topics input:checked + label {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+form.contact .topics input:focus-visible + label {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+form.contact input[type='email'],
+form.contact textarea {
   width: 100%;
+  padding: 11px 13px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+form.contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+form.contact input[type='email']:focus,
+form.contact textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+form.contact ::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
 }
 form.contact .hint {
-  margin: 0;
+  margin: 6px 0 0;
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -198,17 +297,98 @@ form.contact .trap {
   overflow: hidden;
 }
 form.contact .cf-turnstile {
-  margin-top: 16px;
+  margin: 4px 0 18px;
+  min-height: 65px;
 }
 form.contact button {
-  justify-self: start;
-  margin-top: 12px;
+  padding: 12px 26px;
   font: inherit;
   font-weight: 600;
   color: var(--accent-text);
   background: var(--accent);
   border: 0;
-  border-radius: 8px;
-  padding: 10px 22px;
+  border-radius: 10px;
   cursor: pointer;
+}
+form.contact button:hover {
+  filter: brightness(1.08);
+}
+form.contact button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+@media (max-width: 560px) {
+  .card {
+    padding: 18px 16px;
+  }
+  form.contact button {
+    width: 100%;
+  }
+}
+
+/* Add to Claude */
+.card.add .add-lead {
+  margin-top: 0;
+  font-weight: 600;
+}
+.copy-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  margin: 12px 0;
+}
+.copy-row .url {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:hover {
+  border-color: var(--accent);
+}
+.btn-primary {
+  color: var(--accent-text);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+.steps {
+  margin: 18px 0 10px;
+  padding-left: 22px;
+}
+.steps li {
+  margin: 6px 0;
+}
+details.more {
+  margin-top: 14px;
+}
+details.more summary {
+  cursor: pointer;
+  color: var(--accent);
+}
+@media (max-width: 560px) {
+  .copy-row {
+    flex-direction: column;
+  }
+  .card.add .btn-primary {
+    display: block;
+    text-align: center;
+  }
 }

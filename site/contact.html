@@ -6,8 +6,9 @@
     <title>Contact · Italian Archive Navigator</title>
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css?v=2" />
+    <link rel="stylesheet" href="/styles.css?v=3" />
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="/contact.js" defer></script>
   </head>
   <body>
     <div class="tricolore"></div>
@@ -18,43 +19,79 @@
         <div class="by">by fiorfelix</div>
       </div>
     </header>
+    <nav class="site" aria-label="Site">
+      <div class="inner">
+        <a href="/">Home</a>
+        <a href="/#add">Add to Claude</a>
+        <a href="/#ask">What to ask</a>
+        <a href="/#limits">Coverage</a>
+        <a href="/#sources">Sources</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/contact" aria-current="page">Contact</a>
+      </div>
+    </nav>
     <main>
       <h1>Contact</h1>
       <p class="lead">
         A question, a wrong answer, a record rule that needs correcting, or a thank-you: write here.
       </p>
-      <form class="contact" method="post" action="/api/contact">
-        <label for="topic">What is it about?</label>
-        <select id="topic" name="topic">
-          <option value="question">A question</option>
-          <option value="correction">A wrong answer or a rule to correct</option>
-          <option value="thanks">Thank you</option>
-          <option value="other">Something else</option>
-        </select>
+      <div class="card">
+        <form class="contact" method="post" action="/api/contact">
+          <fieldset class="field">
+            <legend>What is it about?</legend>
+            <div class="topics">
+              <input type="radio" id="t-question" name="topic" value="question" checked />
+              <label for="t-question">A question</label>
+              <input type="radio" id="t-correction" name="topic" value="correction" />
+              <label for="t-correction">Something to correct</label>
+              <input type="radio" id="t-thanks" name="topic" value="thanks" />
+              <label for="t-thanks">Thank you</label>
+              <input type="radio" id="t-other" name="topic" value="other" />
+              <label for="t-other">Something else</label>
+            </div>
+          </fieldset>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="8" maxlength="5000" required></textarea>
-        <p class="hint">
-          If it helped you, tell us which comune or kind of record. Please leave out details of
-          living people.
-        </p>
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              maxlength="5000"
+              required
+              placeholder="Write here. If the navigator helped you, tell us which comune or kind of record."
+            ></textarea>
+            <p class="hint">Please leave out details of living people.</p>
+          </div>
 
-        <label for="reply">Your e-mail, if you would like a reply (optional)</label>
-        <input id="reply" name="reply" type="email" maxlength="254" autocomplete="email" />
+          <div class="field">
+            <label for="reply"
+              >Your e-mail <span class="optional">(optional, only if you want a reply)</span></label
+            >
+            <input
+              id="reply"
+              name="reply"
+              type="email"
+              maxlength="254"
+              autocomplete="email"
+              placeholder="name@example.com"
+            />
+          </div>
 
-        <div class="trap" aria-hidden="true" hidden>
-          <label for="website">Leave this empty</label>
-          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-        </div>
+          <div class="trap" aria-hidden="true" hidden>
+            <label for="website">Leave this empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
 
-        <div
-          class="cf-turnstile"
-          data-sitekey="0x4AAAAAAGP9rtefgSPZAyTl"
-          data-action="contact"
-        ></div>
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAAGP9rtefgSPZAyTl"
+            data-action="contact"
+          ></div>
 
-        <button type="submit">Send</button>
-      </form>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
       <p class="note">
         Your message is sent by e-mail to the person who runs this project and is not stored on any
         server. Cloudflare Turnstile checks that the form is sent by a person, not a bot. Messages
